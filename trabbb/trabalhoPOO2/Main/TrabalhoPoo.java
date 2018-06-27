@@ -16,14 +16,14 @@ public class TrabalhoPoo {
      */
     public static void main(String[] args) {
         Animal animal1;
-       /* animal1 = new Cao("Pedro", "lilica", "vira-lata");
+        animal1 = new Cao("Pedro", "lilica", "vira-lata");
         animal1.estadoAtual();
         //animal1.getEstado().setEstadoAguardando();
         animal1.getEstado().setEstadoEmBanho();
         animal1.estadoAtual();
         animal1.getEstado().setEstadoEmEstadia();
         animal1.estadoAtual();
-        TESTE 1*/
+        
     }
     
 }
