@@ -2,23 +2,26 @@ package Model_MVC;
 
 public class Tosa_Decorator extends ServicoDecorator {
 
-	private Servicos servico;
+    private Servicos servico;
 
-    public Tosa_Decorator(Animal animal, Servicos recibo) {
-        super(animal, recibo, (float) 60.0);
+    public Tosa_Decorator(Animal animal, Servicos servico) {
+        super(animal);
+        this.servico = servico;
         this.descricao = ", + Tosa";
     }
 
-	public float pagar() {
-		return this.getPreco() + recibo.pagar();
-	}
+    @Override
+    public float pagar() {
+        return (float) (60.00 + servico.pagar());
+    }
 
-	public String getDescricao() {
-            return recibo.getDescricao() + descricao;
-	}
+    @Override
+    public String getDescricao() {
+        return servico.getDescricao() + descricao;
+    }
 
-	public void registraTosa() {
+    public void registraTosa() {
 
-	}
+    }
 
 }

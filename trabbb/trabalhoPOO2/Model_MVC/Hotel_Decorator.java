@@ -7,18 +7,24 @@ public class Hotel_Decorator extends ServicoDecorator {
 	private int nQuartos;
 
 	private int nQuartosDisponiveis;
+        
+        private int diaria;
 
-    public Hotel_Decorator(Animal animal, Servicos recibo, float preco) {
-        super(animal, recibo,(float) 155.30);
+    public Hotel_Decorator(Animal animal,Servicos servico,int diaria) {
+        super(animal);
+        this.servico = servico;
         this.descricao = ", + Hotel";
+        this.diaria = diaria;
     }
-
+    
+        @Override
 	public float pagar() {
-		return this.getPreco() + recibo.pagar();
+		return (float) ((diaria * 100.00) + servico.pagar());
 	}
 
+        @Override
 	public String getDescricao() {
-		return recibo.getDescricao() + descricao;
+		return servico.getDescricao() + descricao;
 	}
 
 }

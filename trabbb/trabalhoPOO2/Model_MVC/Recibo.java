@@ -10,6 +10,7 @@ public class Recibo extends Servicos {
         this.descricao = "Recibo";
     }
 
+    @Override
 	public float pagar() {
 		return this.getPreco();
 	}
