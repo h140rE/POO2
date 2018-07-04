@@ -1,5 +1,7 @@
 package Controller_MVC;
 
-public class ControllerPet {
+import View_MVC.TelaAtendente;
 
+public class ControllerPet {
+   
 }
