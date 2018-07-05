@@ -18,20 +18,32 @@ public class Cuidador extends Funcionario {
 
 	}
 
-	public void r_entradaHotel(Hotel_Decorator hotel, Animal animal) {
+	public void r_EntradaHotel(Hotel_Decorator hotel, Animal animal) {
 
 	}
 
-	public void r_saidaHotel(Hotel_Decorator hotel, Animal animal) {
+	public void r_SaidaHotel(Hotel_Decorator hotel, Animal animal) {
 
 	}
 
 	public void registraBanho(Banho_Decorator banho, Animal animal) {
 
 	}
-
+        public void r_EntradaBanho(Banho_Decorator banho, Animal animal){
+            
+        }
+        public void r_SaidaBanho(Banho_Decorator banho, Animal animal){
+            
+        }
 	public void registraTosa(Tosa_Decorator tosa, Animal animal) {
 
 	}
+        public void r_EntradaTosa(Tosa_Decorator tosa, Animal animal){
+            
+        }
+        public void r_SaidaTosa(Tosa_Decorator tosa, Animal animal){
+            
+        }
+        
 
 }

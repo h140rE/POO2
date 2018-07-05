@@ -4,6 +4,7 @@
  * and open the template in the editor.
  */
 package Main;
+import Controller_MVC.ControllerPet;
 import Model_MVC.*;
 /**
  *
@@ -23,7 +24,9 @@ public class TrabalhoPoo {
         animal1.estadoAtual();
         animal1.getEstado().setEstadoEmEstadia();
         animal1.estadoAtual();
-        
+        ControllerPet  controller = new ControllerPet();
+       
+ 
     }
     
 }
