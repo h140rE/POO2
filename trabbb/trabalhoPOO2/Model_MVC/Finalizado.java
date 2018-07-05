@@ -7,35 +7,31 @@ public class Finalizado extends State {
         this.descricao = "Todos os servicos realizados";
     }
 
-	public void pegaEstado() {
-
-	}
-
-   public void setEstadoAguardando() {
+    @Override
+    public void setEstadoAguardando() {
         this.getAnimal().setEstado(new Aguardando(this.getAnimal()));
     }
 
-   
+    @Override
     public void setEstadoEmBanho() {
-        this.getAnimal().setEstado(new EmBanho(this.getAnimal()));    
+        this.getAnimal().setEstado(new EmBanho(this.getAnimal()));
     }
 
-    
+    @Override
     public void setEstadoEmConsulta() {
 
         this.getAnimal().setEstado(new EmConsulta(this.getAnimal()));
     }
 
-    
+    @Override
     public void setEstadoEmEstadia() {
-        
+
         this.getAnimal().setEstado(new EmEstadia(this.getAnimal()));
     }
 
-    
+    @Override
     public void setEstadoFinalizado() {
-        throw new UnsupportedOperationException("Estado corrente.");
-    } 
-   
+        System.out.println("Estado Corrente");
+    }
 
 }

@@ -7,31 +7,27 @@ public class EmBanho extends State {
         this.descricao = "Animal se encontra no banho";
     }
 
-	public void pegaEstado() {
-
-	}
-
-   
+    @Override
     public void setEstadoAguardando() {
         this.getAnimal().setEstado(new Aguardando(this.getAnimal()));
     }
 
-   
+    @Override
     public void setEstadoEmBanho() {
-        throw new UnsupportedOperationException("Estado corrente.");
+        System.out.println("Estado Corrente");
     }
 
-    
+    @Override
     public void setEstadoEmConsulta() {
         this.getAnimal().setEstado(new EmConsulta(this.getAnimal()));
     }
 
-    
+    @Override
     public void setEstadoEmEstadia() {
         this.getAnimal().setEstado(new EmEstadia(this.getAnimal()));
     }
 
-    
+    @Override
     public void setEstadoFinalizado() {
         this.getAnimal().setEstado(new Finalizado(this.getAnimal()));
     }
