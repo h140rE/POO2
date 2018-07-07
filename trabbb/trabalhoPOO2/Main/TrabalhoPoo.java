@@ -4,8 +4,9 @@
  * and open the template in the editor.
  */
 package Main;
-import Controller_MVC.ControllerPet;
-import Model_MVC.*;
+import Controller_MVC.Animal;
+import Controller_MVC.Cao;
+import Model_MVR.ControllerPet;
 /**
  *
  * @author higor

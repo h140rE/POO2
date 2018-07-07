@@ -1,4 +1,4 @@
-package Model_MVC;
+package Controller_MVC;
 
 public class Gato extends Animal {
 

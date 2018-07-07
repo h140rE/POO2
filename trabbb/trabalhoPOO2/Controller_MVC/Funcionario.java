@@ -1,4 +1,4 @@
-package Model_MVC;
+package Controller_MVC;
 
 public class Funcionario extends Pessoa {
 

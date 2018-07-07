@@ -1,4 +1,4 @@
-package Controller_MVC;
+package Model_MVR;
 
 import View_MVC.TelaAtendente;
 
