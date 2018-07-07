@@ -1,15 +1,15 @@
-package Model_MVC;
+package Controller_MVC;
 
-public class Aguardando extends State {
+public class Finalizado extends State {
 
-    public Aguardando(Animal animal) {
+    public Finalizado(Animal animal) {
         super(animal);
-        this.descricao = "Animal se encontra na fila, Aguardando";
+        this.descricao = "Todos os servicos realizados";
     }
 
     @Override
     public void setEstadoAguardando() {
-        System.out.println("Estado Corrente");
+        this.getAnimal().setEstado(new Aguardando(this.getAnimal()));
     }
 
     @Override
@@ -19,17 +19,19 @@ public class Aguardando extends State {
 
     @Override
     public void setEstadoEmConsulta() {
+
         this.getAnimal().setEstado(new EmConsulta(this.getAnimal()));
     }
 
     @Override
     public void setEstadoEmEstadia() {
+
         this.getAnimal().setEstado(new EmEstadia(this.getAnimal()));
     }
 
     @Override
     public void setEstadoFinalizado() {
-        this.getAnimal().setEstado(new Finalizado(this.getAnimal()));
+        System.out.println("Estado Corrente");
     }
 
 }
