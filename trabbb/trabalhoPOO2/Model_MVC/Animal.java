@@ -3,7 +3,7 @@ package Model_MVC;
 public class Animal {
 
     private String nomeDono;
-
+    private String cpfDono;
     private String nomeAnimal;
 
     private String raca;
