@@ -29,7 +29,7 @@ public class TrabalhoPoo {
         animal1.estadoAtual();
         ControllerPet  controller = new ControllerPet();
        */
-       
+       /*
        ContrataServico c = new ContrataServico();
        Servicos s = new Recibo(animal1);
        
@@ -40,6 +40,9 @@ public class TrabalhoPoo {
        
        System.out.println(s.pagar()); 
        System.out.println(s.getDescricao());   
+        */
+       ControllerTelaPrincipal principal = new ControllerTelaPrincipal();
+    
        
     }
     

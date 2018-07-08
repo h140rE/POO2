@@ -5,10 +5,15 @@
  */
 package Controller_MVC;
 
+import View_MVC.Tela_Principal;
+
+
 /**
  *
  * @author Gabriel P H
  */
-public class ControllerTelaPrincipal {
+public class ControllerTelaPrincipal extends Tela_Principal{
+    Tela_Principal tela = new Tela_Principal();
+    
     
 }

@@ -29,24 +29,24 @@ public class TelaConsulta extends javax.swing.JFrame {
 
         jPanel5 = new javax.swing.JPanel();
         buttonGroup1 = new javax.swing.ButtonGroup();
-        JPanel_Tela_SistemaConsulta = new javax.swing.JPanel();
+        JPanel_TelaSistemaConsulta = new javax.swing.JPanel();
         jLabel1 = new javax.swing.JLabel();
-        jPanel3 = new javax.swing.JPanel();
+        JPanel_TelaSistemaDeConsulta_VerificaDados = new javax.swing.JPanel();
         jLabel19 = new javax.swing.JLabel();
         jScrollPane3 = new javax.swing.JScrollPane();
         jTextPane3 = new javax.swing.JTextPane();
         jLabel20 = new javax.swing.JLabel();
         jScrollPane4 = new javax.swing.JScrollPane();
         jTextPane4 = new javax.swing.JTextPane();
-        jButton3 = new javax.swing.JButton();
+        jButton_TelaSistemaDeConsultas_Verificar = new javax.swing.JButton();
         jLabel21 = new javax.swing.JLabel();
-        jPanel9 = new javax.swing.JPanel();
+        JPanel_TelaSistemaDeConsulta_ListaProdutosSelecionados = new javax.swing.JPanel();
         jLabel9 = new javax.swing.JLabel();
         jScrollPane8 = new javax.swing.JScrollPane();
         jTextArea5 = new javax.swing.JTextArea();
         jPanel4 = new javax.swing.JPanel();
         jLabel3 = new javax.swing.JLabel();
-        jTextField2 = new javax.swing.JTextField();
+        jTextField_SistemaDeConsulta_NomeDoAnimal = new javax.swing.JTextField();
         jLabel4 = new javax.swing.JLabel();
         jScrollPane5 = new javax.swing.JScrollPane();
         jTextArea1 = new javax.swing.JTextArea();
@@ -73,12 +73,12 @@ public class TelaConsulta extends javax.swing.JFrame {
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
-        JPanel_Tela_SistemaConsulta.setBackground(new java.awt.Color(250, 255, 240));
+        JPanel_TelaSistemaConsulta.setBackground(new java.awt.Color(250, 255, 240));
 
         jLabel1.setFont(new java.awt.Font("Yu Gothic Light", 0, 36)); // NOI18N
         jLabel1.setText("Sistema de Consultas");
 
-        jPanel3.setBackground(new java.awt.Color(250, 255, 240));
+        JPanel_TelaSistemaDeConsulta_VerificaDados.setBackground(new java.awt.Color(250, 255, 240));
 
         jLabel19.setFont(new java.awt.Font("Tahoma", 0, 18)); // NOI18N
         jLabel19.setForeground(new java.awt.Color(102, 102, 102));
@@ -92,10 +92,10 @@ public class TelaConsulta extends javax.swing.JFrame {
 
         jScrollPane4.setViewportView(jTextPane4);
 
-        jButton3.setIcon(new javax.swing.ImageIcon("A:\\Bibliotecas\\Documentos\\POO2\\trabbb\\trabalhoPOO2\\View_MVC\\Icons\\icons8-pesquisar-64.png")); // NOI18N
-        jButton3.addActionListener(new java.awt.event.ActionListener() {
+        jButton_TelaSistemaDeConsultas_Verificar.setIcon(new javax.swing.ImageIcon("A:\\Bibliotecas\\Documentos\\POO2\\trabbb\\trabalhoPOO2\\View_MVC\\Icons\\icons8-pesquisar-64.png")); // NOI18N
+        jButton_TelaSistemaDeConsultas_Verificar.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jButton3ActionPerformed(evt);
+                jButton_TelaSistemaDeConsultas_VerificarActionPerformed(evt);
             }
         });
 
@@ -103,7 +103,7 @@ public class TelaConsulta extends javax.swing.JFrame {
         jLabel21.setFont(new java.awt.Font("Tahoma", 1, 18)); // NOI18N
         jLabel21.setText("Verificar dados");
 
-        jPanel9.setBackground(new java.awt.Color(255, 255, 224));
+        JPanel_TelaSistemaDeConsulta_ListaProdutosSelecionados.setBackground(new java.awt.Color(255, 255, 224));
 
         jLabel9.setText("Produtos");
 
@@ -111,76 +111,76 @@ public class TelaConsulta extends javax.swing.JFrame {
         jTextArea5.setRows(5);
         jScrollPane8.setViewportView(jTextArea5);
 
-        javax.swing.GroupLayout jPanel9Layout = new javax.swing.GroupLayout(jPanel9);
-        jPanel9.setLayout(jPanel9Layout);
-        jPanel9Layout.setHorizontalGroup(
-            jPanel9Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(jPanel9Layout.createSequentialGroup()
+        javax.swing.GroupLayout JPanel_TelaSistemaDeConsulta_ListaProdutosSelecionadosLayout = new javax.swing.GroupLayout(JPanel_TelaSistemaDeConsulta_ListaProdutosSelecionados);
+        JPanel_TelaSistemaDeConsulta_ListaProdutosSelecionados.setLayout(JPanel_TelaSistemaDeConsulta_ListaProdutosSelecionadosLayout);
+        JPanel_TelaSistemaDeConsulta_ListaProdutosSelecionadosLayout.setHorizontalGroup(
+            JPanel_TelaSistemaDeConsulta_ListaProdutosSelecionadosLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(JPanel_TelaSistemaDeConsulta_ListaProdutosSelecionadosLayout.createSequentialGroup()
                 .addContainerGap()
-                .addGroup(jPanel9Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                .addGroup(JPanel_TelaSistemaDeConsulta_ListaProdutosSelecionadosLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addComponent(jScrollPane8, javax.swing.GroupLayout.DEFAULT_SIZE, 297, Short.MAX_VALUE)
-                    .addGroup(jPanel9Layout.createSequentialGroup()
+                    .addGroup(JPanel_TelaSistemaDeConsulta_ListaProdutosSelecionadosLayout.createSequentialGroup()
                         .addComponent(jLabel9)
                         .addGap(0, 0, Short.MAX_VALUE)))
                 .addContainerGap())
         );
-        jPanel9Layout.setVerticalGroup(
-            jPanel9Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(jPanel9Layout.createSequentialGroup()
+        JPanel_TelaSistemaDeConsulta_ListaProdutosSelecionadosLayout.setVerticalGroup(
+            JPanel_TelaSistemaDeConsulta_ListaProdutosSelecionadosLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(JPanel_TelaSistemaDeConsulta_ListaProdutosSelecionadosLayout.createSequentialGroup()
                 .addComponent(jLabel9)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addComponent(jScrollPane8, javax.swing.GroupLayout.DEFAULT_SIZE, 175, Short.MAX_VALUE)
                 .addContainerGap())
         );
 
-        javax.swing.GroupLayout jPanel3Layout = new javax.swing.GroupLayout(jPanel3);
-        jPanel3.setLayout(jPanel3Layout);
-        jPanel3Layout.setHorizontalGroup(
-            jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(jPanel3Layout.createSequentialGroup()
-                .addGroup(jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(jPanel3Layout.createSequentialGroup()
-                        .addGroup(jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addGroup(jPanel3Layout.createSequentialGroup()
+        javax.swing.GroupLayout JPanel_TelaSistemaDeConsulta_VerificaDadosLayout = new javax.swing.GroupLayout(JPanel_TelaSistemaDeConsulta_VerificaDados);
+        JPanel_TelaSistemaDeConsulta_VerificaDados.setLayout(JPanel_TelaSistemaDeConsulta_VerificaDadosLayout);
+        JPanel_TelaSistemaDeConsulta_VerificaDadosLayout.setHorizontalGroup(
+            JPanel_TelaSistemaDeConsulta_VerificaDadosLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(JPanel_TelaSistemaDeConsulta_VerificaDadosLayout.createSequentialGroup()
+                .addGroup(JPanel_TelaSistemaDeConsulta_VerificaDadosLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(JPanel_TelaSistemaDeConsulta_VerificaDadosLayout.createSequentialGroup()
+                        .addGroup(JPanel_TelaSistemaDeConsulta_VerificaDadosLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addGroup(JPanel_TelaSistemaDeConsulta_VerificaDadosLayout.createSequentialGroup()
                                 .addContainerGap()
-                                .addGroup(jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                .addGroup(JPanel_TelaSistemaDeConsulta_VerificaDadosLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                                     .addComponent(jLabel19)
-                                    .addGroup(jPanel3Layout.createSequentialGroup()
+                                    .addGroup(JPanel_TelaSistemaDeConsulta_VerificaDadosLayout.createSequentialGroup()
                                         .addGap(1, 1, 1)
                                         .addComponent(jLabel20)))
                                 .addGap(38, 38, 38)
-                                .addGroup(jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                                .addGroup(JPanel_TelaSistemaDeConsulta_VerificaDadosLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
                                     .addComponent(jScrollPane3)
                                     .addComponent(jScrollPane4, javax.swing.GroupLayout.PREFERRED_SIZE, 150, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                            .addGroup(jPanel3Layout.createSequentialGroup()
+                            .addGroup(JPanel_TelaSistemaDeConsulta_VerificaDadosLayout.createSequentialGroup()
                                 .addGap(105, 105, 105)
-                                .addComponent(jButton3))
-                            .addGroup(jPanel3Layout.createSequentialGroup()
+                                .addComponent(jButton_TelaSistemaDeConsultas_Verificar))
+                            .addGroup(JPanel_TelaSistemaDeConsulta_VerificaDadosLayout.createSequentialGroup()
                                 .addContainerGap()
                                 .addComponent(jLabel21)))
                         .addGap(0, 0, Short.MAX_VALUE))
-                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel3Layout.createSequentialGroup()
+                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, JPanel_TelaSistemaDeConsulta_VerificaDadosLayout.createSequentialGroup()
                         .addGap(0, 0, Short.MAX_VALUE)
-                        .addComponent(jPanel9, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                        .addComponent(JPanel_TelaSistemaDeConsulta_ListaProdutosSelecionados, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)))
                 .addContainerGap())
         );
-        jPanel3Layout.setVerticalGroup(
-            jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(jPanel3Layout.createSequentialGroup()
+        JPanel_TelaSistemaDeConsulta_VerificaDadosLayout.setVerticalGroup(
+            JPanel_TelaSistemaDeConsulta_VerificaDadosLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(JPanel_TelaSistemaDeConsulta_VerificaDadosLayout.createSequentialGroup()
                 .addContainerGap()
                 .addComponent(jLabel21, javax.swing.GroupLayout.PREFERRED_SIZE, 22, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(18, 18, 18)
-                .addGroup(jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                .addGroup(JPanel_TelaSistemaDeConsulta_VerificaDadosLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
                     .addComponent(jLabel19)
                     .addComponent(jScrollPane3, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addGap(23, 23, 23)
-                .addGroup(jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                .addGroup(JPanel_TelaSistemaDeConsulta_VerificaDadosLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addComponent(jScrollPane4, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(jLabel20))
                 .addGap(18, 18, 18)
-                .addComponent(jButton3)
+                .addComponent(jButton_TelaSistemaDeConsultas_Verificar)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(jPanel9, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addComponent(JPanel_TelaSistemaDeConsulta_ListaProdutosSelecionados, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
 
@@ -246,7 +246,7 @@ public class TelaConsulta extends javax.swing.JFrame {
                         .addGap(46, 46, 46)
                         .addComponent(jLabel4)
                         .addGap(6, 6, 6)
-                        .addComponent(jTextField2, javax.swing.GroupLayout.PREFERRED_SIZE, 125, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addComponent(jTextField_SistemaDeConsulta_NomeDoAnimal, javax.swing.GroupLayout.PREFERRED_SIZE, 125, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addGroup(jPanel4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                             .addGroup(jPanel4Layout.createSequentialGroup()
                                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
@@ -268,7 +268,7 @@ public class TelaConsulta extends javax.swing.JFrame {
                 .addGroup(jPanel4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addComponent(jLabel3, javax.swing.GroupLayout.Alignment.TRAILING)
                     .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                        .addComponent(jTextField2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addComponent(jTextField_SistemaDeConsulta_NomeDoAnimal, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addComponent(jLabel4)
                         .addComponent(jRadioButton1)
                         .addComponent(jRadioButton2)))
@@ -316,33 +316,33 @@ public class TelaConsulta extends javax.swing.JFrame {
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
 
-        javax.swing.GroupLayout JPanel_Tela_SistemaConsultaLayout = new javax.swing.GroupLayout(JPanel_Tela_SistemaConsulta);
-        JPanel_Tela_SistemaConsulta.setLayout(JPanel_Tela_SistemaConsultaLayout);
-        JPanel_Tela_SistemaConsultaLayout.setHorizontalGroup(
-            JPanel_Tela_SistemaConsultaLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(JPanel_Tela_SistemaConsultaLayout.createSequentialGroup()
+        javax.swing.GroupLayout JPanel_TelaSistemaConsultaLayout = new javax.swing.GroupLayout(JPanel_TelaSistemaConsulta);
+        JPanel_TelaSistemaConsulta.setLayout(JPanel_TelaSistemaConsultaLayout);
+        JPanel_TelaSistemaConsultaLayout.setHorizontalGroup(
+            JPanel_TelaSistemaConsultaLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(JPanel_TelaSistemaConsultaLayout.createSequentialGroup()
                 .addContainerGap(15, Short.MAX_VALUE)
-                .addComponent(jPanel3, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addComponent(JPanel_TelaSistemaDeConsulta_VerificaDados, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addGroup(JPanel_Tela_SistemaConsultaLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                .addGroup(JPanel_TelaSistemaConsultaLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addComponent(jPanel4, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                     .addComponent(jPanel2, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                    .addGroup(JPanel_Tela_SistemaConsultaLayout.createSequentialGroup()
+                    .addGroup(JPanel_TelaSistemaConsultaLayout.createSequentialGroup()
                         .addComponent(jLabel1)
                         .addGap(0, 0, Short.MAX_VALUE)))
                 .addContainerGap())
         );
-        JPanel_Tela_SistemaConsultaLayout.setVerticalGroup(
-            JPanel_Tela_SistemaConsultaLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(JPanel_Tela_SistemaConsultaLayout.createSequentialGroup()
-                .addGroup(JPanel_Tela_SistemaConsultaLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(JPanel_Tela_SistemaConsultaLayout.createSequentialGroup()
+        JPanel_TelaSistemaConsultaLayout.setVerticalGroup(
+            JPanel_TelaSistemaConsultaLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(JPanel_TelaSistemaConsultaLayout.createSequentialGroup()
+                .addGroup(JPanel_TelaSistemaConsultaLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(JPanel_TelaSistemaConsultaLayout.createSequentialGroup()
                         .addComponent(jLabel1)
                         .addGap(31, 31, 31)
                         .addComponent(jPanel4, javax.swing.GroupLayout.PREFERRED_SIZE, 270, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                         .addComponent(jPanel2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                    .addComponent(jPanel3, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addComponent(JPanel_TelaSistemaDeConsulta_VerificaDados, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
 
@@ -350,19 +350,19 @@ public class TelaConsulta extends javax.swing.JFrame {
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(JPanel_Tela_SistemaConsulta, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+            .addComponent(JPanel_TelaSistemaConsulta, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(JPanel_Tela_SistemaConsulta, javax.swing.GroupLayout.PREFERRED_SIZE, 450, javax.swing.GroupLayout.PREFERRED_SIZE)
+            .addComponent(JPanel_TelaSistemaConsulta, javax.swing.GroupLayout.PREFERRED_SIZE, 450, javax.swing.GroupLayout.PREFERRED_SIZE)
         );
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
 
-    private void jButton3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton3ActionPerformed
+    private void jButton_TelaSistemaDeConsultas_VerificarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton_TelaSistemaDeConsultas_VerificarActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_jButton3ActionPerformed
+    }//GEN-LAST:event_jButton_TelaSistemaDeConsultas_VerificarActionPerformed
 
     private void jButton4ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton4ActionPerformed
         // TODO add your handling code here:
@@ -416,12 +416,14 @@ public class TelaConsulta extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
-    private javax.swing.JPanel JPanel_Tela_SistemaConsulta;
+    private javax.swing.JPanel JPanel_TelaSistemaConsulta;
+    private javax.swing.JPanel JPanel_TelaSistemaDeConsulta_ListaProdutosSelecionados;
+    private javax.swing.JPanel JPanel_TelaSistemaDeConsulta_VerificaDados;
     private javax.swing.ButtonGroup buttonGroup1;
     private javax.swing.JButton jButton1;
     private javax.swing.JButton jButton2;
-    private javax.swing.JButton jButton3;
     private javax.swing.JButton jButton4;
+    private javax.swing.JButton jButton_TelaSistemaDeConsultas_Verificar;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel19;
     private javax.swing.JLabel jLabel2;
@@ -431,11 +433,9 @@ public class TelaConsulta extends javax.swing.JFrame {
     private javax.swing.JLabel jLabel4;
     private javax.swing.JLabel jLabel9;
     private javax.swing.JPanel jPanel2;
-    private javax.swing.JPanel jPanel3;
     private javax.swing.JPanel jPanel4;
     private javax.swing.JPanel jPanel5;
     private javax.swing.JPanel jPanel6;
-    private javax.swing.JPanel jPanel9;
     private javax.swing.JRadioButton jRadioButton1;
     private javax.swing.JRadioButton jRadioButton2;
     private javax.swing.JScrollPane jScrollPane3;
@@ -445,7 +445,7 @@ public class TelaConsulta extends javax.swing.JFrame {
     private javax.swing.JTextArea jTextArea1;
     private javax.swing.JTextArea jTextArea5;
     private javax.swing.JTextField jTextField1;
-    private javax.swing.JTextField jTextField2;
+    private javax.swing.JTextField jTextField_SistemaDeConsulta_NomeDoAnimal;
     private javax.swing.JTextPane jTextPane3;
     private javax.swing.JTextPane jTextPane4;
     // End of variables declaration//GEN-END:variables
