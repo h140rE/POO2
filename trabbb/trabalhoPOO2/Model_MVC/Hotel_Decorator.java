@@ -10,10 +10,10 @@ public class Hotel_Decorator extends ServicoDecorator {
         
         private int diaria;
 
-    public Hotel_Decorator(Animal animal,Servicos servico,int diaria) {
-        super(animal);
+    public Hotel_Decorator(Servicos servico,int diaria) {
+        
         this.servico = servico;
-        this.descricao = ", + Hotel";
+        this.descricao = "\n + Hotel";
         this.diaria = diaria;
     }
     

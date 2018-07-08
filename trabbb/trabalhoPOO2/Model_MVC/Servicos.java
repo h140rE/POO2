@@ -3,12 +3,12 @@ package Model_MVC;
 public abstract class Servicos {
 
     protected float preco;
-    private final Animal animal;
+    
     protected String descricao;
 
     //---------------------------------//
-    public Servicos(Animal animal) {
-        this.animal = animal;
+    public Servicos() {
+        
     }
 
     public void setPreco(float preco) {
@@ -19,9 +19,6 @@ public abstract class Servicos {
         return this.preco;
     }
 
-    public Animal getAnimal() { // opcional...
-        return this.animal;
-    }
 
     public String getDescricao() {
         return descricao;

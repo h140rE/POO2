@@ -4,10 +4,10 @@ public class Banho_Decorator extends ServicoDecorator {
 
     private Servicos servico;
 
-    public Banho_Decorator(Animal animal, Servicos servico) {
-        super(animal);
+    public Banho_Decorator(Servicos servico) {
+        
         this.servico = servico;
-        this.descricao = ", + Banho";
+        this.descricao = "\n + Banho";
 
     }
 

@@ -6,18 +6,18 @@ public class ContrataServico {
         }
         
         
-        public Banho_Decorator banho(Servicos recibo,Animal animal){
-            return new Banho_Decorator(animal,recibo);
+        public Banho_Decorator banho(Servicos recibo){
+            return new Banho_Decorator(recibo);
             
         }
-        public Hotel_Decorator hotel(Servicos recibo,Animal animal, int diaria){
-            return new Hotel_Decorator(animal,recibo,diaria);
+        public Hotel_Decorator hotel(Servicos recibo,int diaria){
+            return new Hotel_Decorator(recibo,diaria);
         }
         public Consulta_Decorator consulta(Animal animal,Servicos recibo){
-            return new Consulta_Decorator(animal,recibo);
+            return new Consulta_Decorator(recibo);
         }
         public Tosa_Decorator tosa(Animal animal,Servicos recibo){
-            return new Tosa_Decorator(animal,recibo);
+            return new Tosa_Decorator(recibo);
         }
        
         
