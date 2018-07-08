@@ -28,9 +28,9 @@ public class TelaBanhoTosa extends javax.swing.JFrame {
     private void initComponents() {
 
         jPanel1 = new javax.swing.JPanel();
-        jPanel2 = new javax.swing.JPanel();
+        JPanel_Tela_BanhoeTosa = new javax.swing.JPanel();
         jLabel1 = new javax.swing.JLabel();
-        jPanel3 = new javax.swing.JPanel();
+        JPanel_Tela_BanhoeTosa_VerificarDados = new javax.swing.JPanel();
         jLabel17 = new javax.swing.JLabel();
         jScrollPane1 = new javax.swing.JScrollPane();
         jTextPane1 = new javax.swing.JTextPane();
@@ -38,28 +38,28 @@ public class TelaBanhoTosa extends javax.swing.JFrame {
         jScrollPane2 = new javax.swing.JScrollPane();
         jTextPane2 = new javax.swing.JTextPane();
         jLabel16 = new javax.swing.JLabel();
-        jButton2 = new javax.swing.JButton();
-        jPanel4 = new javax.swing.JPanel();
+        JButton_Tela_BanhoeTosa_VerificarDados_ActionVerificar = new javax.swing.JButton();
+        JPanel_Tela_BanhoeTosa_Info = new javax.swing.JPanel();
         jPanel5 = new javax.swing.JPanel();
         jScrollPane3 = new javax.swing.JScrollPane();
         jTextArea1 = new javax.swing.JTextArea();
         jTextField2 = new javax.swing.JTextField();
         jLabel4 = new javax.swing.JLabel();
-        jPanel6 = new javax.swing.JPanel();
-        jButton1 = new javax.swing.JButton();
-        jButton3 = new javax.swing.JButton();
+        JPanel_Tela_BanhoeTosa_ConfirmarES = new javax.swing.JPanel();
+        JButton_TelaBanhoeTosa_ConfirmarEntrada = new javax.swing.JButton();
+        JButton_TelaBanhoeTosa_ConfirmarSaida = new javax.swing.JButton();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
-        jPanel2.setBackground(new java.awt.Color(204, 255, 255));
-        jPanel2.setForeground(new java.awt.Color(102, 102, 102));
-        jPanel2.setToolTipText("");
+        JPanel_Tela_BanhoeTosa.setBackground(new java.awt.Color(204, 255, 255));
+        JPanel_Tela_BanhoeTosa.setForeground(new java.awt.Color(102, 102, 102));
+        JPanel_Tela_BanhoeTosa.setToolTipText("");
 
         jLabel1.setBackground(new java.awt.Color(0, 0, 0));
         jLabel1.setFont(new java.awt.Font("Yu Gothic UI Light", 0, 36)); // NOI18N
         jLabel1.setText("Banho | Tosa");
 
-        jPanel3.setBackground(new java.awt.Color(245, 245, 245));
+        JPanel_Tela_BanhoeTosa_VerificarDados.setBackground(new java.awt.Color(245, 245, 245));
 
         jLabel17.setFont(new java.awt.Font("Tahoma", 0, 18)); // NOI18N
         jLabel17.setForeground(new java.awt.Color(0, 0, 153));
@@ -76,53 +76,53 @@ public class TelaBanhoTosa extends javax.swing.JFrame {
         jLabel16.setFont(new java.awt.Font("Tahoma", 1, 18)); // NOI18N
         jLabel16.setText("Verificar dados");
 
-        jButton2.setIcon(new javax.swing.ImageIcon("A:\\Bibliotecas\\Documentos\\POO2\\trabbb\\trabalhoPOO2\\View_MVC\\Icons\\icons8-pesquisar-64.png")); // NOI18N
-        jButton2.addActionListener(new java.awt.event.ActionListener() {
+        JButton_Tela_BanhoeTosa_VerificarDados_ActionVerificar.setIcon(new javax.swing.ImageIcon("A:\\Bibliotecas\\Documentos\\POO2\\trabbb\\trabalhoPOO2\\View_MVC\\Icons\\icons8-pesquisar-64.png")); // NOI18N
+        JButton_Tela_BanhoeTosa_VerificarDados_ActionVerificar.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jButton2ActionPerformed(evt);
+                JButton_Tela_BanhoeTosa_VerificarDados_ActionVerificarActionPerformed(evt);
             }
         });
 
-        javax.swing.GroupLayout jPanel3Layout = new javax.swing.GroupLayout(jPanel3);
-        jPanel3.setLayout(jPanel3Layout);
-        jPanel3Layout.setHorizontalGroup(
-            jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(jPanel3Layout.createSequentialGroup()
-                .addGroup(jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(jPanel3Layout.createSequentialGroup()
+        javax.swing.GroupLayout JPanel_Tela_BanhoeTosa_VerificarDadosLayout = new javax.swing.GroupLayout(JPanel_Tela_BanhoeTosa_VerificarDados);
+        JPanel_Tela_BanhoeTosa_VerificarDados.setLayout(JPanel_Tela_BanhoeTosa_VerificarDadosLayout);
+        JPanel_Tela_BanhoeTosa_VerificarDadosLayout.setHorizontalGroup(
+            JPanel_Tela_BanhoeTosa_VerificarDadosLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(JPanel_Tela_BanhoeTosa_VerificarDadosLayout.createSequentialGroup()
+                .addGroup(JPanel_Tela_BanhoeTosa_VerificarDadosLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(JPanel_Tela_BanhoeTosa_VerificarDadosLayout.createSequentialGroup()
                         .addContainerGap()
-                        .addGroup(jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                        .addGroup(JPanel_Tela_BanhoeTosa_VerificarDadosLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                             .addComponent(jLabel16)
-                            .addGroup(jPanel3Layout.createSequentialGroup()
-                                .addGroup(jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addGroup(JPanel_Tela_BanhoeTosa_VerificarDadosLayout.createSequentialGroup()
+                                .addGroup(JPanel_Tela_BanhoeTosa_VerificarDadosLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                                     .addComponent(jLabel17)
-                                    .addGroup(jPanel3Layout.createSequentialGroup()
+                                    .addGroup(JPanel_Tela_BanhoeTosa_VerificarDadosLayout.createSequentialGroup()
                                         .addGap(1, 1, 1)
                                         .addComponent(jLabel18)))
                                 .addGap(38, 38, 38)
-                                .addGroup(jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                                .addGroup(JPanel_Tela_BanhoeTosa_VerificarDadosLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
                                     .addComponent(jScrollPane1)
                                     .addComponent(jScrollPane2, javax.swing.GroupLayout.PREFERRED_SIZE, 150, javax.swing.GroupLayout.PREFERRED_SIZE)))))
-                    .addGroup(jPanel3Layout.createSequentialGroup()
+                    .addGroup(JPanel_Tela_BanhoeTosa_VerificarDadosLayout.createSequentialGroup()
                         .addGap(105, 105, 105)
-                        .addComponent(jButton2)))
+                        .addComponent(JButton_Tela_BanhoeTosa_VerificarDados_ActionVerificar)))
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
-        jPanel3Layout.setVerticalGroup(
-            jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(jPanel3Layout.createSequentialGroup()
+        JPanel_Tela_BanhoeTosa_VerificarDadosLayout.setVerticalGroup(
+            JPanel_Tela_BanhoeTosa_VerificarDadosLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(JPanel_Tela_BanhoeTosa_VerificarDadosLayout.createSequentialGroup()
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                 .addComponent(jLabel16)
                 .addGap(18, 18, 18)
-                .addGroup(jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                .addGroup(JPanel_Tela_BanhoeTosa_VerificarDadosLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
                     .addComponent(jLabel17)
                     .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addGap(23, 23, 23)
-                .addGroup(jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                .addGroup(JPanel_Tela_BanhoeTosa_VerificarDadosLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addComponent(jScrollPane2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(jLabel18))
                 .addGap(29, 29, 29)
-                .addComponent(jButton2)
+                .addComponent(JButton_Tela_BanhoeTosa_VerificarDados_ActionVerificar)
                 .addGap(71, 71, 71))
         );
 
@@ -148,26 +148,26 @@ public class TelaBanhoTosa extends javax.swing.JFrame {
         jLabel4.setFont(new java.awt.Font("Yu Gothic Medium", 0, 18)); // NOI18N
         jLabel4.setText("Animal");
 
-        javax.swing.GroupLayout jPanel4Layout = new javax.swing.GroupLayout(jPanel4);
-        jPanel4.setLayout(jPanel4Layout);
-        jPanel4Layout.setHorizontalGroup(
-            jPanel4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(jPanel4Layout.createSequentialGroup()
+        javax.swing.GroupLayout JPanel_Tela_BanhoeTosa_InfoLayout = new javax.swing.GroupLayout(JPanel_Tela_BanhoeTosa_Info);
+        JPanel_Tela_BanhoeTosa_Info.setLayout(JPanel_Tela_BanhoeTosa_InfoLayout);
+        JPanel_Tela_BanhoeTosa_InfoLayout.setHorizontalGroup(
+            JPanel_Tela_BanhoeTosa_InfoLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(JPanel_Tela_BanhoeTosa_InfoLayout.createSequentialGroup()
                 .addGap(46, 46, 46)
                 .addComponent(jPanel5, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                 .addGap(45, 45, 45))
-            .addGroup(jPanel4Layout.createSequentialGroup()
+            .addGroup(JPanel_Tela_BanhoeTosa_InfoLayout.createSequentialGroup()
                 .addContainerGap()
                 .addComponent(jLabel4)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addComponent(jTextField2, javax.swing.GroupLayout.PREFERRED_SIZE, 125, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
-        jPanel4Layout.setVerticalGroup(
-            jPanel4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel4Layout.createSequentialGroup()
+        JPanel_Tela_BanhoeTosa_InfoLayout.setVerticalGroup(
+            JPanel_Tela_BanhoeTosa_InfoLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, JPanel_Tela_BanhoeTosa_InfoLayout.createSequentialGroup()
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                .addGroup(jPanel4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                .addGroup(JPanel_Tela_BanhoeTosa_InfoLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jLabel4)
                     .addComponent(jTextField2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
@@ -175,70 +175,70 @@ public class TelaBanhoTosa extends javax.swing.JFrame {
                 .addGap(75, 75, 75))
         );
 
-        jButton1.setText("Confirmar entrada");
-        jButton1.addActionListener(new java.awt.event.ActionListener() {
+        JButton_TelaBanhoeTosa_ConfirmarEntrada.setText("Confirmar entrada");
+        JButton_TelaBanhoeTosa_ConfirmarEntrada.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jButton1ActionPerformed(evt);
+                JButton_TelaBanhoeTosa_ConfirmarEntradaActionPerformed(evt);
             }
         });
 
-        jButton3.setText("Confirmar Saida");
-        jButton3.addActionListener(new java.awt.event.ActionListener() {
+        JButton_TelaBanhoeTosa_ConfirmarSaida.setText("Confirmar Saida");
+        JButton_TelaBanhoeTosa_ConfirmarSaida.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jButton3ActionPerformed(evt);
+                JButton_TelaBanhoeTosa_ConfirmarSaidaActionPerformed(evt);
             }
         });
 
-        javax.swing.GroupLayout jPanel6Layout = new javax.swing.GroupLayout(jPanel6);
-        jPanel6.setLayout(jPanel6Layout);
-        jPanel6Layout.setHorizontalGroup(
-            jPanel6Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(jPanel6Layout.createSequentialGroup()
+        javax.swing.GroupLayout JPanel_Tela_BanhoeTosa_ConfirmarESLayout = new javax.swing.GroupLayout(JPanel_Tela_BanhoeTosa_ConfirmarES);
+        JPanel_Tela_BanhoeTosa_ConfirmarES.setLayout(JPanel_Tela_BanhoeTosa_ConfirmarESLayout);
+        JPanel_Tela_BanhoeTosa_ConfirmarESLayout.setHorizontalGroup(
+            JPanel_Tela_BanhoeTosa_ConfirmarESLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(JPanel_Tela_BanhoeTosa_ConfirmarESLayout.createSequentialGroup()
                 .addGap(46, 46, 46)
-                .addComponent(jButton1)
+                .addComponent(JButton_TelaBanhoeTosa_ConfirmarEntrada)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                .addComponent(jButton3)
+                .addComponent(JButton_TelaBanhoeTosa_ConfirmarSaida)
                 .addGap(38, 38, 38))
         );
-        jPanel6Layout.setVerticalGroup(
-            jPanel6Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel6Layout.createSequentialGroup()
+        JPanel_Tela_BanhoeTosa_ConfirmarESLayout.setVerticalGroup(
+            JPanel_Tela_BanhoeTosa_ConfirmarESLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, JPanel_Tela_BanhoeTosa_ConfirmarESLayout.createSequentialGroup()
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                .addGroup(jPanel6Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(jButton1)
-                    .addComponent(jButton3))
+                .addGroup(JPanel_Tela_BanhoeTosa_ConfirmarESLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(JButton_TelaBanhoeTosa_ConfirmarEntrada)
+                    .addComponent(JButton_TelaBanhoeTosa_ConfirmarSaida))
                 .addContainerGap())
         );
 
-        javax.swing.GroupLayout jPanel2Layout = new javax.swing.GroupLayout(jPanel2);
-        jPanel2.setLayout(jPanel2Layout);
-        jPanel2Layout.setHorizontalGroup(
-            jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(jPanel2Layout.createSequentialGroup()
+        javax.swing.GroupLayout JPanel_Tela_BanhoeTosaLayout = new javax.swing.GroupLayout(JPanel_Tela_BanhoeTosa);
+        JPanel_Tela_BanhoeTosa.setLayout(JPanel_Tela_BanhoeTosaLayout);
+        JPanel_Tela_BanhoeTosaLayout.setHorizontalGroup(
+            JPanel_Tela_BanhoeTosaLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(JPanel_Tela_BanhoeTosaLayout.createSequentialGroup()
                 .addContainerGap()
-                .addComponent(jPanel3, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addComponent(JPanel_Tela_BanhoeTosa_VerificarDados, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(jPanel2Layout.createSequentialGroup()
+                .addGroup(JPanel_Tela_BanhoeTosaLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(JPanel_Tela_BanhoeTosaLayout.createSequentialGroup()
                         .addComponent(jLabel1)
                         .addGap(0, 0, Short.MAX_VALUE))
-                    .addComponent(jPanel6, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                    .addComponent(jPanel4, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                    .addComponent(JPanel_Tela_BanhoeTosa_ConfirmarES, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                    .addComponent(JPanel_Tela_BanhoeTosa_Info, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
                 .addContainerGap())
         );
-        jPanel2Layout.setVerticalGroup(
-            jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(jPanel2Layout.createSequentialGroup()
+        JPanel_Tela_BanhoeTosaLayout.setVerticalGroup(
+            JPanel_Tela_BanhoeTosaLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(JPanel_Tela_BanhoeTosaLayout.createSequentialGroup()
                 .addContainerGap()
                 .addComponent(jLabel1)
                 .addGap(18, 18, 18)
-                .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(jPanel4, javax.swing.GroupLayout.PREFERRED_SIZE, 273, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addGroup(jPanel2Layout.createSequentialGroup()
+                .addGroup(JPanel_Tela_BanhoeTosaLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(JPanel_Tela_BanhoeTosa_Info, javax.swing.GroupLayout.PREFERRED_SIZE, 273, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addGroup(JPanel_Tela_BanhoeTosaLayout.createSequentialGroup()
                         .addGap(9, 9, 9)
-                        .addComponent(jPanel3, javax.swing.GroupLayout.PREFERRED_SIZE, 250, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                        .addComponent(JPanel_Tela_BanhoeTosa_VerificarDados, javax.swing.GroupLayout.PREFERRED_SIZE, 250, javax.swing.GroupLayout.PREFERRED_SIZE)))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                .addComponent(jPanel6, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addComponent(JPanel_Tela_BanhoeTosa_ConfirmarES, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(51, 51, 51))
         );
 
@@ -246,11 +246,11 @@ public class TelaBanhoTosa extends javax.swing.JFrame {
         jPanel1.setLayout(jPanel1Layout);
         jPanel1Layout.setHorizontalGroup(
             jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(jPanel2, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+            .addComponent(JPanel_Tela_BanhoeTosa, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
         );
         jPanel1Layout.setVerticalGroup(
             jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(jPanel2, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+            .addComponent(JPanel_Tela_BanhoeTosa, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
         );
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
@@ -269,17 +269,17 @@ public class TelaBanhoTosa extends javax.swing.JFrame {
         pack();
     }// </editor-fold>//GEN-END:initComponents
 
-    private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
+    private void JButton_TelaBanhoeTosa_ConfirmarEntradaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_JButton_TelaBanhoeTosa_ConfirmarEntradaActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_jButton1ActionPerformed
+    }//GEN-LAST:event_JButton_TelaBanhoeTosa_ConfirmarEntradaActionPerformed
 
-    private void jButton2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton2ActionPerformed
+    private void JButton_Tela_BanhoeTosa_VerificarDados_ActionVerificarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_JButton_Tela_BanhoeTosa_VerificarDados_ActionVerificarActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_jButton2ActionPerformed
+    }//GEN-LAST:event_JButton_Tela_BanhoeTosa_VerificarDados_ActionVerificarActionPerformed
 
-    private void jButton3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton3ActionPerformed
+    private void JButton_TelaBanhoeTosa_ConfirmarSaidaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_JButton_TelaBanhoeTosa_ConfirmarSaidaActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_jButton3ActionPerformed
+    }//GEN-LAST:event_JButton_TelaBanhoeTosa_ConfirmarSaidaActionPerformed
 
     /**
      * @param args the command line arguments
@@ -317,20 +317,20 @@ public class TelaBanhoTosa extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
-    private javax.swing.JButton jButton1;
-    private javax.swing.JButton jButton2;
-    private javax.swing.JButton jButton3;
+    private javax.swing.JButton JButton_TelaBanhoeTosa_ConfirmarEntrada;
+    private javax.swing.JButton JButton_TelaBanhoeTosa_ConfirmarSaida;
+    private javax.swing.JButton JButton_Tela_BanhoeTosa_VerificarDados_ActionVerificar;
+    private javax.swing.JPanel JPanel_Tela_BanhoeTosa;
+    private javax.swing.JPanel JPanel_Tela_BanhoeTosa_ConfirmarES;
+    private javax.swing.JPanel JPanel_Tela_BanhoeTosa_Info;
+    private javax.swing.JPanel JPanel_Tela_BanhoeTosa_VerificarDados;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel16;
     private javax.swing.JLabel jLabel17;
     private javax.swing.JLabel jLabel18;
     private javax.swing.JLabel jLabel4;
     private javax.swing.JPanel jPanel1;
-    private javax.swing.JPanel jPanel2;
-    private javax.swing.JPanel jPanel3;
-    private javax.swing.JPanel jPanel4;
     private javax.swing.JPanel jPanel5;
-    private javax.swing.JPanel jPanel6;
     private javax.swing.JScrollPane jScrollPane1;
     private javax.swing.JScrollPane jScrollPane2;
     private javax.swing.JScrollPane jScrollPane3;
