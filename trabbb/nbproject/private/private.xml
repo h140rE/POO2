@@ -2,30 +2,17 @@
 <project-private xmlns="http://www.netbeans.org/ns/project-private/1">
     <editor-bookmarks xmlns="http://www.netbeans.org/ns/editor-bookmarks/2" lastBookmarkId="0"/>
     <open-files xmlns="http://www.netbeans.org/ns/projectui-open-files/2">
-<<<<<<< HEAD
-        <group/>
-=======
         <group>
-            <file>file:/A:/Bibliotecas/Documentos/POO2/trabbb/trabalhoPOO2/Model_MVC/Tosa_Decorator.java</file>
-            <file>file:/A:/Bibliotecas/Documentos/POO2/trabbb/trabalhoPOO2/Model_MVC/Recibo.java</file>
-            <file>file:/A:/Bibliotecas/Documentos/POO2/trabbb/trabalhoPOO2/View_MVC/TelaVendas.java</file>
-            <file>file:/A:/Bibliotecas/Documentos/POO2/trabbb/trabalhoPOO2/View_MVC/TelaBanhoTosa.java</file>
-            <file>file:/A:/Bibliotecas/Documentos/POO2/trabbb/trabalhoPOO2/Controller_MVC/ControllerPet.java</file>
-            <file>file:/A:/Bibliotecas/Documentos/POO2/trabbb/trabalhoPOO2/View_MVC/TelaPrincipal.java</file>
-            <file>file:/A:/Bibliotecas/Documentos/POO2/trabbb/trabalhoPOO2/Model_MVC/Pessoa.java</file>
-            <file>file:/A:/Bibliotecas/Documentos/POO2/trabbb/trabalhoPOO2/View_MVC/TelaConsulta.java</file>
-            <file>file:/A:/Bibliotecas/Documentos/POO2/trabbb/trabalhoPOO2/Model_MVC/Funcionario.java</file>
-            <file>file:/A:/Bibliotecas/Documentos/POO2/trabbb/trabalhoPOO2/Main/TrabalhoPoo.java</file>
-            <file>file:/A:/Bibliotecas/Documentos/POO2/trabbb/trabalhoPOO2/Model_MVC/Cuidador.java</file>
-            <file>file:/A:/Bibliotecas/Documentos/POO2/trabbb/trabalhoPOO2/Model_MVC/Servicos.java</file>
-            <file>file:/A:/Bibliotecas/Documentos/POO2/trabbb/trabalhoPOO2/Model_MVC/Animal.java</file>
-            <file>file:/A:/Bibliotecas/Documentos/POO2/trabbb/trabalhoPOO2/View_MVC/TelaAtendente.java</file>
-            <file>file:/A:/Bibliotecas/Documentos/POO2/trabbb/trabalhoPOO2/Model_MVC/Atendente.java</file>
-            <file>file:/A:/Bibliotecas/Documentos/POO2/trabbb/trabalhoPOO2/Model_MVC/Veterinario.java</file>
-            <file>file:/A:/Bibliotecas/Documentos/POO2/trabbb/trabalhoPOO2/View_MVC/TelaFuncionalidades.java</file>
-            <file>file:/A:/Bibliotecas/Documentos/POO2/trabbb/trabalhoPOO2/View_MVC/TelaHotel.java</file>
-            <file>file:/A:/Bibliotecas/Documentos/POO2/trabbb/trabalhoPOO2/Model_MVC/ServicoDecorator.java</file>
+            <file>file:/C:/Users/higor/Documents/zikapet/trabbb/trabalhoPOO2/Controller_MVC/Recibo.java</file>
+            <file>file:/C:/Users/higor/Documents/zikapet/trabbb/trabalhoPOO2/Controller_MVC/Consulta_Decorator.java</file>
+            <file>file:/C:/Users/higor/Documents/zikapet/trabbb/trabalhoPOO2/Controller_MVC/Servicos.java</file>
+            <file>file:/C:/Users/higor/Documents/zikapet/trabbb/trabalhoPOO2/Controller_MVC/ContrataServico.java</file>
+            <file>file:/C:/Users/higor/Documents/zikapet/trabbb/trabalhoPOO2/Main/TrabalhoPoo.java</file>
+            <file>file:/C:/Users/higor/Documents/zikapet/trabbb/trabalhoPOO2/Controller_MVC/Banho_Decorator.java</file>
+            <file>file:/C:/Users/higor/Documents/zikapet/trabbb/trabalhoPOO2/Controller_MVC/Cliente.java</file>
+            <file>file:/C:/Users/higor/Documents/zikapet/trabbb/trabalhoPOO2/Controller_MVC/Pessoa.java</file>
+            <file>file:/C:/Users/higor/Documents/zikapet/trabbb/trabalhoPOO2/Controller_MVC/Hotel_Decorator.java</file>
+            <file>file:/C:/Users/higor/Documents/zikapet/trabbb/trabalhoPOO2/Controller_MVC/Tosa_Decorator.java</file>
         </group>
->>>>>>> refs/remotes/origin/master
     </open-files>
 </project-private>

@@ -6,6 +6,7 @@
 package Main;
 import Controller_MVC.Animal;
 import Controller_MVC.Cao;
+import Controller_MVC.Cliente;
 import Model_MVR.ControllerPet;
 /**
  *
@@ -18,6 +19,7 @@ public class TrabalhoPoo {
      */
     public static void main(String[] args) {
         Animal animal1;
+        Cliente cliente;
         animal1 = new Cao("Pedro", "lilica", "vira-lata");
         animal1.estadoAtual();
         //animal1.getEstado().setEstadoAguardando();
@@ -25,7 +27,13 @@ public class TrabalhoPoo {
         animal1.estadoAtual();
         animal1.getEstado().setEstadoEmEstadia();
         animal1.estadoAtual();
-        ControllerPet  controller = new ControllerPet();
+        cliente = new Cliente();
+        cliente.animais.add(animal1);
+        //cliente.contrataServicos().banho(cliente.animais.get(0));
+        cliente.contrataServicos().consulta();
+        cliente.contrataServicos().hotel(3);
+        cliente.contrataServicos().getRecibo();
+        
        
  
     }
