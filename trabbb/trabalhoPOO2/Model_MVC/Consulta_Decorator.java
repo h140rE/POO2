@@ -6,10 +6,10 @@ public class Consulta_Decorator extends ServicoDecorator {
 
     private Veterinario veterinario;
 
-    public Consulta_Decorator(Animal animal, Servicos servico) {
-        super(animal);
+    public Consulta_Decorator(Servicos servico) {
+        
         this.servico = servico;
-        this.descricao = ", + Consulta";
+        this.descricao = "\n + Consulta";
 
     }
 

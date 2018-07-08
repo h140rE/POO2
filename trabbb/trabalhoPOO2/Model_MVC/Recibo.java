@@ -4,8 +4,8 @@ public class Recibo extends Servicos {
 
 	
 
-    public Recibo(Animal animal) {
-        super(animal);
+    public Recibo() {
+        
         this.setPreco(0);
         this.descricao = "Recibo";
     }

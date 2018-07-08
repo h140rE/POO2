@@ -40,7 +40,7 @@ public class TrabalhoPoo {
        
        System.out.println(s.pagar()); 
        System.out.println(s.getDescricao());   
- 
+       
     }
     
 }

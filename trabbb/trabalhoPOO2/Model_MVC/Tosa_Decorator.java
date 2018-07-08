@@ -4,10 +4,10 @@ public class Tosa_Decorator extends ServicoDecorator {
 
     private Servicos servico;
 
-    public Tosa_Decorator(Animal animal, Servicos servico) {
-        super(animal);
+    public Tosa_Decorator(Servicos servico) {
+        
         this.servico = servico;
-        this.descricao = ", + Tosa";
+        this.descricao = "\n + Tosa";
     }
 
     @Override

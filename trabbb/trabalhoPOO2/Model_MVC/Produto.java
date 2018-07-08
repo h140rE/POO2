@@ -6,8 +6,8 @@ public class Produto extends Vendas_Decorator {
         
     private float preco;
     
-    public Produto(Animal animal, Servicos servico,float preco,String descricao) {
-        super(animal);
+    public Produto(Servicos servico,float preco,String descricao) {
+        
         this.servico = servico;
         this.descricao = descricao;
         this.preco = preco;
