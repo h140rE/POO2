@@ -5,6 +5,13 @@
  */
 package View_MVC;
 
+import javax.swing.JButton;
+import javax.swing.JOptionPane;
+import javax.swing.JPanel;
+import javax.swing.JTextField;
+import Controller_MVC.*;
+import java.awt.event.ActionListener;
+
 /**
  *
  * @author xpimenta
@@ -147,6 +154,12 @@ public class TelaAtendente extends javax.swing.JFrame {
             }
         });
 
+        jTextField2.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jTextField2ActionPerformed(evt);
+            }
+        });
+
         jTextField3.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jTextField3ActionPerformed(evt);
@@ -177,14 +190,12 @@ public class TelaAtendente extends javax.swing.JFrame {
             }
         });
 
-        JButton_MenuPrincipal_Cadastro_Cancelar.setIcon(new javax.swing.ImageIcon("A:\\Bibliotecas\\Documentos\\POO2\\trabbb\\trabalhoPOO2\\View_MVC\\Icons\\icons8-cancel-64.png")); // NOI18N
         JButton_MenuPrincipal_Cadastro_Cancelar.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 JButton_MenuPrincipal_Cadastro_CancelarActionPerformed(evt);
             }
         });
 
-        JButton_MenuPrincipal_Cadastro_Conformar.setIcon(new javax.swing.ImageIcon("A:\\Bibliotecas\\Documentos\\POO2\\trabbb\\trabalhoPOO2\\View_MVC\\Icons\\icons8-checkmark-64.png")); // NOI18N
         JButton_MenuPrincipal_Cadastro_Conformar.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 JButton_MenuPrincipal_Cadastro_ConformarActionPerformed(evt);
@@ -293,8 +304,6 @@ public class TelaAtendente extends javax.swing.JFrame {
 
         jScrollPane3.setViewportView(jTextPane3);
 
-        JButton_MenuPrincipal_MarcaConsulta_Pesquisar.setIcon(new javax.swing.ImageIcon("A:\\Bibliotecas\\Documentos\\POO2\\trabbb\\trabalhoPOO2\\View_MVC\\Icons\\icons8-pesquisar-64.png")); // NOI18N
-
         javax.swing.GroupLayout JPanel_MenuPrincipal_MarcaConsultaLayout = new javax.swing.GroupLayout(JPanel_MenuPrincipal_MarcaConsulta);
         JPanel_MenuPrincipal_MarcaConsulta.setLayout(JPanel_MenuPrincipal_MarcaConsultaLayout);
         JPanel_MenuPrincipal_MarcaConsultaLayout.setHorizontalGroup(
@@ -352,8 +361,6 @@ public class TelaAtendente extends javax.swing.JFrame {
 
         jLabel19.setFont(new java.awt.Font("Yu Gothic UI Light", 0, 36)); // NOI18N
         jLabel19.setText("Sistema de Vendas");
-
-        JButton_MenuPrincipal_SistemadeVendas_Carrinho.setIcon(new javax.swing.ImageIcon("A:\\Bibliotecas\\Documentos\\POO2\\trabbb\\trabalhoPOO2\\View_MVC\\Icons\\icons8-shopping-cart-64.png")); // NOI18N
 
         javax.swing.GroupLayout JPanel_MenuPrincipal_SistemasdeVendasLayout = new javax.swing.GroupLayout(JPanel_MenuPrincipal_SistemasdeVendas);
         JPanel_MenuPrincipal_SistemasdeVendas.setLayout(JPanel_MenuPrincipal_SistemasdeVendasLayout);
@@ -444,16 +451,35 @@ public class TelaAtendente extends javax.swing.JFrame {
     }//GEN-LAST:event_jTextField1ActionPerformed
 
     private void JButton_MenuPrincipal_Cadastro_ConformarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_JButton_MenuPrincipal_Cadastro_ConformarActionPerformed
-        // TODO add your handling code here:
+      //JOptionPane.showMessageDialog(null,"conformar");
     }//GEN-LAST:event_JButton_MenuPrincipal_Cadastro_ConformarActionPerformed
 
     private void JButton_MenuPrincipal_Cadastro_CancelarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_JButton_MenuPrincipal_Cadastro_CancelarActionPerformed
-        // TODO add your handling code here:
+     // JOptionPane.showMessageDialog(null,"cancelar");
     }//GEN-LAST:event_JButton_MenuPrincipal_Cadastro_CancelarActionPerformed
 
-    /**
-     * @param args the command line arguments
-     */
+    private void jTextField2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jTextField2ActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_jTextField2ActionPerformed
+
+    public JTextField getjTextField1() {
+        return jTextField1;
+    }
+
+    public JTextField getjTextField2() {
+        return jTextField2;
+    }
+
+    public JTextField getjTextField3() {
+        return jTextField3;
+    }
+
+    public JButton getJButton_MenuPrincipal_Cadastro_Conformar() {
+        return JButton_MenuPrincipal_Cadastro_Conformar;
+    }
+
+ 
+
     public static void main(String args[]) {
         /* Set the Nimbus look and feel */
         //<editor-fold defaultstate="collapsed" desc=" Look and feel setting code (optional) ">

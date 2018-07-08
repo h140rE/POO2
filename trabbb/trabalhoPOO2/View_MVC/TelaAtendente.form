@@ -336,6 +336,9 @@
               </Events>
             </Component>
             <Component class="javax.swing.JTextField" name="jTextField2">
+              <Events>
+                <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="jTextField2ActionPerformed"/>
+              </Events>
             </Component>
             <Component class="javax.swing.JTextField" name="jTextField3">
               <Events>
@@ -385,21 +388,11 @@
               </Events>
             </Component>
             <Component class="javax.swing.JButton" name="JButton_MenuPrincipal_Cadastro_Cancelar">
-              <Properties>
-                <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
-                  <Image iconType="2" name="A:\Bibliotecas\Documentos\POO2\trabbb\trabalhoPOO2\View_MVC\Icons\icons8-cancel-64.png"/>
-                </Property>
-              </Properties>
               <Events>
                 <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="JButton_MenuPrincipal_Cadastro_CancelarActionPerformed"/>
               </Events>
             </Component>
             <Component class="javax.swing.JButton" name="JButton_MenuPrincipal_Cadastro_Conformar">
-              <Properties>
-                <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
-                  <Image iconType="2" name="A:\Bibliotecas\Documentos\POO2\trabbb\trabalhoPOO2\View_MVC\Icons\icons8-checkmark-64.png"/>
-                </Property>
-              </Properties>
               <Events>
                 <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="JButton_MenuPrincipal_Cadastro_ConformarActionPerformed"/>
               </Events>
@@ -550,11 +543,6 @@
               </SubComponents>
             </Container>
             <Component class="javax.swing.JButton" name="JButton_MenuPrincipal_MarcaConsulta_Pesquisar">
-              <Properties>
-                <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
-                  <Image iconType="2" name="A:\Bibliotecas\Documentos\POO2\trabbb\trabalhoPOO2\View_MVC\Icons\icons8-pesquisar-64.png"/>
-                </Property>
-              </Properties>
             </Component>
           </SubComponents>
         </Container>
@@ -601,11 +589,6 @@
               </Properties>
             </Component>
             <Component class="javax.swing.JButton" name="JButton_MenuPrincipal_SistemadeVendas_Carrinho">
-              <Properties>
-                <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
-                  <Image iconType="2" name="A:\Bibliotecas\Documentos\POO2\trabbb\trabalhoPOO2\View_MVC\Icons\icons8-shopping-cart-64.png"/>
-                </Property>
-              </Properties>
             </Component>
           </SubComponents>
         </Container>

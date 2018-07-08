@@ -1,5 +1,7 @@
 package Model_MVC;
 
+import javax.swing.JOptionPane;
+
 public class Atendente extends Funcionario {
 
 	public void atende() {
@@ -26,4 +28,8 @@ public class Atendente extends Funcionario {
 
 	}
 
+        public void cadastrar(String Nome,String CPF,String Telefone){
+            JOptionPane.showMessageDialog(null,"Cadastrado no Banco: "+ Nome + " " + CPF + " " + Telefone);
+        }
+        
 }
