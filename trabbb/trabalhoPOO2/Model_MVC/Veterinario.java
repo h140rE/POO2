@@ -9,7 +9,7 @@ public class Veterinario extends Funcionario {
     }
 
 	public void encaminha(Animal animal) {
-
+               
 	}
 
 	public void fazConsulta(Animal animal) {

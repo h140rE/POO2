@@ -24,8 +24,8 @@ public class Atendente extends Funcionario {
 		return false;
 	}
 
-	public void Imprime(Recibo r) {
-
+	public void Imprime(Cliente cliente) {
+                System.out.println(cliente.imprimeRecibo());
 	}
 
 	public void marcaConsulta(String CPFDono,String data,String hora) {

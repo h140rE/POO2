@@ -5,11 +5,14 @@ public class Consulta_Decorator extends ServicoDecorator {
     private Servicos servico;
 
     private Veterinario veterinario;
+    
+    private ListaConsulta consulta;
 
-    public Consulta_Decorator(Servicos servico) {
+    public Consulta_Decorator(Servicos servico,Animal animal) {
         this.setPreco(60);
         this.servico = servico;
         this.descricao = "\n + Consulta \t\t" + this.getPreco();
+        this.listaConsulta(animal);
 
     }
 
@@ -28,7 +31,7 @@ public class Consulta_Decorator extends ServicoDecorator {
     }
 
     public void listaConsulta(Animal animal) {
-
+          
     }
 
     public void listaRemedios() {
