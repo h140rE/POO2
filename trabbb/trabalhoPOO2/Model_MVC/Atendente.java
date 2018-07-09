@@ -1,5 +1,7 @@
 package Model_MVC;
 
+import javax.swing.JOptionPane;
+
 public class Atendente extends Funcionario {
 
 	public void atende() {
@@ -22,8 +24,15 @@ public class Atendente extends Funcionario {
 
 	}
 
-	public void marcaConsulta(String data) {
-
+	public void marcaConsulta(String CPFDono,String data,String hora) {
+            JOptionPane.showMessageDialog(null,"Marcado Consulta: "+ CPFDono + " " + data + " " + hora);
 	}
 
+        public void cadastrar(String Nome,String CPF,String Telefone,String NomeCachorro,String Raca){
+            JOptionPane.showMessageDialog(null,"Cadastrado no Banco: "+ Nome + " " + CPF + " " + Telefone + " " + NomeCachorro + " " + Raca);
+        }
+        
+        public Recibo criaRecibo(){
+            return new Recibo();
+        }
 }

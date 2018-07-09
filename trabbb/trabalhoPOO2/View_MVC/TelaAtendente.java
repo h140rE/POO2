@@ -5,6 +5,14 @@
  */
 package View_MVC;
 
+import javax.swing.JButton;
+import javax.swing.JOptionPane;
+import javax.swing.JPanel;
+import javax.swing.JTextField;
+import Controller_MVC.*;
+import java.awt.event.ActionListener;
+import javax.swing.JTextPane;
+
 /**
  *
  * @author xpimenta
@@ -119,8 +127,6 @@ public class TelaAtendente extends javax.swing.JFrame {
                 .addGap(0, 0, Short.MAX_VALUE))
         );
 
-        setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
-
         JButton_MenuPrincipal.setBackground(new java.awt.Color(176, 224, 230));
 
         jLabel1.setFont(new java.awt.Font("Yu Gothic Light", 1, 48)); // NOI18N
@@ -144,6 +150,12 @@ public class TelaAtendente extends javax.swing.JFrame {
         jTextField1.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jTextField1ActionPerformed(evt);
+            }
+        });
+
+        jTextField2.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jTextField2ActionPerformed(evt);
             }
         });
 
@@ -264,7 +276,7 @@ public class TelaAtendente extends javax.swing.JFrame {
                         .addGroup(JPanel_MenuPrincipal_CadastroLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                             .addComponent(jLabel9)
                             .addComponent(jTextField5, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 31, Short.MAX_VALUE)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                         .addComponent(JButton_MenuPrincipal_Cadastro_Cancelar))
                     .addGroup(JPanel_MenuPrincipal_CadastroLayout.createSequentialGroup()
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
@@ -345,7 +357,7 @@ public class TelaAtendente extends javax.swing.JFrame {
                         .addComponent(jLabel20)))
                 .addGap(31, 31, 31)
                 .addComponent(JButton_MenuPrincipal_MarcaConsulta_Pesquisar)
-                .addContainerGap(42, Short.MAX_VALUE))
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
 
         JPanel_MenuPrincipal_SistemasdeVendas.setBackground(new java.awt.Color(250, 255, 240));
@@ -374,7 +386,7 @@ public class TelaAtendente extends javax.swing.JFrame {
                 .addComponent(jLabel19)
                 .addGap(32, 32, 32)
                 .addComponent(JButton_MenuPrincipal_SistemadeVendas_Carrinho)
-                .addContainerGap(38, Short.MAX_VALUE))
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
 
         javax.swing.GroupLayout JButton_MenuPrincipalLayout = new javax.swing.GroupLayout(JButton_MenuPrincipal);
@@ -444,16 +456,68 @@ public class TelaAtendente extends javax.swing.JFrame {
     }//GEN-LAST:event_jTextField1ActionPerformed
 
     private void JButton_MenuPrincipal_Cadastro_ConformarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_JButton_MenuPrincipal_Cadastro_ConformarActionPerformed
-        // TODO add your handling code here:
+      //JOptionPane.showMessageDialog(null,"conformar");
     }//GEN-LAST:event_JButton_MenuPrincipal_Cadastro_ConformarActionPerformed
 
     private void JButton_MenuPrincipal_Cadastro_CancelarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_JButton_MenuPrincipal_Cadastro_CancelarActionPerformed
-        // TODO add your handling code here:
+     // JOptionPane.showMessageDialog(null,"cancelar");
     }//GEN-LAST:event_JButton_MenuPrincipal_Cadastro_CancelarActionPerformed
 
-    /**
-     * @param args the command line arguments
-     */
+    private void jTextField2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jTextField2ActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_jTextField2ActionPerformed
+
+    public JTextField getjTextField1() {
+        return jTextField1;
+    }
+
+    public JTextField getjTextField2() {
+        return jTextField2;
+    }
+
+    public JTextField getjTextField3() {
+        return jTextField3;
+    }
+
+    public JTextField getjTextField4() {
+        return jTextField4;
+    }
+
+    public JTextField getjTextField5() {
+        return jTextField5;
+    }
+   
+    public JButton getJButton_MenuPrincipal_Cadastro_Conformar() {
+        return JButton_MenuPrincipal_Cadastro_Conformar;
+    }
+
+    public JButton getJButton_MenuPrincipal_Cadastro_Cancelar() {
+        return JButton_MenuPrincipal_Cadastro_Cancelar;
+    }
+
+    public JTextPane getjTextPane1() {
+        return jTextPane1;
+    }
+
+    public JTextPane getjTextPane2() {
+        return jTextPane2;
+    }
+
+    public JTextPane getjTextPane3() {
+        return jTextPane3;
+    }
+
+    public JButton getJButton_MenuPrincipal_MarcaConsulta_Pesquisar() {
+        return JButton_MenuPrincipal_MarcaConsulta_Pesquisar;
+    }
+
+    public JButton getJButton_MenuPrincipal_SistemadeVendas_Carrinho() {
+        return JButton_MenuPrincipal_SistemadeVendas_Carrinho;
+    }
+
+    
+ 
+
     public static void main(String args[]) {
         /* Set the Nimbus look and feel */
         //<editor-fold defaultstate="collapsed" desc=" Look and feel setting code (optional) ">
