@@ -2,16 +2,14 @@ package Model_MVC;
 
 public class Animal {
 
-    private String nomeDono;
-    private String cpfDono;
     private String nomeAnimal;
 
     private String raca;
 
     private State estado;
+    public String tipo;
 
-    public Animal(String nomeDono, String nomeAnimal, String raca) {
-        this.nomeDono = nomeDono;
+    public Animal(String nomeAnimal, String raca) {
         this.nomeAnimal = nomeAnimal;
         this.raca = raca;
         this.setEstado(new Aguardando(this));
@@ -30,7 +28,7 @@ public class Animal {
     }
 
     public String dadosAnimal() {
-        String temp = "Nome Dono: " + nomeDono + "\nNome Animal:" + nomeAnimal + "\nRaca:" + this.raca;
+        String temp = "Animal: " + nomeAnimal + "\t" + "Raca: " + this.raca;
         return temp;
     }
 

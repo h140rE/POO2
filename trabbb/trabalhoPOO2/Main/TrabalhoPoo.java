@@ -8,8 +8,8 @@ public class TrabalhoPoo {
 
     public static void main(String[] args) {
 
-        Animal animal1;
-        animal1 = new Cao("Pedro", "lilica", "vira-lata");
+        
+        
         /*
         animal1.estadoAtual();
         //animal1.getEstado().setEstadoAguardando();
@@ -72,8 +72,12 @@ public class TrabalhoPoo {
         Atendente at = new Atendente("Joao", 321, 1233-1233, 1);
         ContrataServico c = new ContrataServico();
         
-        cli.setRecibo(at.criaRecibo());
+        cli.AdicionaAnimal("lilica", "vira-lata", "cao");
+        cli.AdicionaAnimal("xanim", "siames", "gato");
+        cli.AdicionaAnimal("julio", "pit-bull", "cao");
         
+        cli.setRecibo(at.criaRecibo());
+        cli.listaAnimais();
         cli.setRecibo(c.banho(cli.getRecibo()));
         cli.setRecibo(c.consulta(cli.getRecibo()));
         cli.setRecibo(c.hotel(cli.getRecibo(), 5));

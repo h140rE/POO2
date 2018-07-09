@@ -38,5 +38,24 @@ public class Cliente extends Pessoa {
         String auxiliar =  recibo.getDescricao() + "\n Total a pagar: R$" + this.recibo.pagar();
                 return auxiliar;
     }
+    public void AdicionaAnimal(String nome, String raca, String tipo){
+        if(tipo == "cao"){
+            animais.add(new Cao(nome,raca));
+        }
+        else if(tipo == "gato"){
+            animais.add(new Gato(nome,raca));
+        }
+        else{
+            System.out.println("Tipo invalido");
+    }
+        
+    }
+    
+    public void listaAnimais(){
+        System.out.println("Cliente:" + this.getNome());
+        for(int i=0; i < animais.size(); i++){
+            System.out.println(animais.get(i).dadosAnimal() +"\t Tipo: " + animais.get(i).tipo );
+        }
+    }
  
 }
