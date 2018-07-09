@@ -5,6 +5,12 @@
  */
 package View_MVC;
 
+import javax.swing.JButton;
+import javax.swing.JRadioButton;
+import javax.swing.JTextArea;
+import javax.swing.JTextField;
+import javax.swing.JTextPane;
+
 /**
  *
  * @author xpimenta
@@ -16,6 +22,54 @@ public class TelaVendaServico extends javax.swing.JFrame {
      */
     public TelaVendaServico() {
         initComponents();
+    }
+
+    public JButton getjButton1() {
+        return jButton1;
+    }
+
+    public JButton getjButton2() {
+        return jButton2;
+    }
+
+    public JButton getjButton3() {
+        return jButton3;
+    }
+
+    public JRadioButton getjRadioButton1() {
+        return jRadioButton1;
+    }
+
+    public JRadioButton getjRadioButton2() {
+        return jRadioButton2;
+    }
+
+    public JRadioButton getjRadioButton3() {
+        return jRadioButton3;
+    }
+
+    public JTextArea getjTextArea1() {
+        return jTextArea1;
+    }
+
+    public JTextArea getjTextArea3() {
+        return jTextArea3;
+    }
+
+    public JTextField getjTextField3() {
+        return jTextField3;
+    }
+
+    public JTextField getjTextField4() {
+        return jTextField4;
+    }
+
+    public JTextPane getjTextPane3() {
+        return jTextPane3;
+    }
+
+    public JTextPane getjTextPane4() {
+        return jTextPane4;
     }
 
     /**

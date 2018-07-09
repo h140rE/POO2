@@ -5,6 +5,11 @@
  */
 package View_MVC;
 
+import javax.swing.JButton;
+import javax.swing.JTextArea;
+import javax.swing.JTextField;
+import javax.swing.JTextPane;
+
 /**
  *
  * @author xpimenta
@@ -261,6 +266,34 @@ public class TelaHBT extends javax.swing.JFrame {
     private void jButton2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton2ActionPerformed
         // TODO add your handling code here:
     }//GEN-LAST:event_jButton2ActionPerformed
+
+    public JButton getjButton2() {
+        return jButton2;
+    }
+
+    public JButton getjButton3() {
+        return jButton3;
+    }
+
+    public JButton getjButton4() {
+        return jButton4;
+    }
+
+    public JTextArea getjTextArea1() {
+        return jTextArea1;
+    }
+
+    public JTextField getjTextField3() {
+        return jTextField3;
+    }
+
+    public JTextPane getjTextPane3() {
+        return jTextPane3;
+    }
+
+    public JTextPane getjTextPane4() {
+        return jTextPane4;
+    }
 
     /**
      * @param args the command line arguments

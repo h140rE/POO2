@@ -5,6 +5,11 @@
  */
 package View_MVC;
 
+import javax.swing.JButton;
+import javax.swing.JTextArea;
+import javax.swing.JTextField;
+import javax.swing.JTextPane;
+
 /**
  *
  * @author xpimenta
@@ -16,6 +21,38 @@ public class TelaVendasProdutos extends javax.swing.JFrame {
      */
     public TelaVendasProdutos() {
         initComponents();
+    }
+
+    public JButton getjButton1() {
+        return jButton1;
+    }
+
+    public JButton getjButton2() {
+        return jButton2;
+    }
+
+    public JButton getjButton3() {
+        return jButton3;
+    }
+
+    public JTextArea getjTextArea1() {
+        return jTextArea1;
+    }
+
+    public JTextArea getjTextArea3() {
+        return jTextArea3;
+    }
+
+    public JTextField getjTextField3() {
+        return jTextField3;
+    }
+
+    public JTextField getjTextField4() {
+        return jTextField4;
+    }
+
+    public JTextPane getjTextPane3() {
+        return jTextPane3;
     }
 
     /**

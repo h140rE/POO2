@@ -5,6 +5,12 @@
  */
 package View_MVC;
 
+import javax.swing.JButton;
+import javax.swing.JRadioButton;
+import javax.swing.JTextArea;
+import javax.swing.JTextField;
+import javax.swing.JTextPane;
+
 /**
  *
  * @author xpimenta
@@ -377,6 +383,54 @@ public class TelaConsulta extends javax.swing.JFrame {
     private void jRadioButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jRadioButton1ActionPerformed
         // TODO add your handling code here:
     }//GEN-LAST:event_jRadioButton1ActionPerformed
+
+    public JButton getjButton1() {
+        return jButton1;
+    }
+
+    public JButton getjButton2() {
+        return jButton2;
+    }
+
+    public JButton getjButton4() {
+        return jButton4;
+    }
+
+    public JButton getjButton_TelaSistemaDeConsultas_Verificar() {
+        return jButton_TelaSistemaDeConsultas_Verificar;
+    }
+
+    public JRadioButton getjRadioButton1() {
+        return jRadioButton1;
+    }
+
+    public JRadioButton getjRadioButton2() {
+        return jRadioButton2;
+    }
+
+    public JTextArea getjTextArea1() {
+        return jTextArea1;
+    }
+
+    public JTextArea getjTextArea5() {
+        return jTextArea5;
+    }
+
+    public JTextField getjTextField1() {
+        return jTextField1;
+    }
+
+    public JTextField getjTextField_SistemaDeConsulta_NomeDoAnimal() {
+        return jTextField_SistemaDeConsulta_NomeDoAnimal;
+    }
+
+    public JTextPane getjTextPane3() {
+        return jTextPane3;
+    }
+
+    public JTextPane getjTextPane4() {
+        return jTextPane4;
+    }
 
     /**
      * @param args the command line arguments
