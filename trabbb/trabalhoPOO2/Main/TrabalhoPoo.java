@@ -8,7 +8,7 @@ public class TrabalhoPoo {
 
     public static void main(String[] args) {
 
-        Animal animal1;
+         Animal animal1;
         animal1 = new Cao("Pedro", "lilica", "vira-lata");
         /*
         animal1.estadoAtual();
@@ -20,17 +20,17 @@ public class TrabalhoPoo {
         ControllerPet  controller = new ControllerPet();
        ContrataServico c = new ContrataServico();
        Servicos s = new Recibo(animal1);
-       
+
        s = c.banho(s, animal1);
        s = c.consulta(animal1, s);
        s = c.hotel(s, animal1, 1);
        s = c.tosa(animal1, s);
-       
+
        System.out.println(s.pagar()); 
-       System.out.println(s.getDescricao());   
+       System.out.println(s.getDescricao());
         */
        ControllerTelaPrincipal principal = new ControllerTelaPrincipal();
-    
+
 
 
         ContrataServico c = new ContrataServico();
@@ -46,11 +46,13 @@ public class TrabalhoPoo {
 
         TelaAtendente a = new TelaAtendente();
         a.setVisible(true);
-        
+
         Atendente a2 = new Atendente();
 
-        ControllerAtendente cA = new ControllerAtendente(a2,a);
+        Cliente cli = new Cliente();
 
+        ControllerAtendente cA = new ControllerAtendente(a2,a,cli);
+            
 
     }
 
