@@ -28,7 +28,7 @@ public class TrabalhoPoo {
         animal1.getEstado().setEstadoEmEstadia();
         animal1.estadoAtual();
         ControllerPet  controller = new ControllerPet();
-       */
+       
        
        ContrataServico c = new ContrataServico();
        Servicos s = new Recibo(animal1);
@@ -39,7 +39,7 @@ public class TrabalhoPoo {
        s = c.tosa(animal1, s);
        
        System.out.println(s.pagar()); 
-       System.out.println(s.getDescricao());   
+       System.out.println(s.getDescricao());   */
  
     }
     

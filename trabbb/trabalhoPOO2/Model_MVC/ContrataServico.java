@@ -13,10 +13,10 @@ public class ContrataServico {
         public Hotel_Decorator hotel(Servicos recibo,int diaria){
             return new Hotel_Decorator(recibo,diaria);
         }
-        public Consulta_Decorator consulta(Animal animal,Servicos recibo){
+        public Consulta_Decorator consulta(Servicos recibo){
             return new Consulta_Decorator(recibo);
         }
-        public Tosa_Decorator tosa(Animal animal,Servicos recibo){
+        public Tosa_Decorator tosa(Servicos recibo){
             return new Tosa_Decorator(recibo);
         }
        
