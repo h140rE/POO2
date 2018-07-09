@@ -9,8 +9,7 @@ public class ControllerVendaProdutos {
     private Servicos model;
     private TelaVendasProdutos view;
     
-     public ControllerVendaProdutos(Servicos model, TelaVendasProdutos view) {
-        this.model = model;
+     public ControllerVendaProdutos(TelaVendasProdutos view) {
         this.view = view;
 }
      

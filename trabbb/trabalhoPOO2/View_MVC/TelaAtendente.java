@@ -127,8 +127,6 @@ public class TelaAtendente extends javax.swing.JFrame {
                 .addGap(0, 0, Short.MAX_VALUE))
         );
 
-        setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
-
         JButton_MenuPrincipal.setBackground(new java.awt.Color(176, 224, 230));
 
         jLabel1.setFont(new java.awt.Font("Yu Gothic Light", 1, 48)); // NOI18N
@@ -191,12 +189,14 @@ public class TelaAtendente extends javax.swing.JFrame {
             }
         });
 
+        JButton_MenuPrincipal_Cadastro_Cancelar.setIcon(new javax.swing.ImageIcon("A:\\Bibliotecas\\Documentos\\POO2\\trabbb\\trabalhoPOO2\\View_MVC\\Icons\\icons8-cancel-64.png")); // NOI18N
         JButton_MenuPrincipal_Cadastro_Cancelar.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 JButton_MenuPrincipal_Cadastro_CancelarActionPerformed(evt);
             }
         });
 
+        JButton_MenuPrincipal_Cadastro_Conformar.setIcon(new javax.swing.ImageIcon("A:\\Bibliotecas\\Documentos\\POO2\\trabbb\\trabalhoPOO2\\View_MVC\\Icons\\icons8-checkmark-64.png")); // NOI18N
         JButton_MenuPrincipal_Cadastro_Conformar.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 JButton_MenuPrincipal_Cadastro_ConformarActionPerformed(evt);
@@ -276,7 +276,7 @@ public class TelaAtendente extends javax.swing.JFrame {
                         .addGroup(JPanel_MenuPrincipal_CadastroLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                             .addComponent(jLabel9)
                             .addComponent(jTextField5, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 31, Short.MAX_VALUE)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                         .addComponent(JButton_MenuPrincipal_Cadastro_Cancelar))
                     .addGroup(JPanel_MenuPrincipal_CadastroLayout.createSequentialGroup()
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
@@ -304,6 +304,8 @@ public class TelaAtendente extends javax.swing.JFrame {
         jLabel20.setText("Hora");
 
         jScrollPane3.setViewportView(jTextPane3);
+
+        JButton_MenuPrincipal_MarcaConsulta_Pesquisar.setIcon(new javax.swing.ImageIcon("A:\\Bibliotecas\\Documentos\\POO2\\trabbb\\trabalhoPOO2\\View_MVC\\Icons\\icons8-pesquisar-64.png")); // NOI18N
 
         javax.swing.GroupLayout JPanel_MenuPrincipal_MarcaConsultaLayout = new javax.swing.GroupLayout(JPanel_MenuPrincipal_MarcaConsulta);
         JPanel_MenuPrincipal_MarcaConsulta.setLayout(JPanel_MenuPrincipal_MarcaConsultaLayout);
@@ -355,13 +357,15 @@ public class TelaAtendente extends javax.swing.JFrame {
                         .addComponent(jLabel20)))
                 .addGap(31, 31, 31)
                 .addComponent(JButton_MenuPrincipal_MarcaConsulta_Pesquisar)
-                .addContainerGap(42, Short.MAX_VALUE))
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
 
         JPanel_MenuPrincipal_SistemasdeVendas.setBackground(new java.awt.Color(250, 255, 240));
 
         jLabel19.setFont(new java.awt.Font("Yu Gothic UI Light", 0, 36)); // NOI18N
         jLabel19.setText("Sistema de Vendas");
+
+        JButton_MenuPrincipal_SistemadeVendas_Carrinho.setIcon(new javax.swing.ImageIcon("A:\\Bibliotecas\\Documentos\\POO2\\trabbb\\trabalhoPOO2\\View_MVC\\Icons\\icons8-shopping-cart-64.png")); // NOI18N
 
         javax.swing.GroupLayout JPanel_MenuPrincipal_SistemasdeVendasLayout = new javax.swing.GroupLayout(JPanel_MenuPrincipal_SistemasdeVendas);
         JPanel_MenuPrincipal_SistemasdeVendas.setLayout(JPanel_MenuPrincipal_SistemasdeVendasLayout);
@@ -382,7 +386,7 @@ public class TelaAtendente extends javax.swing.JFrame {
                 .addComponent(jLabel19)
                 .addGap(32, 32, 32)
                 .addComponent(JButton_MenuPrincipal_SistemadeVendas_Carrinho)
-                .addContainerGap(38, Short.MAX_VALUE))
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
 
         javax.swing.GroupLayout JButton_MenuPrincipalLayout = new javax.swing.GroupLayout(JButton_MenuPrincipal);

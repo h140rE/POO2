@@ -51,8 +51,6 @@ public class TelaVendasProdutos extends javax.swing.JFrame {
         jLabel5 = new javax.swing.JLabel();
         jTextField3 = new javax.swing.JTextField();
 
-        setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
-
         jPanel1.setBackground(new java.awt.Color(255, 255, 240));
 
         jPanel3.setBackground(new java.awt.Color(255, 255, 224));

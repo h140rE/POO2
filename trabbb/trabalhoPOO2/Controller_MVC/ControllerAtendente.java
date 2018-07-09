@@ -1,7 +1,6 @@
 package Controller_MVC;
 
 import Model_MVC.Atendente;
-import Model_MVC.Cliente;
 import View_MVC.TelaAtendente;
 import View_MVC.TelaVendas;
 import java.awt.event.ActionEvent;
@@ -13,12 +12,10 @@ public class ControllerAtendente {
     private ControllerVendas controller;
     private TelaAtendente view;
     private TelaVendas viewVendas;
-    private Cliente reciboCliente;
 
-    public ControllerAtendente(Atendente model, TelaAtendente view, Cliente reciboCliente) {
+    public ControllerAtendente(Atendente model, TelaAtendente view) {
         this.model = model;
         this.view = view;
-        this.reciboCliente = reciboCliente;
 
         view.getJButton_MenuPrincipal_Cadastro_Conformar().addActionListener(new CadastraListener());
         view.getJButton_MenuPrincipal_Cadastro_Cancelar().addActionListener(new CancelaListener());
@@ -77,10 +74,9 @@ public class ControllerAtendente {
         @Override
         public void actionPerformed(ActionEvent e) {
 
-           reciboCliente.setRecibo(model.criaRecibo());
            viewVendas = new TelaVendas();
            viewVendas.setVisible(true);
-           controller = new ControllerVendas(viewVendas,reciboCliente.getRecibo());
+           controller = new ControllerVendas(viewVendas);
             
         }
     }

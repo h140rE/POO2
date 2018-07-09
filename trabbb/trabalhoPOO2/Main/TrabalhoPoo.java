@@ -29,7 +29,6 @@ public class TrabalhoPoo {
        System.out.println(s.pagar()); 
        System.out.println(s.getDescricao());
         */
-       ControllerTelaPrincipal principal = new ControllerTelaPrincipal();
 
 
 
@@ -44,14 +43,10 @@ public class TrabalhoPoo {
         System.out.println(s.pagar());
         System.out.println(s.getDescricao());
 
-        TelaAtendente a = new TelaAtendente();
+        Tela_Principal a = new Tela_Principal();
         a.setVisible(true);
 
-        Atendente a2 = new Atendente();
-
-        Cliente cli = new Cliente();
-
-        ControllerAtendente cA = new ControllerAtendente(a2,a,cli);
+        ControllerTelaPrincipal cA = new ControllerTelaPrincipal(a);
             
 
     }

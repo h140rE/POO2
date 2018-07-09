@@ -71,8 +71,6 @@ public class TelaConsulta extends javax.swing.JFrame {
             .addGap(0, 170, Short.MAX_VALUE)
         );
 
-        setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
-
         JPanel_TelaSistemaConsulta.setBackground(new java.awt.Color(250, 255, 240));
 
         jLabel1.setFont(new java.awt.Font("Yu Gothic Light", 0, 36)); // NOI18N

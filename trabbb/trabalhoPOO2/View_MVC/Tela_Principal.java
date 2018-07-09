@@ -5,6 +5,8 @@
  */
 package View_MVC;
 
+import javax.swing.JButton;
+
 /**
  *
  * @author xpimenta
@@ -161,9 +163,18 @@ public class Tela_Principal extends javax.swing.JFrame {
         // TODO add your handling code here:
     }//GEN-LAST:event_jButton3ActionPerformed
 
-    /**
-     * @param args the command line arguments
-     */
+    public JButton getjButton1() {
+        return jButton1;
+    }
+
+    public JButton getjButton3() {
+        return jButton3;
+    }
+
+    public JButton getjButton4() {
+        return jButton4;
+    }    
+    
     public static void main(String args[]) {
         /* Set the Nimbus look and feel */
         //<editor-fold defaultstate="collapsed" desc=" Look and feel setting code (optional) ">
