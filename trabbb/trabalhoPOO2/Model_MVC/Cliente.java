@@ -6,6 +6,7 @@ import java.util.ArrayList;
 public class Cliente extends Pessoa {
 
     private ArrayList<Animal> animais;
+
     private Servicos recibo;
     
     public Cliente(String nome, int cpf, int telefone){
@@ -13,6 +14,7 @@ public class Cliente extends Pessoa {
         this.recibo = new Recibo();
         this.animais = new ArrayList<Animal>();
     }
+
 
     public void pagarDinheiro() {
 
