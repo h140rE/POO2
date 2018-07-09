@@ -1,4 +1,7 @@
-﻿CREATE SCHEMA ZikaPET;
+﻿1 INTO Animal (cpfDono, tipo, nome, raca, estado) VALUES 
+	('03834902004', 'c', 'Rex', 'Border', 'Finalizado');
+
+CREATE SCHEMA ZikaPET;
 --DROP SCHEMA ZikaPET CASCADE;
 SET search_path to ZikaPET;
 CREATE SEQUENCE funcionarioID;
@@ -164,18 +167,7 @@ INSERT INTO Animal (cpfDono, tipo, nome, raca, estado) VALUES
 
 
 
-INSERT INTO recibo (idCompra,cpf,preco, descricao) VALUES 
-        ( nextval(idCompra), '84592076095', , ),
-        ( nextval(idCompra), '19383455098', , ),
-        ( nextval(idCompra), '03834902004', , ),
-        ( nextval(idCompra), '03834902004', , ),
-        ( nextval(idCompra), '34976352005', , ),
-        ( nextval(idCompra), '34976352005', , ),
-        ( nextval(idCompra), '85390972066', , ),
-        ( nextval(idCompra), '85390972066', , ),
-        ( nextval(idCompra), '34976352005', , ),
-        ( nextval(idCompra), '34976352005', , );
- 
+--INSERT INTO recibo (idCompra,cpf,preco, descricao) VALUES ( nextval(idCompra), '84592076095', , );
  
 --INSERT INTO reciboproduto (nome,cpf,telefone) VALUES 
 
