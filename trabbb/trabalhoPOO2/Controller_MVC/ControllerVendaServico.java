@@ -8,8 +8,7 @@ public class ControllerVendaServico {
     private Servicos model;
     private TelaVendaServico view;
     
-     public ControllerVendaServico(Servicos model, TelaVendaServico view) {
-        this.model = model;
+     public ControllerVendaServico(TelaVendaServico view) {
         this.view = view;
      }
 }

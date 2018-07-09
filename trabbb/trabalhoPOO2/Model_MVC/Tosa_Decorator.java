@@ -5,14 +5,14 @@ public class Tosa_Decorator extends ServicoDecorator {
     private Servicos servico;
 
     public Tosa_Decorator(Servicos servico) {
-        
+        this.setPreco(60);
         this.servico = servico;
-        this.descricao = "\n + Tosa";
+        this.descricao = "\n + Tosa \t\t" + this.getPreco();
     }
 
     @Override
     public float pagar() {
-        return (float) (60.00 + servico.pagar());
+        return (float) (this.getPreco() + servico.pagar());
     }
 
     @Override

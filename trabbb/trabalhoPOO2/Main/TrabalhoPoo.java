@@ -8,8 +8,8 @@ public class TrabalhoPoo {
 
     public static void main(String[] args) {
 
-         Animal animal1;
-        animal1 = new Cao("Pedro", "lilica", "vira-lata");
+        
+        
         /*
         animal1.estadoAtual();
         //animal1.getEstado().setEstadoAguardando();
@@ -18,6 +18,11 @@ public class TrabalhoPoo {
         animal1.getEstado().setEstadoEmEstadia();
         animal1.estadoAtual();
         ControllerPet  controller = new ControllerPet();
+
+       
+       
+
+
        ContrataServico c = new ContrataServico();
        Servicos s = new Recibo(animal1);
 
@@ -27,32 +32,67 @@ public class TrabalhoPoo {
        s = c.tosa(animal1, s);
 
        System.out.println(s.pagar()); 
+
+       System.out.println(s.getDescricao());   
+ 
+
+
        System.out.println(s.getDescricao());
-        */
-       ControllerTelaPrincipal principal = new ControllerTelaPrincipal();
+        
+
+*/
 
 
+        /*
 
         ContrataServico c = new ContrataServico();
         Servicos s = new Recibo();
 
         s = c.banho(s);
-        s = c.consulta(animal1, s);
+        s = c.consulta(s);
         s = c.hotel(s, 1);
+
+        s = c.tosa(s);
+
+
         s = c.tosa(animal1, s);
+        
 
         System.out.println(s.pagar());
         System.out.println(s.getDescricao());
+        */
 
-        TelaAtendente a = new TelaAtendente();
-        a.setVisible(true);
+        //Tela_Principal a = new Tela_Principal();
+        //a.setVisible(true);
 
-        Atendente a2 = new Atendente();
-
-        Cliente cli = new Cliente();
-
-        ControllerAtendente cA = new ControllerAtendente(a2,a,cli);
+        //ControllerTelaPrincipal cA = new ControllerTelaPrincipal(a);
+        
+        
+        Cliente cli = new Cliente("Pedro", 123, 3322-1122);
+        Atendente at = new Atendente("Joao", 321, 1233-1233, 1);
+        ContrataServico c = new ContrataServico();
+        
+        cli.AdicionaAnimal("lilica", "vira-lata", "cao");
+        cli.AdicionaAnimal("xanim", "siames", "gato");
+        cli.AdicionaAnimal("julio", "pit-bull", "cao");
+        
+        cli.setRecibo(at.criaRecibo());
+        cli.listaAnimais();
+        cli.setRecibo(c.banho(cli.getRecibo()));
+        cli.setRecibo(c.consulta(cli.getRecibo()));
+        cli.setRecibo(c.hotel(cli.getRecibo(), 5));
+        cli.setRecibo(c.tosa(cli.getRecibo()));
+        cli.setRecibo(c.banho(cli.getRecibo()));
+        cli.setRecibo(c.venda(cli.getRecibo(),135,"batata"));
+        
+        
+        System.out.println(cli.imprimeRecibo());
+        
+        
+        
+        
             
+
 
     }
 

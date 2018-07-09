@@ -5,6 +5,12 @@
  */
 package View_MVC;
 
+import javax.swing.JButton;
+import javax.swing.JRadioButton;
+import javax.swing.JTextArea;
+import javax.swing.JTextField;
+import javax.swing.JTextPane;
+
 /**
  *
  * @author xpimenta
@@ -71,8 +77,6 @@ public class TelaConsulta extends javax.swing.JFrame {
             .addGap(0, 170, Short.MAX_VALUE)
         );
 
-        setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
-
         JPanel_TelaSistemaConsulta.setBackground(new java.awt.Color(250, 255, 240));
 
         jLabel1.setFont(new java.awt.Font("Yu Gothic Light", 0, 36)); // NOI18N
@@ -109,6 +113,7 @@ public class TelaConsulta extends javax.swing.JFrame {
 
         jTextArea5.setColumns(20);
         jTextArea5.setRows(5);
+        jTextArea5.setEnabled(false);
         jScrollPane8.setViewportView(jTextArea5);
 
         javax.swing.GroupLayout JPanel_TelaSistemaDeConsulta_ListaProdutosSelecionadosLayout = new javax.swing.GroupLayout(JPanel_TelaSistemaDeConsulta_ListaProdutosSelecionados);
@@ -185,6 +190,13 @@ public class TelaConsulta extends javax.swing.JFrame {
         );
 
         jPanel4.setBackground(new java.awt.Color(240, 255, 240));
+
+        jTextField_SistemaDeConsulta_NomeDoAnimal.setEnabled(false);
+        jTextField_SistemaDeConsulta_NomeDoAnimal.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jTextField_SistemaDeConsulta_NomeDoAnimalActionPerformed(evt);
+            }
+        });
 
         jLabel4.setFont(new java.awt.Font("Yu Gothic Medium", 0, 18)); // NOI18N
         jLabel4.setText("Animal");
@@ -343,7 +355,7 @@ public class TelaConsulta extends javax.swing.JFrame {
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                         .addComponent(jPanel2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                     .addComponent(JPanel_TelaSistemaDeConsulta_VerificaDados, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                .addContainerGap(18, Short.MAX_VALUE))
         );
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
@@ -354,7 +366,7 @@ public class TelaConsulta extends javax.swing.JFrame {
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(JPanel_TelaSistemaConsulta, javax.swing.GroupLayout.PREFERRED_SIZE, 450, javax.swing.GroupLayout.PREFERRED_SIZE)
+            .addComponent(JPanel_TelaSistemaConsulta, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
         );
 
         pack();
@@ -379,6 +391,58 @@ public class TelaConsulta extends javax.swing.JFrame {
     private void jRadioButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jRadioButton1ActionPerformed
         // TODO add your handling code here:
     }//GEN-LAST:event_jRadioButton1ActionPerformed
+
+    private void jTextField_SistemaDeConsulta_NomeDoAnimalActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jTextField_SistemaDeConsulta_NomeDoAnimalActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_jTextField_SistemaDeConsulta_NomeDoAnimalActionPerformed
+
+    public JButton getjButton1() {
+        return jButton1;
+    }
+
+    public JButton getjButton2() {
+        return jButton2;
+    }
+
+    public JButton getjButton4() {
+        return jButton4;
+    }
+
+    public JButton getjButton_TelaSistemaDeConsultas_Verificar() {
+        return jButton_TelaSistemaDeConsultas_Verificar;
+    }
+
+    public JRadioButton getjRadioButton1() {
+        return jRadioButton1;
+    }
+
+    public JRadioButton getjRadioButton2() {
+        return jRadioButton2;
+    }
+
+    public JTextArea getjTextArea1() {
+        return jTextArea1;
+    }
+
+    public JTextArea getjTextArea5() {
+        return jTextArea5;
+    }
+
+    public JTextField getjTextField1() {
+        return jTextField1;
+    }
+
+    public JTextField getjTextField_SistemaDeConsulta_NomeDoAnimal() {
+        return jTextField_SistemaDeConsulta_NomeDoAnimal;
+    }
+
+    public JTextPane getjTextPane3() {
+        return jTextPane3;
+    }
+
+    public JTextPane getjTextPane4() {
+        return jTextPane4;
+    }
 
     /**
      * @param args the command line arguments

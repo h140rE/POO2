@@ -4,23 +4,22 @@ public class Produto extends Vendas_Decorator {
     
     private Servicos servico;
         
-    private float preco;
     
-    public Produto(Servicos servico,float preco,String descricao) {
-        
+    public Produto(Servicos servico,float preco, String produto) {
+        this.setPreco(preco);
         this.servico = servico;
-        this.descricao = descricao;
-        this.preco = preco;
+        this.descricao = "\n + produto:" + produto + "\t" + this.getPreco();
+        
     }
 
-    @Override
-    public float getPreco() {
+    
+   /* public float getPreco() {
         return preco;
-    }
+    }*/
 
-    @Override
+    
 	public String getDescricao() {
-		return servico.getDescricao() + " + Produto: " + descricao;
+		return servico.getDescricao() + descricao;
 	}
 
     @Override

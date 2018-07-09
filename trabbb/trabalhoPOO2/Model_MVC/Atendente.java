@@ -4,6 +4,10 @@ import javax.swing.JOptionPane;
 
 public class Atendente extends Funcionario {
 
+    public Atendente(String nome, int cpf, int telefone, int idFunc) {
+        super(nome, cpf, telefone, idFunc);
+    }
+
 	public void atende() {
 
 	}
