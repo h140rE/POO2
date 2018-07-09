@@ -7,9 +7,6 @@ public abstract class Servicos {
     protected String descricao;
 
     //---------------------------------//
-    public Servicos() {
-        
-    }
 
     public void setPreco(float preco) {
         this.preco = preco;

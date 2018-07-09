@@ -11,9 +11,10 @@ public class Cliente extends Pessoa {
     
     public Cliente(String nome, int cpf, int telefone){
         super(nome,cpf,telefone);
-        this.recibo = new Recibo();
         this.animais = new ArrayList<Animal>();
     }
+
+
 
 
     public void pagarDinheiro() {
@@ -27,8 +28,15 @@ public class Cliente extends Pessoa {
     public void pagarCheque() {
 
     }
+    public void setRecibo(Servicos recibo){
+        this.recibo = recibo;
+    }
     public Servicos getRecibo(){
         return this.recibo;
+    }
+    public String imprimeRecibo(){
+        String auxiliar =  recibo.getDescricao() + "\n Total a pagar: R$" + this.recibo.pagar();
+                return auxiliar;
     }
  
 }

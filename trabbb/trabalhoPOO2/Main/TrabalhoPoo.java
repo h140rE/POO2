@@ -8,7 +8,7 @@ public class TrabalhoPoo {
 
     public static void main(String[] args) {
 
-         Animal animal1;
+        Animal animal1;
         animal1 = new Cao("Pedro", "lilica", "vira-lata");
         /*
         animal1.estadoAtual();
@@ -62,27 +62,27 @@ public class TrabalhoPoo {
         System.out.println(s.getDescricao());
         */
 
-        Tela_Principal a = new Tela_Principal();
-        a.setVisible(true);
+        //Tela_Principal a = new Tela_Principal();
+        //a.setVisible(true);
 
-        ControllerTelaPrincipal cA = new ControllerTelaPrincipal(a);
+        //ControllerTelaPrincipal cA = new ControllerTelaPrincipal(a);
         
         
-        Cliente cli = new Cliente();
-        Atendente at = new Atendente();
+        Cliente cli = new Cliente("Pedro", 123, 3322-1122);
+        Atendente at = new Atendente("Joao", 321, 1233-1233, 1);
         ContrataServico c = new ContrataServico();
         
         cli.setRecibo(at.criaRecibo());
         
         cli.setRecibo(c.banho(cli.getRecibo()));
-        cli.setRecibo(c.consulta(animal1, cli.getRecibo()));
+        cli.setRecibo(c.consulta(cli.getRecibo()));
         cli.setRecibo(c.hotel(cli.getRecibo(), 1));
-        cli.setRecibo(c.tosa(animal1, cli.getRecibo()));
+        cli.setRecibo(c.tosa(cli.getRecibo()));
         cli.setRecibo(c.banho(cli.getRecibo()));
         cli.setRecibo(c.venda(cli.getRecibo(),135,"batata"));
         
-        System.out.println(cli.getRecibo().pagar());
-        System.out.println(cli.getRecibo().getDescricao());
+        
+        System.out.println(cli.imprimeRecibo());
         
         
         
