@@ -5,7 +5,7 @@ import java.util.ArrayList;
 public class Cliente extends Pessoa {
 
     private ArrayList<Animal> animais;
-    private Servicos recibo;
+    private Servicos recibo;   
 
     public void pagarDinheiro() {
 

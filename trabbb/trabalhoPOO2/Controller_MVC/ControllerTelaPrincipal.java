@@ -1,11 +1,11 @@
 package Controller_MVC;
 
 import Model_MVC.Atendente;
-import Model_MVC.Cliente;
+import Model_MVC.Cuidador;
+import Model_MVC.Veterinario;
 import View_MVC.TelaAtendente;
 import View_MVC.TelaConsulta;
 import View_MVC.TelaHBT;
-import View_MVC.TelaVendas;
 import View_MVC.Tela_Principal;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
@@ -20,6 +20,8 @@ public class ControllerTelaPrincipal {
     private ControllerHBT controllerBanho;
     private TelaConsulta viewConsulta;
     private ControllerConsulta controllerConsulta;
+    private Cuidador modelCuidador;
+    private Veterinario modelVeterinario;
 
     public ControllerTelaPrincipal(Tela_Principal view) {
         this.view = view;
@@ -49,7 +51,8 @@ public class ControllerTelaPrincipal {
 
             viewBanho = new TelaHBT();
             viewBanho.setVisible(true);
-            controllerBanho = new ControllerHBT(viewBanho);
+            modelCuidador = new Cuidador();
+            controllerBanho = new ControllerHBT(viewBanho,modelCuidador);
         }
     }
     
@@ -60,7 +63,8 @@ public class ControllerTelaPrincipal {
 
             viewConsulta = new TelaConsulta();
             viewConsulta.setVisible(true);
-            controllerConsulta = new ControllerConsulta(viewConsulta);
+            modelVeterinario = new Veterinario();
+            controllerConsulta = new ControllerConsulta(viewConsulta,modelVeterinario);
         }
     }
 

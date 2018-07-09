@@ -20,7 +20,7 @@ public class Produto extends Vendas_Decorator {
 
     @Override
 	public String getDescricao() {
-		return servico.getDescricao() + " + Produto: " + descricao;
+		return servico.getDescricao() + "\n + Produto: " + descricao;
 	}
 
     @Override
