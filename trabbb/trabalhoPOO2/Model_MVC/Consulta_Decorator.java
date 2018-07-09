@@ -7,15 +7,15 @@ public class Consulta_Decorator extends ServicoDecorator {
     private Veterinario veterinario;
 
     public Consulta_Decorator(Servicos servico) {
-        
+        this.setPreco(60);
         this.servico = servico;
-        this.descricao = "\n + Consulta";
+        this.descricao = "\n + Consulta \t\t" + this.getPreco();
 
     }
 
     @Override
     public float pagar() {
-        return (float) (60.00 + servico.pagar());
+        return (float) (this.getPreco() + servico.pagar());
     }
 
     @Override

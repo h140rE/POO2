@@ -76,7 +76,7 @@ public class TrabalhoPoo {
         
         cli.setRecibo(c.banho(cli.getRecibo()));
         cli.setRecibo(c.consulta(cli.getRecibo()));
-        cli.setRecibo(c.hotel(cli.getRecibo(), 1));
+        cli.setRecibo(c.hotel(cli.getRecibo(), 5));
         cli.setRecibo(c.tosa(cli.getRecibo()));
         cli.setRecibo(c.banho(cli.getRecibo()));
         cli.setRecibo(c.venda(cli.getRecibo(),135,"batata"));

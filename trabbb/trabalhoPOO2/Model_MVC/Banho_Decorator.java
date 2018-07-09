@@ -5,15 +5,16 @@ public class Banho_Decorator extends ServicoDecorator {
     private Servicos servico;
 
     public Banho_Decorator(Servicos servico) {
-        
+        this.setPreco(50);
         this.servico = servico;
-        this.descricao = "\n + Banho";
+        this.descricao = "\n + Banho \t\t" + this.getPreco();
+        
 
     }
 
     @Override
     public float pagar() {
-        return (float) (50.00 + servico.pagar());
+        return (float) ((this.getPreco()) + servico.pagar());
     }
 
     @Override
