@@ -11,6 +11,7 @@ import javax.swing.JPanel;
 import javax.swing.JTextField;
 import Controller_MVC.*;
 import java.awt.event.ActionListener;
+import javax.swing.JTextPane;
 
 /**
  *
@@ -474,10 +475,43 @@ public class TelaAtendente extends javax.swing.JFrame {
         return jTextField3;
     }
 
+    public JTextField getjTextField4() {
+        return jTextField4;
+    }
+
+    public JTextField getjTextField5() {
+        return jTextField5;
+    }
+   
     public JButton getJButton_MenuPrincipal_Cadastro_Conformar() {
         return JButton_MenuPrincipal_Cadastro_Conformar;
     }
 
+    public JButton getJButton_MenuPrincipal_Cadastro_Cancelar() {
+        return JButton_MenuPrincipal_Cadastro_Cancelar;
+    }
+
+    public JTextPane getjTextPane1() {
+        return jTextPane1;
+    }
+
+    public JTextPane getjTextPane2() {
+        return jTextPane2;
+    }
+
+    public JTextPane getjTextPane3() {
+        return jTextPane3;
+    }
+
+    public JButton getJButton_MenuPrincipal_MarcaConsulta_Pesquisar() {
+        return JButton_MenuPrincipal_MarcaConsulta_Pesquisar;
+    }
+
+    public JButton getJButton_MenuPrincipal_SistemadeVendas_Carrinho() {
+        return JButton_MenuPrincipal_SistemadeVendas_Carrinho;
+    }
+
+    
  
 
     public static void main(String args[]) {

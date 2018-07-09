@@ -126,9 +126,6 @@
                 <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
                   <Font name="Yu Gothic Light" size="24" style="0"/>
                 </Property>
-                <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
-                  <Image iconType="2" name="A:\Bibliotecas\Documentos\POO2\trabbb\trabalhoPOO2\View_MVC\Icons\icons8-shopping-cart-64.png"/>
-                </Property>
                 <Property name="text" type="java.lang.String" value="Produtos"/>
                 <Property name="iconTextGap" type="int" value="10"/>
               </Properties>
@@ -140,9 +137,6 @@
               <Properties>
                 <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
                   <Font name="Yu Gothic Light" size="24" style="0"/>
-                </Property>
-                <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
-                  <Image iconType="2" name="A:\Bibliotecas\Documentos\POO2\trabbb\trabalhoPOO2\View_MVC\Icons\icons8-bath-64.png"/>
                 </Property>
                 <Property name="text" type="java.lang.String" value="Banho &amp; Tosa"/>
                 <Property name="alignmentX" type="float" value="0.5"/>
@@ -159,9 +153,6 @@
               <Properties>
                 <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
                   <Font name="Yu Gothic Light" size="24" style="0"/>
-                </Property>
-                <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
-                  <Image iconType="2" name="A:\Bibliotecas\Documentos\POO2\trabbb\trabalhoPOO2\View_MVC\Icons\icons8-hospital-64.png"/>
                 </Property>
                 <Property name="text" type="java.lang.String" value="Servicos"/>
                 <Property name="iconTextGap" type="int" value="10"/>
