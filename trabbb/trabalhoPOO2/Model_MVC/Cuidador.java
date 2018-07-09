@@ -2,6 +2,10 @@ package Model_MVC;
 
 public class Cuidador extends Funcionario {
 
+    public Cuidador(String nome, int cpf, int telefone, int idFunc) {
+        super(nome, cpf, telefone, idFunc);
+    }
+
 	public String exibeInfoAnimal(Animal animal) {
 		return null;
 	}

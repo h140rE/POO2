@@ -18,11 +18,11 @@ public class TrabalhoPoo {
         animal1.getEstado().setEstadoEmEstadia();
         animal1.estadoAtual();
         ControllerPet  controller = new ControllerPet();
-<<<<<<< HEAD
+
        
        
-=======
->>>>>>> e166670376db5b24531759e151356cff470bcf99
+
+
        ContrataServico c = new ContrataServico();
        Servicos s = new Recibo(animal1);
 
@@ -32,22 +32,22 @@ public class TrabalhoPoo {
        s = c.tosa(animal1, s);
 
        System.out.println(s.pagar()); 
-<<<<<<< HEAD
-       System.out.println(s.getDescricao());   */
+
+       System.out.println(s.getDescricao());   
  
-=======
+
        System.out.println(s.getDescricao());
-        */
+        
 
-
+*/
 
         ContrataServico c = new ContrataServico();
         Servicos s = new Recibo();
 
         s = c.banho(s);
-        s = c.consulta(animal1, s);
+        s = c.consulta(s);
         s = c.hotel(s, 1);
-        s = c.tosa(animal1, s);
+        s = c.tosa(s);
 
         System.out.println(s.pagar());
         System.out.println(s.getDescricao());
@@ -58,7 +58,7 @@ public class TrabalhoPoo {
         ControllerTelaPrincipal cA = new ControllerTelaPrincipal(a);
             
 
->>>>>>> e166670376db5b24531759e151356cff470bcf99
+
     }
 
 }

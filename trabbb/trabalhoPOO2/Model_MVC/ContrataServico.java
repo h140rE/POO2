@@ -1,7 +1,8 @@
 package Model_MVC;
 
 public class ContrataServico {
-
+    private Servicos recibo;
+    
     public ContrataServico(){
         }
         
