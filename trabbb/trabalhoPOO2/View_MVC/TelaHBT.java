@@ -138,6 +138,8 @@ public class TelaHBT extends javax.swing.JFrame {
         jTextArea1.setRows(5);
         jScrollPane1.setViewportView(jTextArea1);
 
+        jTextField3.setEnabled(false);
+
         jLabel5.setFont(new java.awt.Font("Yu Gothic Medium", 0, 18)); // NOI18N
         jLabel5.setText("Animal");
 

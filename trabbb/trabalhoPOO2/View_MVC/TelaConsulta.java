@@ -113,6 +113,7 @@ public class TelaConsulta extends javax.swing.JFrame {
 
         jTextArea5.setColumns(20);
         jTextArea5.setRows(5);
+        jTextArea5.setEnabled(false);
         jScrollPane8.setViewportView(jTextArea5);
 
         javax.swing.GroupLayout JPanel_TelaSistemaDeConsulta_ListaProdutosSelecionadosLayout = new javax.swing.GroupLayout(JPanel_TelaSistemaDeConsulta_ListaProdutosSelecionados);
@@ -189,6 +190,13 @@ public class TelaConsulta extends javax.swing.JFrame {
         );
 
         jPanel4.setBackground(new java.awt.Color(240, 255, 240));
+
+        jTextField_SistemaDeConsulta_NomeDoAnimal.setEnabled(false);
+        jTextField_SistemaDeConsulta_NomeDoAnimal.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jTextField_SistemaDeConsulta_NomeDoAnimalActionPerformed(evt);
+            }
+        });
 
         jLabel4.setFont(new java.awt.Font("Yu Gothic Medium", 0, 18)); // NOI18N
         jLabel4.setText("Animal");
@@ -347,7 +355,7 @@ public class TelaConsulta extends javax.swing.JFrame {
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                         .addComponent(jPanel2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                     .addComponent(JPanel_TelaSistemaDeConsulta_VerificaDados, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                .addContainerGap(18, Short.MAX_VALUE))
         );
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
@@ -358,7 +366,7 @@ public class TelaConsulta extends javax.swing.JFrame {
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(JPanel_TelaSistemaConsulta, javax.swing.GroupLayout.PREFERRED_SIZE, 450, javax.swing.GroupLayout.PREFERRED_SIZE)
+            .addComponent(JPanel_TelaSistemaConsulta, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
         );
 
         pack();
@@ -383,6 +391,10 @@ public class TelaConsulta extends javax.swing.JFrame {
     private void jRadioButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jRadioButton1ActionPerformed
         // TODO add your handling code here:
     }//GEN-LAST:event_jRadioButton1ActionPerformed
+
+    private void jTextField_SistemaDeConsulta_NomeDoAnimalActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jTextField_SistemaDeConsulta_NomeDoAnimalActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_jTextField_SistemaDeConsulta_NomeDoAnimalActionPerformed
 
     public JButton getjButton1() {
         return jButton1;
