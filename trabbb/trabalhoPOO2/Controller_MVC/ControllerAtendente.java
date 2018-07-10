@@ -6,11 +6,19 @@ import View_MVC.TelaAtendente;
 import View_MVC.TelaVendas;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
+import java.sql.Connection;
+import java.sql.PreparedStatement;
+import java.sql.ResultSet;
+import java.sql.SQLException;
 import java.util.LinkedList;
+import java.util.logging.Level;
+import java.util.logging.Logger;
 import javax.swing.JOptionPane;
 
 public class ControllerAtendente {
-
+    Connection conecta = null;
+    PreparedStatement pst;
+    ResultSet rs;
     private Atendente model;
     private TelaAtendente view;
     private TelaVendas viewVendas;
@@ -31,6 +39,64 @@ public class ControllerAtendente {
         view.getRadioButtonGato().addActionListener(new RacaListenerGato());
 
     }
+    
+    public void insereCliente(String nome, String cpf, String telefone)throws ClassNotFoundException, SQLException{
+        
+        String sql = "INSERT INTO cliente (nome,cpf,telefone) VALUES (?,?,?);";
+
+        try {
+            pst = conecta.prepareStatement(sql);
+            pst.setString(1, nome);
+            pst.setString(2, cpf);
+            pst.setString(3, telefone);
+            pst.execute();
+            JOptionPane.showMessageDialog(null, "Cliente inserido com sucesso!!");
+        }
+        catch (SQLException ex) {
+            Logger.getLogger(Inserts.class.getName()).log(Level.SEVERE, null, ex);
+            JOptionPane.showMessageDialog(null, "Erro!");
+        }
+        conecta.close();
+    }
+    
+    public void insereAnimal(String cpfDono, String tipo, String nomeAnimal, String raca, String estado)throws ClassNotFoundException, SQLException{
+
+        String sql = "INSERT INTO Animal (cpfDono, tipo, nome, raca) VALUES (?,?,?,?);";
+        try {
+            pst = conecta.prepareStatement(sql);
+            pst.setString(1, cpfDono);
+            pst.setString(2, tipo);
+            pst.setString(3, nomeAnimal);
+            pst.setString(4, raca);
+            pst.execute();
+            JOptionPane.showMessageDialog(null, "Animal inserido com sucesso!!");
+        }
+        catch (SQLException ex) {
+            Logger.getLogger(Inserts.class.getName()).log(Level.SEVERE, null, ex);
+            JOptionPane.showMessageDialog(null, "Erro!");
+        }
+        conecta.close();
+    }
+    /*              Pesquisar como consultar o cliente no github
+    public void consulta(String cpf)throws ClassNotFoundException, SQLException{
+
+        String sql = "INSERT INTO Animal (cpfDono, tipo, nome, raca) VALUES (?,?,?,?);";
+        try {
+            pst = conecta.prepareStatement(sql);
+            pst.setString(1, cpfDono);
+            pst.setString(2, tipo);
+            pst.setString(3, nomeAnimal);
+            pst.setString(4, raca);
+            pst.execute();
+            JOptionPane.showMessageDialog(null, "Animal inserido com sucesso!!");
+        }
+        catch (SQLException ex) {
+            Logger.getLogger(Inserts.class.getName()).log(Level.SEVERE, null, ex);
+            JOptionPane.showMessageDialog(null, "Erro!");
+        }
+        conecta.close();
+    }
+    */
 
     class CadastraListener implements ActionListener {
 

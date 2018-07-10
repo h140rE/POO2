@@ -9,13 +9,6 @@ public class Inserts {
     Connection conecta = null;
     PreparedStatement pst;
     ResultSet rs;
-    
-    public void loginSql(String nome, String senha) throws SQLException, ClassNotFoundException {
-        //if(conecta != null) conecta.close();
-        //conecta = PostgreSQL.get(nome, senha);
-    }
-        
-
     public void Insere(String tabela, String valor)throws ClassNotFoundException, SQLException{
         
         String sql = "INSERT INTO Animal (cpfDono, tipo, nome, raca, estado) VALUES ('03834902004', 'c', ?, ?, 'Finalizado');";
