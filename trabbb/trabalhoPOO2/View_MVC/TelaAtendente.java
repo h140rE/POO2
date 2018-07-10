@@ -19,7 +19,7 @@ import javax.swing.JTextPane;
  *
  * @author xpimenta
  */
-public class TelaAtendente extends javax.swing.JFrame {
+public class TelaAtendente extends javax.swing.JInternalFrame {
 
     /**
      * Creates new form TelaAtendent

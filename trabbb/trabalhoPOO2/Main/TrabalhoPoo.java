@@ -9,8 +9,11 @@ import java.util.LinkedList;
 public class TrabalhoPoo {
 
     public static void main(String[] args) {
+        
+        JanelaPrincipal tela = new JanelaPrincipal();
+        tela.setVisible(true);
         // TELAS ----------------------------------------//
-        Tela_Principal tela = new Tela_Principal();
+       /* Tela_Principal tela = new Tela_Principal();
         TelaAtendente tela2 = new TelaAtendente();
         TelaHBT tela3 = new TelaHBT();
         TelaConsulta tela4 = new TelaConsulta();
@@ -37,7 +40,7 @@ public class TrabalhoPoo {
         
         // INICIALIZACAO DA JANELA ----------------------//
         tela.setVisible(true);
-        
+        */
     }
 
 }
