@@ -1,0 +1,98 @@
+       
+        
+        /*
+        animal1.estadoAtual();
+        //animal1.getEstado().setEstadoAguardando();
+        animal1.getEstado().setEstadoEmBanho();
+        animal1.estadoAtual();
+        animal1.getEstado().setEstadoEmEstadia();
+        animal1.estadoAtual();
+        ControllerPet  controller = new ControllerPet();
+
+       
+       
+
+
+       ContrataServico c = new ContrataServico();
+       Servicos s = new Recibo(animal1);
+
+       s = c.banho(s, animal1);
+       s = c.consulta(animal1, s);
+       s = c.hotel(s, animal1, 1);
+       s = c.tosa(animal1, s);
+
+       System.out.println(s.pagar()); 
+
+       System.out.println(s.getDescricao());   
+ 
+
+
+       System.out.println(s.getDescricao());
+        
+
+*/
+
+
+        /*
+
+        ContrataServico c = new ContrataServico();
+        Servicos s = new Recibo();
+
+        s = c.banho(s);
+        s = c.consulta(s);
+        s = c.hotel(s, 1);
+
+        s = c.tosa(s);
+
+
+        s = c.tosa(animal1, s);
+        
+
+        System.out.println(s.pagar());
+        System.out.println(s.getDescricao());
+        */
+
+        //Tela_Principal a = new Tela_Principal();
+        //a.setVisible(true);
+
+        //ControllerTelaPrincipal cA = new ControllerTelaPrincipal(a);
+		
+		
+		
+		ArrayList<Cliente> clientes = new ArrayList<Cliente>();
+        Atendente at = new Atendente("Joao", 321, 1233-1233, 1);
+        ContrataServico c = new ContrataServico();
+        ListaConsulta consultas = new ListaConsulta();
+        clientes.add(at.atende("Pedro",123,3322-1122));
+        
+        clientes.get(0).AdicionaAnimal("lilica", "vira-lata", "cao");
+        clientes.get(0).AdicionaAnimal("xanim", "siames", "gato");
+        clientes.get(0).AdicionaAnimal("julio", "pit-bull", "cao");
+        
+        clientes.get(0).setRecibo(at.criaRecibo());
+        
+        clientes.get(0).setRecibo(c.banho(clientes.get(0).getRecibo()));
+        clientes.get(0).setRecibo(c.consulta(clientes.get(0).getRecibo()));
+        
+        consultas.adicionaLista(clientes.get(0).getAnimal(1));
+        consultas.adicionaLista(clientes.get(0).getAnimal(0));
+        consultas.adicionaLista(clientes.get(0).getAnimal(2));
+        
+        clientes.get(0).setRecibo(c.hotel(clientes.get(0).getRecibo(), 5));
+        clientes.get(0).setRecibo(c.tosa(clientes.get(0).getRecibo()));
+        clientes.get(0).setRecibo(c.banho(clientes.get(0).getRecibo()));
+        clientes.get(0).setRecibo(c.venda(clientes.get(0).getRecibo(),135,"batata"));
+        clientes.get(0).listaAnimais();
+        System.out.println("--------------------------------");
+        at.Imprime(clientes.get(0));
+        System.out.println("--------------------------------");
+        consultas.imprimeLista();
+        System.out.println("--------------------------------");
+        consultas.retiraLista(1);
+        consultas.imprimeLista();
+        System.out.println("--------------------------------");
+        consultas.retiraLista(1);
+        consultas.imprimeLista();
+        System.out.println("--------------------------------");
+        consultas.retiraLista(1);
+        consultas.imprimeLista();

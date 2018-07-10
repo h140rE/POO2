@@ -1,10 +1,12 @@
 package Controller_MVC;
 
 import Model_MVC.Atendente;
+import Model_MVC.Cliente;
 import View_MVC.TelaAtendente;
 import View_MVC.TelaVendas;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
+import java.util.LinkedList;
 
 public class ControllerAtendente {
 
@@ -12,11 +14,12 @@ public class ControllerAtendente {
     private ControllerVendas controller;
     private TelaAtendente view;
     private TelaVendas viewVendas;
+    private LinkedList<Cliente> clientesAtivos;
 
-    public ControllerAtendente(Atendente model, TelaAtendente view) {
+    public ControllerAtendente(Atendente model, TelaAtendente view, LinkedList<Cliente> cliente) {
         this.model = model;
         this.view = view;
-
+        this.clientesAtivos = cliente;
         view.getJButton_MenuPrincipal_Cadastro_Conformar().addActionListener(new CadastraListener());
         view.getJButton_MenuPrincipal_Cadastro_Cancelar().addActionListener(new CancelaListener());
         view.getJButton_MenuPrincipal_MarcaConsulta_Pesquisar().addActionListener(new ConsultaListener());
@@ -38,6 +41,7 @@ public class ControllerAtendente {
             Raca = view.getjTextField5().getText();
 
             model.cadastrar(Nome, CPF, Telefone, NomeCachorro, Raca);
+            clientesAtivos.add(model.atende(Nome,Integer.parseInt(CPF),Integer.parseInt(Telefone)));
         }
     }
 

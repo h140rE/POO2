@@ -54,8 +54,11 @@ public class Cliente extends Pessoa {
     public void listaAnimais(){
         System.out.println("Cliente:" + this.getNome());
         for(int i=0; i < animais.size(); i++){
-            System.out.println(animais.get(i).dadosAnimal() +"\t Tipo: " + animais.get(i).tipo );
+            System.out.println(i + " - " +animais.get(i).dadosAnimal() +"\t Tipo: " + animais.get(i).tipo );
         }
+    }
+    public Animal getAnimal(int i){
+        return this.animais.get(i);
     }
  
 }

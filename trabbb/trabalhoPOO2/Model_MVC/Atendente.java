@@ -8,8 +8,8 @@ public class Atendente extends Funcionario {
         super(nome, cpf, telefone, idFunc);
     }
 
-	public void atende() {
-
+	public Cliente atende(String nome, int cpf,int telefone) {
+            return new Cliente(nome,cpf,telefone);
 	}
 
 	public Cliente verificaeCadastra(int CPF) {

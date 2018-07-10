@@ -14,17 +14,15 @@ public class ControllerTelaPrincipal {
 
     private Tela_Principal view;
     private TelaAtendente viewAtendente;
-    private ControllerAtendente controllerAtendente;
-    private Atendente modelAtendente;
     private TelaHBT viewBanho;
-    private ControllerHBT controllerBanho;
     private TelaConsulta viewConsulta;
-    private ControllerConsulta controllerConsulta;
-    private Cuidador modelCuidador;
-    private Veterinario modelVeterinario;
 
-    public ControllerTelaPrincipal(Tela_Principal view) {
+
+    public ControllerTelaPrincipal(Tela_Principal view, TelaAtendente tela2, TelaHBT tela3, TelaConsulta tela4) {
         this.view = view;
+        this.viewAtendente = tela2;
+        this.viewBanho = tela3;
+        this.viewConsulta = tela4;
 
         view.getjButton1().addActionListener(new AtendenteListener());
         view.getjButton3().addActionListener(new BanhoListener());
@@ -32,15 +30,16 @@ public class ControllerTelaPrincipal {
 
     }
 
+
     class AtendenteListener implements ActionListener {
 
         @Override
         public void actionPerformed(ActionEvent e) {
 
-            viewAtendente = new TelaAtendente();
+            
             viewAtendente.setVisible(true);
-            modelAtendente = new Atendente();
-            controllerAtendente = new ControllerAtendente(modelAtendente,viewAtendente);
+            
+            
         }
     }
     
@@ -49,10 +48,10 @@ public class ControllerTelaPrincipal {
         @Override
         public void actionPerformed(ActionEvent e) {
 
-            viewBanho = new TelaHBT();
+            
             viewBanho.setVisible(true);
-            modelCuidador = new Cuidador();
-            controllerBanho = new ControllerHBT(viewBanho,modelCuidador);
+            
+            
         }
     }
     
@@ -61,10 +60,10 @@ public class ControllerTelaPrincipal {
         @Override
         public void actionPerformed(ActionEvent e) {
 
-            viewConsulta = new TelaConsulta();
+ 
             viewConsulta.setVisible(true);
-            modelVeterinario = new Veterinario();
-            controllerConsulta = new ControllerConsulta(viewConsulta,modelVeterinario);
+            
+
         }
     }
 

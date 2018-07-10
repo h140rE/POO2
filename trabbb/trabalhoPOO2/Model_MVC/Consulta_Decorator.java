@@ -6,13 +6,13 @@ public class Consulta_Decorator extends ServicoDecorator {
 
     private Veterinario veterinario;
     
-    private ListaConsulta consulta;
+    
 
-    public Consulta_Decorator(Servicos servico,Animal animal) {
+    public Consulta_Decorator(Servicos servico) {
         this.setPreco(60);
         this.servico = servico;
         this.descricao = "\n + Consulta \t\t" + this.getPreco();
-        this.listaConsulta(animal);
+        
 
     }
 
