@@ -11,15 +11,15 @@ import java.util.LinkedList;
 public class ControllerAtendente {
 
     private Atendente model;
-    private ControllerVendas controller;
     private TelaAtendente view;
     private TelaVendas viewVendas;
     private LinkedList<Cliente> clientesAtivos;
 
-    public ControllerAtendente(Atendente model, TelaAtendente view, LinkedList<Cliente> cliente) {
+    public ControllerAtendente(Atendente model, TelaAtendente view, LinkedList<Cliente> cliente,TelaVendas viewVendas) {
         this.model = model;
         this.view = view;
         this.clientesAtivos = cliente;
+        this.viewVendas = viewVendas;
         view.getJButton_MenuPrincipal_Cadastro_Conformar().addActionListener(new CadastraListener());
         view.getJButton_MenuPrincipal_Cadastro_Cancelar().addActionListener(new CancelaListener());
         view.getJButton_MenuPrincipal_MarcaConsulta_Pesquisar().addActionListener(new ConsultaListener());
@@ -78,9 +78,9 @@ public class ControllerAtendente {
         @Override
         public void actionPerformed(ActionEvent e) {
 
-           viewVendas = new TelaVendas();
+           
            viewVendas.setVisible(true);
-           controller = new ControllerVendas(viewVendas);
+           
             
         }
     }
