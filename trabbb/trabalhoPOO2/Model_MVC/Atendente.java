@@ -4,11 +4,11 @@ import javax.swing.JOptionPane;
 
 public class Atendente extends Funcionario {
 
-    public Atendente(String nome, int cpf, int telefone, int idFunc) {
+    public Atendente(String nome, String cpf, String telefone, int idFunc) {
         super(nome, cpf, telefone, idFunc);
     }
 
-	public Cliente atende(String nome, int cpf,int telefone) {
+	public Cliente atende(String nome, String cpf,String telefone) {
             return new Cliente(nome,cpf,telefone);
 	}
 
@@ -25,7 +25,7 @@ public class Atendente extends Funcionario {
 	}
 
 	public void Imprime(Cliente cliente) {
-                System.out.println(cliente.imprimeRecibo());
+                JOptionPane.showMessageDialog(null,cliente.imprimeRecibo());
 	}
 
 	public void marcaConsulta(String CPFDono,String data,String hora) {

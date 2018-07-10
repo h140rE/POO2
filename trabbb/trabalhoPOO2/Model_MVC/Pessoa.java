@@ -4,11 +4,11 @@ public class Pessoa {
 
 	private String nome;
 
-	private int CPF;
+	private String CPF;
 
-	private int telefone;
+	private String telefone;
 
-        public Pessoa(String nome, int CPF, int telefone){
+        public Pessoa(String nome, String CPF, String telefone){
             this.nome = nome;
             this.CPF = CPF;
             this.telefone = telefone;
@@ -17,20 +17,20 @@ public class Pessoa {
         public String getNome(){
             return this.nome;
         }
-        public int getCPF(){
+        public String getCPF(){
             return this.CPF;
         }
-        public int getTelefone(){
+        public String getTelefone(){
             return this.telefone;
         }
         
         public void atualizaNome(String s){
             nome = s;
         }
-        public void atualizaCPF(int n){
+        public void atualizaCPF(String n){
             this.CPF = n;
         }
-        public void atualizaTelefone(int n){
+        public void atualizaTelefone(String n){
             this.telefone = n;
         }
 

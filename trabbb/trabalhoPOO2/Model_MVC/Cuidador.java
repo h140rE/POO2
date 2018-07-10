@@ -2,7 +2,7 @@ package Model_MVC;
 
 public class Cuidador extends Funcionario {
 
-    public Cuidador(String nome, int cpf, int telefone, int idFunc) {
+    public Cuidador(String nome, String cpf, String telefone, int idFunc) {
         super(nome, cpf, telefone, idFunc);
     }
 

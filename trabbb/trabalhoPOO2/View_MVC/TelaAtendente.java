@@ -11,6 +11,8 @@ import javax.swing.JPanel;
 import javax.swing.JTextField;
 import Controller_MVC.*;
 import java.awt.event.ActionListener;
+import javax.swing.ButtonGroup;
+import javax.swing.JRadioButton;
 import javax.swing.JTextPane;
 
 /**
@@ -64,8 +66,8 @@ public class TelaAtendente extends javax.swing.JFrame {
         JButton_MenuPrincipal_Cadastro_Conformar = new javax.swing.JButton();
         jLabel10 = new javax.swing.JLabel();
         jPanel1 = new javax.swing.JPanel();
-        jRadioButton1 = new javax.swing.JRadioButton();
-        jRadioButton2 = new javax.swing.JRadioButton();
+        RadioButtonCao = new javax.swing.JRadioButton();
+        radioButtonGato = new javax.swing.JRadioButton();
         JPanel_MenuPrincipal_MarcaConsulta = new javax.swing.JPanel();
         jLabel15 = new javax.swing.JLabel();
         jLabel16 = new javax.swing.JLabel();
@@ -131,6 +133,8 @@ public class TelaAtendente extends javax.swing.JFrame {
                 .addComponent(jLabel14)
                 .addGap(0, 0, Short.MAX_VALUE))
         );
+
+        setResizable(false);
 
         JButton_MenuPrincipal.setBackground(new java.awt.Color(176, 224, 230));
 
@@ -206,11 +210,11 @@ public class TelaAtendente extends javax.swing.JFrame {
             }
         });
 
-        buttonGroup1.add(jRadioButton1);
-        jRadioButton1.setText("Cão");
+        buttonGroup1.add(RadioButtonCao);
+        RadioButtonCao.setText("Cão");
 
-        buttonGroup1.add(jRadioButton2);
-        jRadioButton2.setText("Gato");
+        buttonGroup1.add(radioButtonGato);
+        radioButtonGato.setText("Gato");
 
         javax.swing.GroupLayout jPanel1Layout = new javax.swing.GroupLayout(jPanel1);
         jPanel1.setLayout(jPanel1Layout);
@@ -218,16 +222,16 @@ public class TelaAtendente extends javax.swing.JFrame {
             jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jPanel1Layout.createSequentialGroup()
                 .addGap(0, 0, 0)
-                .addComponent(jRadioButton1)
+                .addComponent(RadioButtonCao)
                 .addGap(18, 18, 18)
-                .addComponent(jRadioButton2)
+                .addComponent(radioButtonGato)
                 .addContainerGap(9, Short.MAX_VALUE))
         );
         jPanel1Layout.setVerticalGroup(
             jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                .addComponent(jRadioButton1)
-                .addComponent(jRadioButton2, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                .addComponent(RadioButtonCao)
+                .addComponent(radioButtonGato, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
 
         javax.swing.GroupLayout JPanel_MenuPrincipal_CadastroLayout = new javax.swing.GroupLayout(JPanel_MenuPrincipal_Cadastro);
@@ -260,7 +264,7 @@ public class TelaAtendente extends javax.swing.JFrame {
                                     .addComponent(jLabel10)
                                     .addGroup(JPanel_MenuPrincipal_CadastroLayout.createSequentialGroup()
                                         .addComponent(JButton_MenuPrincipal_Cadastro_Cancelar)
-                                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 48, Short.MAX_VALUE)
+                                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                                         .addComponent(JButton_MenuPrincipal_Cadastro_Conformar)
                                         .addGap(6, 6, 6)))))
                         .addGap(0, 0, Short.MAX_VALUE))
@@ -321,7 +325,7 @@ public class TelaAtendente extends javax.swing.JFrame {
                         .addGap(40, 40, 40)
                         .addComponent(JButton_MenuPrincipal_Cadastro_Cancelar))
                     .addComponent(JButton_MenuPrincipal_Cadastro_Conformar))
-                .addContainerGap(36, Short.MAX_VALUE))
+                .addContainerGap(90, Short.MAX_VALUE))
         );
 
         jLabel15.setFont(new java.awt.Font("Yu Gothic UI Light", 0, 36)); // NOI18N
@@ -440,7 +444,7 @@ public class TelaAtendente extends javax.swing.JFrame {
                     .addGroup(JButton_MenuPrincipalLayout.createSequentialGroup()
                         .addGap(58, 58, 58)
                         .addComponent(jLabel1)))
-                .addContainerGap(14, Short.MAX_VALUE))
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
         JButton_MenuPrincipalLayout.setVerticalGroup(
             JButton_MenuPrincipalLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -466,11 +470,13 @@ public class TelaAtendente extends javax.swing.JFrame {
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(JButton_MenuPrincipal, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+            .addComponent(JButton_MenuPrincipal, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(JButton_MenuPrincipal, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+            .addGroup(layout.createSequentialGroup()
+                .addComponent(JButton_MenuPrincipal, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(0, 0, Short.MAX_VALUE))
         );
 
         pack();
@@ -552,6 +558,18 @@ public class TelaAtendente extends javax.swing.JFrame {
         return JButton_MenuPrincipal_SistemadeVendas_Carrinho;
     }
 
+    public JRadioButton getRadioButtonCao() {
+        return RadioButtonCao;
+    }
+
+    public JRadioButton getRadioButtonGato() {
+        return radioButtonGato;
+    }
+
+    public ButtonGroup getButtonGroup1() {
+        return buttonGroup1;
+    }
+
     
  
 
@@ -597,6 +615,7 @@ public class TelaAtendente extends javax.swing.JFrame {
     private javax.swing.JPanel JPanel_MenuPrincipal_Cadastro;
     private javax.swing.JPanel JPanel_MenuPrincipal_MarcaConsulta;
     private javax.swing.JPanel JPanel_MenuPrincipal_SistemasdeVendas;
+    private javax.swing.JRadioButton RadioButtonCao;
     private javax.swing.ButtonGroup buttonGroup1;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel10;
@@ -623,8 +642,6 @@ public class TelaAtendente extends javax.swing.JFrame {
     private javax.swing.JPanel jPanel5;
     private javax.swing.JPanel jPanel6;
     private javax.swing.JPanel jPanel8;
-    private javax.swing.JRadioButton jRadioButton1;
-    private javax.swing.JRadioButton jRadioButton2;
     private javax.swing.JScrollPane jScrollPane1;
     private javax.swing.JScrollPane jScrollPane2;
     private javax.swing.JScrollPane jScrollPane3;
@@ -636,5 +653,6 @@ public class TelaAtendente extends javax.swing.JFrame {
     private javax.swing.JTextPane jTextPane1;
     private javax.swing.JTextPane jTextPane2;
     private javax.swing.JTextPane jTextPane3;
+    private javax.swing.JRadioButton radioButtonGato;
     // End of variables declaration//GEN-END:variables
 }

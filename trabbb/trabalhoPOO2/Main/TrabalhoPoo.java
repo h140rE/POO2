@@ -19,9 +19,9 @@ public class TrabalhoPoo {
         
         // INSTANCIAS INICIAIS ------------------------//
         LinkedList<Cliente> clientes = new LinkedList<>();
-        Atendente atendentePadrao = new Atendente("Joao1",123,1111,1);
-        Cuidador cuidadorPadrao = new Cuidador("Joao2",132,1111,2);
-        Veterinario veterinarioPadrao = new Veterinario("Joao3",213,1111,3);
+        Atendente atendentePadrao = new Atendente("Joao1","123","1111",1);
+        Cuidador cuidadorPadrao = new Cuidador("Joao2","132","1111",2);
+        Veterinario veterinarioPadrao = new Veterinario("Joao3","213","1111",3);
         
         
         

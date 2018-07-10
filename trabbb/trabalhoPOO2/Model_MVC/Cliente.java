@@ -1,6 +1,7 @@
 package Model_MVC;
 
 import java.util.ArrayList;
+import javax.swing.JOptionPane;
 
 
 public class Cliente extends Pessoa {
@@ -9,7 +10,7 @@ public class Cliente extends Pessoa {
 
     private Servicos recibo;
     
-    public Cliente(String nome, int cpf, int telefone){
+    public Cliente(String nome, String cpf, String telefone){
         super(nome,cpf,telefone);
         this.animais = new ArrayList<Animal>();
     }
@@ -38,12 +39,14 @@ public class Cliente extends Pessoa {
         String auxiliar =  recibo.getDescricao() + "\n Total a pagar: R$" + this.recibo.pagar();
                 return auxiliar;
     }
-    public void AdicionaAnimal(String nome, String raca, String tipo){
-        if(tipo == "cao"){
+    public void AdicionaAnimal(String nome, String raca, int tipo){
+        if(tipo == 1){
             animais.add(new Cao(nome,raca));
+            JOptionPane.showMessageDialog(null, "Cao Adicionado com Sucesso!");
         }
-        else if(tipo == "gato"){
+        else if(tipo == 2){
             animais.add(new Gato(nome,raca));
+            JOptionPane.showMessageDialog(null, "Gato Adicionado com Sucesso!");
         }
         else{
             System.out.println("Tipo invalido");

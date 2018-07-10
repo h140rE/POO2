@@ -7,6 +7,7 @@ import View_MVC.TelaVendas;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 import java.util.LinkedList;
+import javax.swing.JOptionPane;
 
 public class ControllerAtendente {
 
@@ -14,8 +15,10 @@ public class ControllerAtendente {
     private TelaAtendente view;
     private TelaVendas viewVendas;
     private LinkedList<Cliente> clientesAtivos;
+    private Boolean cao = false;
+    private Boolean gato = false;
 
-    public ControllerAtendente(Atendente model, TelaAtendente view, LinkedList<Cliente> cliente,TelaVendas viewVendas) {
+    public ControllerAtendente(Atendente model, TelaAtendente view, LinkedList<Cliente> cliente, TelaVendas viewVendas) {
         this.model = model;
         this.view = view;
         this.clientesAtivos = cliente;
@@ -24,6 +27,8 @@ public class ControllerAtendente {
         view.getJButton_MenuPrincipal_Cadastro_Cancelar().addActionListener(new CancelaListener());
         view.getJButton_MenuPrincipal_MarcaConsulta_Pesquisar().addActionListener(new ConsultaListener());
         view.getJButton_MenuPrincipal_SistemadeVendas_Carrinho().addActionListener(new AbreVendaListener());
+        view.getRadioButtonCao().addActionListener(new RacaListenerCao());
+        view.getRadioButtonGato().addActionListener(new RacaListenerGato());
 
     }
 
@@ -32,18 +37,52 @@ public class ControllerAtendente {
         @Override
         public void actionPerformed(ActionEvent e) {
 
-            String Nome, CPF, Telefone, NomeCachorro, Raca;
+            String Nome, CPF, Telefone, NomeAnimal, Raca;
 
             Nome = view.getjTextField1().getText();
             CPF = view.getjTextField2().getText();
             Telefone = view.getjTextField3().getText();
-            NomeCachorro = view.getjTextField4().getText();
+            NomeAnimal = view.getjTextField4().getText();
             Raca = view.getjTextField5().getText();
 
-            model.cadastrar(Nome, CPF, Telefone, NomeCachorro, Raca);
-            clientesAtivos.add(model.atende(Nome,Integer.parseInt(CPF),Integer.parseInt(Telefone)));
+            //model.cadastrar(Nome, CPF, Telefone, NomeCachorro, Raca);
+            clientesAtivos.add(model.atende(Nome,CPF,Telefone));
+            if(cao){
+                clientesAtivos.getLast().AdicionaAnimal(NomeAnimal, Raca, 1);
+                cao = false;
+                view.getButtonGroup1().clearSelection();
+                
+            }else if(gato){
+                clientesAtivos.getLast().AdicionaAnimal(NomeAnimal, Raca, 2);
+                gato = false;
+                view.getButtonGroup1().clearSelection();
+                
+            }else{
+                JOptionPane.showMessageDialog(null, "Selecione um tipo de Animal");
+            }
+            
         }
     }
+    
+    class RacaListenerCao implements ActionListener {
+
+        @Override
+        public void actionPerformed(ActionEvent e) {
+            
+            cao = true;
+
+        }
+    }
+    class RacaListenerGato implements ActionListener {
+
+        @Override
+        public void actionPerformed(ActionEvent e) {
+            
+            gato = true;
+
+        }
+    }    
+    
 
     class CancelaListener implements ActionListener {
 
