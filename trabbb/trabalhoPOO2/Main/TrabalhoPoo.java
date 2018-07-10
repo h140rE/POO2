@@ -11,7 +11,10 @@ public class TrabalhoPoo {
     public static void main(String[] args) {
         
         JanelaPrincipal tela = new JanelaPrincipal();
+        tela.setSize(1010,550);
+        tela.setLocationRelativeTo(null);
         tela.setVisible(true);
+         
         // TELAS ----------------------------------------//
        /* Tela_Principal tela = new Tela_Principal();
         TelaAtendente tela2 = new TelaAtendente();

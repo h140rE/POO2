@@ -5,17 +5,14 @@
  */
 package View_MVC;
 
-import javax.swing.JButton;
-import javax.swing.JRadioButton;
-import javax.swing.JTextArea;
-import javax.swing.JTextField;
-import javax.swing.JTextPane;
+import javax.swing.*;
+
 
 /**
  *
  * @author xpimenta
  */
-public class TelaConsulta extends javax.swing.JFrame {
+public class TelaConsulta extends javax.swing.JInternalFrame {
 
     /**
      * Creates new form TelaConsulta
@@ -76,6 +73,8 @@ public class TelaConsulta extends javax.swing.JFrame {
             jPanel5Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGap(0, 170, Short.MAX_VALUE)
         );
+
+        setClosable(true);
 
         JPanel_TelaSistemaConsulta.setBackground(new java.awt.Color(250, 255, 240));
 
@@ -228,6 +227,11 @@ public class TelaConsulta extends javax.swing.JFrame {
 
         buttonGroup1.add(jRadioButton2);
         jRadioButton2.setText("Controle");
+        jRadioButton2.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jRadioButton2ActionPerformed(evt);
+            }
+        });
 
         jTable1.setModel(new javax.swing.table.DefaultTableModel(
             new Object [][] {
@@ -373,7 +377,7 @@ public class TelaConsulta extends javax.swing.JFrame {
                 .addGroup(JPanel_TelaSistemaConsultaLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
                     .addComponent(jLabel1)
                     .addComponent(jPanel4, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                    .addComponent(jPanel2, javax.swing.GroupLayout.PREFERRED_SIZE, 0, Short.MAX_VALUE))
+                    .addComponent(jPanel2, javax.swing.GroupLayout.PREFERRED_SIZE, 578, Short.MAX_VALUE))
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
         JPanel_TelaSistemaConsultaLayout.setVerticalGroup(
@@ -429,6 +433,10 @@ public class TelaConsulta extends javax.swing.JFrame {
     private void jTextField_SistemaDeConsulta_NomeDoAnimalActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jTextField_SistemaDeConsulta_NomeDoAnimalActionPerformed
         // TODO add your handling code here:
     }//GEN-LAST:event_jTextField_SistemaDeConsulta_NomeDoAnimalActionPerformed
+
+    private void jRadioButton2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jRadioButton2ActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_jRadioButton2ActionPerformed
 
     public JButton getjButton1() {
         return jButton1;

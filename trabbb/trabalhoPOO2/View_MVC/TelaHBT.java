@@ -14,7 +14,7 @@ import javax.swing.JTextPane;
  *
  * @author xpimenta
  */
-public class TelaHBT extends javax.swing.JFrame {
+public class TelaHBT extends javax.swing.JInternalFrame {
 
     /**
      * Creates new form TelaHotel
@@ -57,6 +57,8 @@ public class TelaHBT extends javax.swing.JFrame {
 
         jLabel4.setFont(new java.awt.Font("Yu Gothic Medium", 0, 18)); // NOI18N
         jLabel4.setText("Animal");
+
+        setClosable(true);
 
         jPanel1.setBackground(new java.awt.Color(255, 240, 245));
 

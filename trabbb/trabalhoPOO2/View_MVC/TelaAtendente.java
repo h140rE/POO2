@@ -5,15 +5,10 @@
  */
 package View_MVC;
 
-import javax.swing.JButton;
-import javax.swing.JOptionPane;
-import javax.swing.JPanel;
-import javax.swing.JTextField;
+import javax.swing.*;
 import Controller_MVC.*;
 import java.awt.event.ActionListener;
-import javax.swing.ButtonGroup;
-import javax.swing.JRadioButton;
-import javax.swing.JTextPane;
+
 
 /**
  *
@@ -134,7 +129,7 @@ public class TelaAtendente extends javax.swing.JInternalFrame {
                 .addGap(0, 0, Short.MAX_VALUE))
         );
 
-        setResizable(false);
+        setClosable(true);
 
         JButton_MenuPrincipal.setBackground(new java.awt.Color(176, 224, 230));
 

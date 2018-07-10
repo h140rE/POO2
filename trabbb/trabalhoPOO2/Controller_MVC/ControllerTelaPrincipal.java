@@ -24,9 +24,6 @@ public class ControllerTelaPrincipal {
         this.viewBanho = tela3;
         this.viewConsulta = tela4;
 
-        view.getjButton1().addActionListener(new AtendenteListener());
-        view.getjButton3().addActionListener(new BanhoListener());
-        view.getjButton4().addActionListener(new ConsultaListener());
 
     }
 

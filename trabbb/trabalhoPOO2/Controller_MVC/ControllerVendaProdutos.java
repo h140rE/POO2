@@ -13,11 +13,9 @@ public class ControllerVendaProdutos {
      public ControllerVendaProdutos(TelaVendasProdutos view) {
         this.view = view;
         
-        view.getjButton3().addActionListener(new VerificaDadosListener());
         view.getjButton2().addActionListener(new ConfirmaEntradaListener());
         
 }
-     
      class VerificaDadosListener implements ActionListener {
 
         @Override
@@ -25,9 +23,6 @@ public class ControllerVendaProdutos {
 
             String CPFDono;
 
-            CPFDono = view.getjTextPane3().getText();
-
-            JOptionPane.showMessageDialog(null,"Verificado :" + CPFDono);
         }
     }
      
@@ -38,11 +33,7 @@ public class ControllerVendaProdutos {
 
             String CPFDono;
 
-            CPFDono = view.getjTextPane3().getText();
 
-            JOptionPane.showMessageDialog(null,"Verificado :" + CPFDono);
-            
-            
             
         }
     }
