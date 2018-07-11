@@ -21,42 +21,49 @@ public class ControllerAtendente {
     ResultSet rs;
     private Atendente atendente;
     TelaAtendente view;
+    JanelaPrincipal jPrincipal;
+    
     private LinkedList<Cliente> clientesAtivos;
-    private Boolean cao = false;
-    private Boolean gato = false; 
+ 
      BuscaCliente buscaCliente;
      CadastraAnimal cadastraA;
      CadastraCliente cadastraC;
-     MarcaConsulta marcaConsulta;
-    
-    
-    
-    public ControllerAtendente(Atendente model, TelaAtendente view,LinkedList<Cliente> cliente) {
+     MarcaConsulta marcaC;
+
+    public ControllerAtendente(JanelaPrincipal jPrincipal,Atendente model, TelaAtendente view , CadastraCliente cadastraC,
+            BuscaCliente buscaCliente,CadastraAnimal cadastraA  ,MarcaConsulta marcaC ,LinkedList<Cliente> cliente){
        
+       
+        this.jPrincipal = jPrincipal;
         this.atendente = model;
         this.view = view;
-        this.clientesAtivos = cliente;
-        this.cadastraC = new CadastraCliente();
+        this.cadastraC = cadastraC;
+        this.buscaCliente = buscaCliente;
+        this.cadastraA = cadastraA;
+        this.marcaC = marcaC;
         
-        
-        this.view.getMenuCadastraCliente().addActionListener(new CadastraClienteListener());
-        
-        
-        
+        //this.clientesAtivos = cliente;
+        view.getMenuCadastraCliente().addActionListener(new CadastraClienteListener());
+        view.getMenuBuscaCliente().addActionListener(new IdentificadorCadastro());
+        view.getMenCadastraAnimal().addActionListener(new CadastroDeAnimal());
+        view.getMenuMarcaConsulta().addActionListener(new MarcaAConsulta());
+      
     }
     
 
     class CadastraClienteListener implements ActionListener {
 
-        
+          @Override
         public void actionPerformed(ActionEvent e) {
             
             view.getDesktopPanel().removeAll();
-            view.getDesktopPanel().repaint();      
+            view.getDesktopPanel().repaint();
+            
             view.getDesktopPanel().add(cadastraC);
+            cadastraC.show();
+
             
-            
-            cadastraC.setVisible(true);
+            //cadastraC.show();
            
             /*String Nome, CPF, Telefone, NomeAnimal, Raca;
             Nome = cadastroCliente.getjTextField1().toString();
@@ -69,70 +76,60 @@ public class ControllerAtendente {
         }
     }
     
-    /* class IdentificadorCadastro implements ActionListener {
+     class IdentificadorCadastro implements ActionListener {
 
         @Override
         public void actionPerformed(ActionEvent e) {
+            view.getDesktopPanel().removeAll();
+            view.getDesktopPanel().repaint();
             
-            CadastroCliente = true;
-            view.getDesktopPanel().add(cadastroCliente);
-            cadastroCliente.setVisible(true);
+            view.getDesktopPanel().add(buscaCliente);
+            buscaCliente.show();
+            
+            
 
         }
     }
-    
-    class RacaListenerCao implements ActionListener {
+     
+     class CadastroDeAnimal implements ActionListener{
 
         @Override
-        public void actionPerformed(ActionEvent e) {
+        public void actionPerformed(ActionEvent ae) {
+            view.getDesktopPanel().removeAll();
+            view.getDesktopPanel().repaint();
             
-            cao = true;
-
+            view.getDesktopPanel().add(cadastraA);
+            cadastraA.show();
         }
-    }
-    
-    class RacaListenerGato implements ActionListener {
+     }
+        
+      class MarcaAConsulta implements ActionListener{
 
         @Override
-        public void actionPerformed(ActionEvent e) {
+        public void actionPerformed(ActionEvent ae) {
+            view.getDesktopPanel().removeAll();
+            view.getDesktopPanel().repaint();
             
-            gato = true;
-
+            view.getDesktopPanel().add(marcaC);
+            marcaC.show();
         }
-    }    
+      }
+         
     
-
     class CancelaListener implements ActionListener {
 
         @Override
         public void actionPerformed(ActionEvent e) {
-/*
+     /*
             view.getjTextField1().setText("");
             view.getjTextField2().setText("");
             view.getjTextField3().setText("");
             view.getjTextField4().setText("");
             view.getjTextField5().setText("");
-            
-        }
-    }*/
-
-    class ConsultaListener implements ActionListener {
-
-        @Override
-        public void actionPerformed(ActionEvent e) {
-/*
-            String CPFDono,Data,Hora;
-            
-            CPFDono = view.getjTextPane1().getText();
-            Data = view.getjTextPane2().getText();
-            Hora = view.getjTextPane3().getText();
-            
-            model.marcaConsulta(CPFDono, Data, Hora);
             */
         }
-    }
-
    
-    
+    }
 }
+     
 

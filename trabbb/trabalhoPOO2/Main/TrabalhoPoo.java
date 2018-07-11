@@ -13,13 +13,25 @@ public class TrabalhoPoo {
         
          
         // TELAS ----------------------------------------//
-        TelaInicial tela0 = new TelaInicial();
-        JanelaPrincipal tela1 = new JanelaPrincipal();
-        TelaAtendente tela2 = new TelaAtendente();
-        TelaHBT tela3 = new TelaHBT();
-        TelaConsulta tela4 = new TelaConsulta();
-        TelaVendas tela5 = new TelaVendas();
+        JanelaPrincipal telaPrincipal = new JanelaPrincipal();
+        TelaInicial telaApresentacao = new TelaInicial();
+        TelaAtendente telaAtendente = new TelaAtendente();
+        TelaHBT telaHotelBanhoTosa = new TelaHBT();
+        TelaConsulta telaConsulta = new TelaConsulta();
+        TelaVendas telaVendas = new TelaVendas();
         
+        CadastraCliente  cad = new CadastraCliente();
+        CadastraAnimal caa = new CadastraAnimal();
+        BuscaCliente bus = new BuscaCliente();
+        MarcaConsulta mar = new MarcaConsulta();
+        
+     
+        
+        /*
+        CadastraCliente cadastraC = new CadastraCliente();
+        CadastraAnimal cadastraA = new CadastraAnimal();
+        BuscaCliente buscaCliente = new BuscaCliente();
+        */
         
         // INSTANCIAS INICIAIS ------------------------//
         LinkedList<Cliente> clientes = new LinkedList<>();
@@ -28,15 +40,14 @@ public class TrabalhoPoo {
         Veterinario veterinarioPadrao = new Veterinario("Joao3","213","1111",3);
         
         //CONTROLLERS ----------------------------------//
-        ControllerJFrame jf = new ControllerJFrame(tela1,tela2,tela4,tela3,tela5);
-        ControllerAtendente controlerAtendente = new ControllerAtendente(atendentePadrao,tela2,clientes);
-        ControllerVendas controllerVendas = new ControllerVendas(tela5);
+        ControllerJFrame jf = new ControllerJFrame(telaPrincipal,telaAtendente,telaConsulta ,telaHotelBanhoTosa,telaVendas);
+        ControllerAtendente controllerAtendente = new ControllerAtendente(telaPrincipal,atendentePadrao,telaAtendente, cad ,bus ,caa ,mar ,clientes);
+        ControllerVendas controllerVendas = new ControllerVendas(cad,telaPrincipal);
         ControllerHBT controllerBanho;
         ControllerConsulta controllerConsulta;
-        
-        
+       
         // INICIALIZACAO DA JANELA ----------------------//
-        tela1.setVisible(true);
+        //telaPrincipal.setVisible(true);
         
     }
 

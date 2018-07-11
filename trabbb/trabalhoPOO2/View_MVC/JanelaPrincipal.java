@@ -30,6 +30,7 @@ public class JanelaPrincipal extends javax.swing.JFrame {
     public JMenuItem getjMenuItem_Vendas() {
         return jMenuItem_Vendas;
     }
+    
 
     @SuppressWarnings("unchecked")
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
@@ -173,7 +174,7 @@ public class JanelaPrincipal extends javax.swing.JFrame {
     }// </editor-fold>//GEN-END:initComponents
 
     private void jMenuItem4ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jMenuItem4ActionPerformed
-        this.dispose();
+      
     }//GEN-LAST:event_jMenuItem4ActionPerformed
 
     private void jMenuItem_ConsultaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jMenuItem_ConsultaActionPerformed
