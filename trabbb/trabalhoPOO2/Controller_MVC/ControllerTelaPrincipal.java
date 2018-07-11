@@ -6,19 +6,19 @@ import Model_MVC.Veterinario;
 import View_MVC.TelaAtendente;
 import View_MVC.TelaConsulta;
 import View_MVC.TelaHBT;
-import View_MVC.Tela_Principal;
+import View_MVC.TelaInicial;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 
 public class ControllerTelaPrincipal {
 
-    private Tela_Principal view;
+    private TelaInicial view;
     private TelaAtendente viewAtendente;
     private TelaHBT viewBanho;
     private TelaConsulta viewConsulta;
 
 
-    public ControllerTelaPrincipal(Tela_Principal view, TelaAtendente tela2, TelaHBT tela3, TelaConsulta tela4) {
+    public ControllerTelaPrincipal(TelaInicial view, TelaAtendente tela2, TelaHBT tela3, TelaConsulta tela4) {
         this.view = view;
         this.viewAtendente = tela2;
         this.viewBanho = tela3;

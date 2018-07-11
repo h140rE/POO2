@@ -4,17 +4,10 @@ package View_MVC;
 import javax.swing.JMenuItem;
 
 public class JanelaPrincipal extends javax.swing.JFrame {
-    Tela_Principal telaPrincipal = new Tela_Principal();
-    TelaConsulta telaConsulta = new TelaConsulta();  
-    TelaAtendente telaAtendente = new TelaAtendente();
-    TelaVendas telaVendas = new TelaVendas();
-    TelaHBT telaHBT = new TelaHBT();
+  
 
     public JanelaPrincipal(){
         initComponents(); 
-        this.desktopPanel.add(telaPrincipal);
-        telaPrincipal.setVisible(true);
-        telaPrincipal.setSize(900, 560);
     }
 
     public JMenuItem getjMenuItem_Atendente() {
@@ -179,22 +172,11 @@ public class JanelaPrincipal extends javax.swing.JFrame {
     }//GEN-LAST:event_jMenuItem4ActionPerformed
 
     private void jMenuItem_ConsultaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jMenuItem_ConsultaActionPerformed
-        
-        this.desktopPanel.add(telaConsulta);
-        telaConsulta.setVisible(true);
-        telaAtendente.setVisible(false);
-        telaVendas.setVisible(false);
-        telaHBT.setVisible(false);
-        
+ 
     }//GEN-LAST:event_jMenuItem_ConsultaActionPerformed
 
     private void jMenuItem_AtendenteActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jMenuItem_AtendenteActionPerformed
-        
-        this.desktopPanel.add(telaAtendente);
-        telaConsulta.setVisible(false);
-        telaAtendente.setVisible(true);
-        telaVendas.setVisible(false);
-        telaHBT.setVisible(false);
+     
     }//GEN-LAST:event_jMenuItem_AtendenteActionPerformed
 
     private void jMenu1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jMenu1ActionPerformed
@@ -202,20 +184,11 @@ public class JanelaPrincipal extends javax.swing.JFrame {
     }//GEN-LAST:event_jMenu1ActionPerformed
 
     private void jMenuItem_VendasActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jMenuItem_VendasActionPerformed
-        
-        this.desktopPanel.add(telaVendas);
-        telaConsulta.setVisible(false);
-        telaAtendente.setVisible(false);
-        telaVendas.setVisible(true);
-        telaHBT.setVisible(false);
+          
     }//GEN-LAST:event_jMenuItem_VendasActionPerformed
 
     private void jMenuItem_HotelBanhoTosaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jMenuItem_HotelBanhoTosaActionPerformed
-        this.desktopPanel.add(telaHBT);
-        telaConsulta.setVisible(false);
-        telaAtendente.setVisible(false);
-        telaVendas.setVisible(false);
-        telaHBT.setVisible(true);
+     
     }//GEN-LAST:event_jMenuItem_HotelBanhoTosaActionPerformed
 
     /**
