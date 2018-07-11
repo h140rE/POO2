@@ -2,8 +2,9 @@ package Model_MVC;
 
 public class Gato extends Animal {
 
-    public Gato(String cpfDono, String nomeAnimal, String raca) {
-        super(cpfDono, 'g', nomeAnimal, raca);
+    public Gato(String nomeAnimal, String raca) {
+        super(nomeAnimal, raca);
+        this.tipo = "Gato";
     }
 
 }
