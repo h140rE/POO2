@@ -5,6 +5,8 @@ import View_MVC.*;
 
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
+import java.awt.event.MouseAdapter;
+import java.awt.event.MouseEvent;
 import java.sql.Connection;
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
@@ -24,6 +26,9 @@ public class ControllerAtendente {
     CadastraCliente cadastraC;
     MarcaConsulta marcaC;
     private LinkedList<Cliente> clientesAtivos;
+    ClienteTableModel tableModel;
+    Boolean cao = false;
+    Boolean gato = false;
 
     public ControllerAtendente(JanelaPrincipal jPrincipal, Atendente model, TelaAtendente view, CadastraCliente cadastraC,
             BuscaCliente buscaCliente, CadastraAnimal cadastraA, MarcaConsulta marcaC, LinkedList<Cliente> cliente) {
@@ -36,7 +41,10 @@ public class ControllerAtendente {
         this.cadastraA = cadastraA;
         this.marcaC = marcaC;
         this.clientesAtivos = cliente;
+        this.tableModel = new ClienteTableModel(cliente);
 
+        this.view.getTabelaClientes().setModel(tableModel);
+        this.view.getTabelaClientes().addMouseListener(new ClicaTabela());
         this.view.getMenuCadastraCliente().addActionListener(new CadastraClienteJanelaListener());
         this.view.getMenuBuscaCliente().addActionListener(new BuscaClienteJanelaListener());
         this.view.getMenCadastraAnimal().addActionListener(new CadastroAnimalJanelaListener());
@@ -51,6 +59,11 @@ public class ControllerAtendente {
 
         this.marcaC.getBotaoCancela().addActionListener(new CancelaConsultaListener());
         this.marcaC.getBotaoConfirma().addActionListener(new ConfirmaConsultaListener());
+        
+        this.cadastraA.getBotaoConfirmaAnimal().addActionListener(new CadastraAnimalListener());
+        this.cadastraA.getBotaoCancelaAnimal().addActionListener(new CancelaAnimalListener());
+        this.cadastraA.getRadioButtonCao().addActionListener(new SelecionaCaoListener());
+        this.cadastraA.getRadioButtonGato().addActionListener(new SelecionaGatoListener());
 
     }
 
@@ -121,7 +134,7 @@ public class ControllerAtendente {
                 clientesAtivos.add(atendente.atende(Nome, CPF, Telefone));
 
                 limpaBufferCadastra();
-                adicionaTabela(clientesAtivos);
+                adicionaTabela(clientesAtivos.getLast());
             }
 
         }
@@ -136,9 +149,9 @@ public class ControllerAtendente {
 
     }
 
-    private void adicionaTabela(LinkedList<Cliente> clientesAtivos) {
-        view.getTabelaClientes().removeAll();
-        view.getTabelaClientes().setModel(new ClienteTableModel(clientesAtivos));
+    private void adicionaTabela(Cliente clientesAtivos) {
+        this.tableModel.addCliente(clientesAtivos);
+        
     }
 
     private void limpaBufferCadastra() {
@@ -216,6 +229,92 @@ public class ControllerAtendente {
 
         }
 
+    }
+      class CadastraAnimalListener implements ActionListener {
+
+        @Override
+        public void actionPerformed(ActionEvent e) {
+            Cliente cli = null;
+            String nomeAnimal, racaAnimal;
+            cli = tableModel.getCliente(view.getTabelaClientes().getSelectedRow());
+            if (cli == null) {
+                JOptionPane.showMessageDialog(null, "Escolha um cliente");
+            } else {
+
+                cadastraA.getDonoCadastraAnimal().setText(cli.getNome());
+                nomeAnimal = cadastraA.getTextoNomeAnimal().getText();
+                racaAnimal = cadastraA.getTextoRacaAnimal().getText();
+
+                if (nomeAnimal.equals("") || racaAnimal.equals("")) {
+                    JOptionPane.showMessageDialog(null, "Preencha todos os campos");
+                } else {
+                    if (cao) {
+                        cli.AdicionaAnimal(nomeAnimal, racaAnimal, 1);
+                        limpaRadioButton();
+                        cao = false;
+                    } else if (gato) {
+                        cli.AdicionaAnimal(nomeAnimal, racaAnimal, 2);
+                        limpaRadioButton();
+                        gato = false;
+                    } else {
+                        JOptionPane.showMessageDialog(null, "Selecione o Tipo do Animal");
+                    }
+                }
+            }
+        }
+
+    }
+
+    class CancelaAnimalListener implements ActionListener {
+
+        @Override
+        public void actionPerformed(ActionEvent e) {
+            limpaBufferCadastraAnimal();
+        }
+
+    }
+
+    class SelecionaCaoListener implements ActionListener {
+
+        @Override
+        public void actionPerformed(ActionEvent e) {
+            cao = true;
+        }
+
+    }
+
+    class SelecionaGatoListener implements ActionListener {
+
+        @Override
+        public void actionPerformed(ActionEvent e) {
+            gato = true;
+        }
+
+    }
+    
+    class ClicaTabela extends MouseAdapter {
+
+        
+        public void mouseClicked(MouseEvent e) {
+            Cliente cli;
+            cli = tableModel.getCliente(view.getTabelaClientes().getSelectedRow());
+            view.getTabelaClientes().getSelectedRow();
+            cadastraA.getDonoCadastraAnimal().setText(cli.getNome());
+            
+        }
+   
+    }
+
+    public void limpaRadioButton() {
+        cadastraA.getButtonGroup1().clearSelection();
+    }
+
+
+
+    private void limpaBufferCadastraAnimal() {
+        cadastraA.getTextoNomeAnimal().setText("");
+        cadastraA.getTextoRacaAnimal().setText("");
+        cadastraA.getDonoCadastraAnimal().setText("");
     }
 
 }
