@@ -10,10 +10,11 @@ public class TrabalhoPoo {
 
     public static void main(String[] args) {
         
-        ControllerJFrame jf = new ControllerJFrame();
+        
          
         // TELAS ----------------------------------------//
-       /* Tela_Principal tela = new Tela_Principal();
+        TelaInicial tela0 = new TelaInicial();
+        JanelaPrincipal tela1 = new JanelaPrincipal();
         TelaAtendente tela2 = new TelaAtendente();
         TelaHBT tela3 = new TelaHBT();
         TelaConsulta tela4 = new TelaConsulta();
@@ -26,21 +27,17 @@ public class TrabalhoPoo {
         Cuidador cuidadorPadrao = new Cuidador("Joao2","132","1111",2);
         Veterinario veterinarioPadrao = new Veterinario("Joao3","213","1111",3);
         
-        
-        
-        
-        
         //CONTROLLERS ----------------------------------//
-        ControllerTelaPrincipal controlerTelaPrincipal = new ControllerTelaPrincipal(tela,tela2,tela3,tela4);
-        ControllerAtendente controlerAtendente = new ControllerAtendente(atendentePadrao,tela2,clientes,tela5);
+        ControllerJFrame jf = new ControllerJFrame(tela1,tela2,tela4,tela3,tela5);
+        ControllerAtendente controlerAtendente = new ControllerAtendente(atendentePadrao,tela2,clientes);
         ControllerVendas controllerVendas = new ControllerVendas(tela5);
         ControllerHBT controllerBanho;
         ControllerConsulta controllerConsulta;
         
         
         // INICIALIZACAO DA JANELA ----------------------//
-        tela.setVisible(true);
-        */
+        tela1.setVisible(true);
+        
     }
 
 }
