@@ -1,4 +1,4 @@
-CREATE SCHEMA ZikaPET;
+﻿CREATE SCHEMA ZikaPET;
 --DROP SCHEMA ZikaPET CASCADE;
 SET search_path to ZikaPET;
 CREATE SEQUENCE funcionarioID;
@@ -168,4 +168,4 @@ INSERT INTO Animal (cpfDono, tipo, nome, raca) VALUES
  
 --INSERT INTO reciboproduto (nome,cpf,telefone) VALUES 
 
-
+select * from cliente

@@ -3,14 +3,15 @@ package Main;
 import Model_MVC.*;
 import Controller_MVC.*;
 import View_MVC.*;
+import java.sql.SQLException;
 import java.util.ArrayList;
 import java.util.LinkedList;
 
 public class TrabalhoPoo {
 
-    public static void main(String[] args) {
+    public static void main(String[] args) throws ClassNotFoundException, SQLException {
         
-        
+        SQL testesql = new SQL(new PostgreSQL().login("postgres","121533"));
          
         // TELAS ----------------------------------------//
         JanelaPrincipal telaPrincipal = new JanelaPrincipal();
@@ -42,7 +43,7 @@ public class TrabalhoPoo {
         
         //CONTROLLERS ----------------------------------//
         ControllerJFrame jf = new ControllerJFrame(telaPrincipal,telaAtendente,telaConsulta ,telaHotelBanhoTosa,telaVendas);
-        ControllerAtendente controllerAtendente = new ControllerAtendente(telaPrincipal,atendentePadrao,telaAtendente, cad ,bus ,caa ,mar ,clientes);
+        ControllerAtendente controllerAtendente = new ControllerAtendente(telaPrincipal,atendentePadrao,telaAtendente, cad ,bus ,caa ,mar ,clientes,testesql);
         ControllerVendas controllerVendas = new ControllerVendas(telaPrincipal,telaVendas,cuidadorPadrao, vserv, vprod);
         ControllerHBT controllerBanho;
         ControllerConsulta controllerConsulta;

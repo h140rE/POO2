@@ -8,7 +8,10 @@ import java.awt.event.ActionListener;
 import java.sql.Connection;
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
+import java.sql.SQLException;
 import java.util.LinkedList;
+import java.util.logging.Level;
+import java.util.logging.Logger;
 import javax.swing.JOptionPane;
 
 public class ControllerAtendente {
@@ -24,9 +27,10 @@ public class ControllerAtendente {
     CadastraCliente cadastraC;
     MarcaConsulta marcaC;
     private LinkedList<Cliente> clientesAtivos;
+    SQL testesql;
 
     public ControllerAtendente(JanelaPrincipal jPrincipal, Atendente model, TelaAtendente view, CadastraCliente cadastraC,
-            BuscaCliente buscaCliente, CadastraAnimal cadastraA, MarcaConsulta marcaC, LinkedList<Cliente> cliente) {
+            BuscaCliente buscaCliente, CadastraAnimal cadastraA, MarcaConsulta marcaC, LinkedList<Cliente> cliente, SQL testesql) {
 
         this.jPrincipal = jPrincipal;
         this.atendente = model;
@@ -36,6 +40,7 @@ public class ControllerAtendente {
         this.cadastraA = cadastraA;
         this.marcaC = marcaC;
         this.clientesAtivos = cliente;
+        this.testesql = testesql;
 
         this.view.getMenuCadastraCliente().addActionListener(new CadastraClienteJanelaListener());
         this.view.getMenuBuscaCliente().addActionListener(new BuscaClienteJanelaListener());
@@ -172,7 +177,9 @@ public class ControllerAtendente {
             if (NomeCliente.equals("")) {
                 JOptionPane.showMessageDialog(null, "Preencha todos os campos!!!");
             } else {
-                JOptionPane.showMessageDialog(null, "Não implementado!!!");
+                   clientesAtivos.add(atendente.atende(buscaCliente.getjTextField1().getText(), buscaCliente.getjTextField2().getText(),
+                           buscaCliente.getjTextField3().getText()));
+                
 
             }
 
@@ -185,12 +192,21 @@ public class ControllerAtendente {
         @Override
         public void actionPerformed(ActionEvent e) {
 
-            String NomeCliente = buscaCliente.getjTextField1().getText();
+            String CPF = buscaCliente.getjTextField1().getText();
 
-            if (NomeCliente.equals("")) {
+            if (CPF.equals("")) {
                 JOptionPane.showMessageDialog(null, "Preencha todos os campos!!!");
             } else {
-                JOptionPane.showMessageDialog(null, "Não implementado!!!");
+                try {
+                    Cliente c = testesql.getClienteBanco(CPF);
+                    buscaCliente.getjTextField2().setText(c.getNome());
+                    buscaCliente.getjTextField3().setText(c.getTelefone());
+                    
+                } catch (ClassNotFoundException ex) {
+                    Logger.getLogger(ControllerAtendente.class.getName()).log(Level.SEVERE, null, ex);
+                } catch (SQLException ex) {
+                    Logger.getLogger(ControllerAtendente.class.getName()).log(Level.SEVERE, null, ex);
+                }
 
             }
         }
