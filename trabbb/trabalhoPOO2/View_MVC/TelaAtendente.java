@@ -10,12 +10,14 @@ import javax.swing.JOptionPane;
 import javax.swing.JPanel;
 import javax.swing.JTextField;
 import Controller_MVC.*;
+import Model_MVC.ClienteTableModel;
 import java.awt.event.ActionListener;
 import javax.swing.ButtonGroup;
 import javax.swing.JDesktopPane;
 import javax.swing.JMenu;
 import javax.swing.JMenuItem;
 import javax.swing.JRadioButton;
+import javax.swing.JTable;
 import javax.swing.JTextPane;
 
 /**
@@ -24,11 +26,12 @@ import javax.swing.JTextPane;
  */
 public class TelaAtendente extends javax.swing.JInternalFrame {
 
-    /**
-     * Creates new form TelaAtendent
-     */
+    ClienteTableModel tableModel;
     public TelaAtendente() {
-        initComponents();   
+        initComponents();
+        tableModel = new ClienteTableModel();
+        this.tabelaClientes.setModel(tableModel);
+        
     }
 
     /**
@@ -57,7 +60,7 @@ public class TelaAtendente extends javax.swing.JInternalFrame {
         jPanel2 = new javax.swing.JPanel();
         jLabel11 = new javax.swing.JLabel();
         jScrollPane4 = new javax.swing.JScrollPane();
-        jTable1 = new javax.swing.JTable();
+        tabelaClientes = new javax.swing.JTable();
         desktopPanel = new javax.swing.JDesktopPane();
         jMenuBar2 = new javax.swing.JMenuBar();
         jMenu4 = new javax.swing.JMenu();
@@ -141,33 +144,7 @@ public class TelaAtendente extends javax.swing.JInternalFrame {
         jLabel11.setFont(new java.awt.Font("Yu Gothic UI Light", 0, 36)); // NOI18N
         jLabel11.setText("Clientes Ativos");
 
-        jTable1.setModel(new javax.swing.table.DefaultTableModel(
-            new Object [][] {
-                {null, null, null},
-                {null, null, null},
-                {null, null, null},
-                {null, null, null}
-            },
-            new String [] {
-                "Nome", "CPF", "Telefone"
-            }
-        ) {
-            Class[] types = new Class [] {
-                java.lang.String.class, java.lang.String.class, java.lang.String.class
-            };
-            boolean[] canEdit = new boolean [] {
-                false, false, false
-            };
-
-            public Class getColumnClass(int columnIndex) {
-                return types [columnIndex];
-            }
-
-            public boolean isCellEditable(int rowIndex, int columnIndex) {
-                return canEdit [columnIndex];
-            }
-        });
-        jScrollPane4.setViewportView(jTable1);
+        jScrollPane4.setViewportView(tabelaClientes);
 
         javax.swing.GroupLayout jPanel2Layout = new javax.swing.GroupLayout(jPanel2);
         jPanel2.setLayout(jPanel2Layout);
@@ -306,7 +283,7 @@ public class TelaAtendente extends javax.swing.JInternalFrame {
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(JButton_MenuPrincipal, javax.swing.GroupLayout.PREFERRED_SIZE, 429, Short.MAX_VALUE)
+            .addComponent(JButton_MenuPrincipal, javax.swing.GroupLayout.PREFERRED_SIZE, 500, Short.MAX_VALUE)
         );
 
         bindingGroup.bind();
@@ -363,6 +340,10 @@ public class TelaAtendente extends javax.swing.JInternalFrame {
 
     public JMenuItem getMenuMarcaConsulta() {
         return menuMarcaConsulta;
+    }
+
+    public JTable getTabelaClientes() {
+        return tabelaClientes;
     }
 
   
@@ -430,12 +411,12 @@ public class TelaAtendente extends javax.swing.JInternalFrame {
     private javax.swing.JPopupMenu.Separator jSeparator3;
     private javax.swing.JPopupMenu.Separator jSeparator4;
     private javax.swing.JPopupMenu.Separator jSeparator5;
-    private javax.swing.JTable jTable1;
     private javax.swing.JMenuItem menCadastraAnimal;
     private javax.swing.JMenuItem menuBuscaCliente;
     private javax.swing.JMenu menuCadastraAnimal;
     private javax.swing.JMenuItem menuCadastraCliente;
     private javax.swing.JMenuItem menuMarcaConsulta;
+    private javax.swing.JTable tabelaClientes;
     private org.jdesktop.beansbinding.BindingGroup bindingGroup;
     // End of variables declaration//GEN-END:variables
 }

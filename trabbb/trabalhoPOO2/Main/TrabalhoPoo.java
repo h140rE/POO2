@@ -10,9 +10,7 @@ public class TrabalhoPoo {
 
     public static void main(String[] args) {
         
-        
-         
-        // TELAS ----------------------------------------//
+    // TELAS ----------------------------------------//
         JanelaPrincipal telaPrincipal = new JanelaPrincipal();
         TelaInicial telaApresentacao = new TelaInicial();
         TelaAtendente telaAtendente = new TelaAtendente();
@@ -26,7 +24,6 @@ public class TrabalhoPoo {
         MarcaConsulta mar = new MarcaConsulta();
         
      
-        
         /*
         CadastraCliente cadastraC = new CadastraCliente();
         CadastraAnimal cadastraA = new CadastraAnimal();
