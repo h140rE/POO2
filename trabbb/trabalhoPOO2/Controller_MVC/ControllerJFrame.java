@@ -16,8 +16,13 @@ public class ControllerJFrame {
     JanelaPrincipal view  = new JanelaPrincipal();
     
         public ControllerJFrame(){
-        view.setSize(1050,560);
+        view.setSize(1000,500);
         view.setVisible(true);
         view.setLocationRelativeTo(null);
         }
+
+    public JanelaPrincipal getView() {
+        return view;
+    }
+        
 }
