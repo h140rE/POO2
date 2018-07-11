@@ -1,5 +1,6 @@
-package Controller_MVC;
+package Model_MVC;
 
+import Controller_MVC.ControllerAtendente;
 import Model_MVC.Animal;
 import java.sql.*;
 import java.util.logging.Level;

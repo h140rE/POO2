@@ -171,6 +171,27 @@ public class ControllerAtendente {
         public void actionPerformed(ActionEvent e) {
             limpaBufferBusca();
         }
+
+    }
+
+    class ConfirmaBuscaListener implements ActionListener {
+
+        @Override
+        public void actionPerformed(ActionEvent e) {
+
+            String NomeCliente = buscaCliente.getjTextField1().getText();
+
+            if (NomeCliente.equals("")) {
+                JOptionPane.showMessageDialog(null, "Preencha todos os campos!!!");
+            } else {
+                   clientesAtivos.add(atendente.atende(buscaCliente.getjTextField1().getText(), buscaCliente.getjTextField2().getText(),
+                           buscaCliente.getjTextField3().getText()));
+                
+
+            }
+
+        }
+
     }
 
     class BotaoBuscaListener implements ActionListener {
@@ -185,6 +206,7 @@ public class ControllerAtendente {
             } else {
                 try {
                     Cliente c = testesql.getClienteBanco(CPF);
+
                     if (c == null) {
                         JOptionPane.showMessageDialog(null, "Cliente não encontrado!!!");
                     }
@@ -197,6 +219,11 @@ public class ControllerAtendente {
                     limpaBufferBusca();
 
                     adicionaTabela(clientesAtivos);
+
+
+                    buscaCliente.getjTextField2().setText(c.getNome());
+                    buscaCliente.getjTextField3().setText(c.getTelefone());
+                    
 
                 } catch (ClassNotFoundException ex) {
                     Logger.getLogger(ControllerAtendente.class.getName()).log(Level.SEVERE, null, ex);
