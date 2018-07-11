@@ -1,11 +1,16 @@
 package Controller_MVC;
 
+
+import java.util.ArrayList;
 import Model_MVC.Animal;
+import Model_MVC.Cao;
 import java.sql.*;
 import java.util.logging.Level;
 import java.util.logging.Logger;
 import javax.swing.JOptionPane;
 import Model_MVC.Cliente;
+import Model_MVC.Gato;
+import java.util.ArrayList;
 public class SQL {
     Connection conecta;
     PreparedStatement pst;
@@ -230,10 +235,12 @@ public class SQL {
             rs = pst.executeQuery();
             if(rs.next()){
                 cpf = rs.getString(1);
-                nome = rs.getString(2);
-                tipo = rs.getString(3);
+                nome = rs.getString(3);
+                tipo = rs.getString(2);
                 raca = rs.getString(4);
-                c = new Animal(nomeAnimal,cpfDono);
+                if(tipo.charAt(0)=='c')
+                    c = new Cao(cpf,nome,raca);
+                else c = new Gato(cpf,nome,raca);
             }else return null;
             
         }
@@ -242,6 +249,28 @@ public class SQL {
             JOptionPane.showMessageDialog(null, "Erro!");
         }
         return c;
+    }
+    //FUNCIONA
+    public ArrayList<Animal> buscaListaAnimal(String cpf){
+        sql = "SELECT * FROM  Animal c WHERE c.cpfdono = ?;";
+        ArrayList<Animal> animais=null;
+        Animal an;
+        try {
+            pst = conecta.prepareStatement(sql);
+            pst.setString(1, cpf);
+            rs = pst.executeQuery();
+            animais = new ArrayList<Animal>();
+            while(rs.next()){
+                if(rs.getString(2).charAt(0)=='c')
+                    an = new Cao(rs.getString(1),rs.getString(3),rs.getString(4));
+                else an = new Gato(rs.getString(1),rs.getString(3),rs.getString(4));
+                animais.add(an);
+            }
+
+        } catch (SQLException ex) {
+            Logger.getLogger(ControllerAtendente.class.getName()).log(Level.SEVERE, null, ex);
+        }
+        return animais;
     }
     
     /*              Pesquisar como consultar o cliente no github*/

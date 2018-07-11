@@ -54,7 +54,7 @@ public class CadastraAnimal extends javax.swing.JInternalFrame {
         jLabel2.setText("Cadastro Animal");
 
         jLabel3.setFont(new java.awt.Font("Tahoma", 0, 18)); // NOI18N
-        jLabel3.setText("Nome");
+        jLabel3.setText("CPF");
 
         jTextField1.setEditable(false);
         jTextField1.setEnabled(false);
@@ -103,7 +103,7 @@ public class CadastraAnimal extends javax.swing.JInternalFrame {
                 .addComponent(RadioButtonCao)
                 .addGap(18, 18, 18)
                 .addComponent(radioButtonGato)
-                .addContainerGap(9, Short.MAX_VALUE))
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
         jPanel1Layout.setVerticalGroup(
             jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)

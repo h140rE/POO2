@@ -39,13 +39,13 @@ public class Cliente extends Pessoa {
         String auxiliar =  recibo.getDescricao() + "\n Total a pagar: R$" + this.recibo.pagar();
                 return auxiliar;
     }
-    public void AdicionaAnimal(String nome, String raca, int tipo){
+    public void AdicionaAnimal(String cpfDono, int tipo, String nome, String raca){
         if(tipo == 1){
-            animais.add(new Cao(nome,raca));
+            animais.add(new Cao(cpfDono, nome, raca));
             JOptionPane.showMessageDialog(null, "Cao Adicionado com Sucesso!");
         }
         else if(tipo == 2){
-            animais.add(new Gato(nome,raca));
+            animais.add(new Gato(cpfDono,nome,raca));
             JOptionPane.showMessageDialog(null, "Gato Adicionado com Sucesso!");
         }
         else{
@@ -58,7 +58,9 @@ public class Cliente extends Pessoa {
         String acumula;
         acumula = "Cliente:" + this.getNome() + "\n";
         for(int i=0; i < animais.size(); i++){
-            acumula += i + " - " +animais.get(i).dadosAnimal() +"\t Tipo: " + animais.get(i).tipo + "\n";
+            
+            //CORRIGIR, Animal foi alterado
+            acumula += i + " - " +animais.get(i).dadosAnimal() +"\t Tipo: " + animais.get(i).getTipo() + "\n";
         }
         JOptionPane.showMessageDialog(null, acumula);
     }
