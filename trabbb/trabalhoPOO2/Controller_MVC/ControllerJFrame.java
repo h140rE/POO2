@@ -30,7 +30,7 @@ public class ControllerJFrame {
         this.viewConsulta = viewConsulta;
         this.viewHBT = viewHBT;
         this.viewVendas = viewVendas;
-        this.view.setSize(1000, 500);
+        this.view.setSize(1015, 560);
         this.view.setVisible(true);
         this.view.setLocationRelativeTo(null);
 
@@ -43,7 +43,7 @@ public class ControllerJFrame {
         view.getjMenuItem_HotelBanhoTosa().addActionListener(new MenuHotelBanhoTosaListener());
         view.getjMenuItem_Vendas().addActionListener(new MenuVendasListener());
         view.getjMenuItem4().addActionListener(new SairListener());
-          view.setSize(1000,500);
+        
     }
 
     class SairListener implements ActionListener {

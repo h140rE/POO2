@@ -35,7 +35,7 @@ public class TelaInicial extends javax.swing.JInternalFrame{
         jLabel2 = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.DISPOSE_ON_CLOSE);
-        setPreferredSize(new java.awt.Dimension(990, 490));
+        setPreferredSize(new java.awt.Dimension(1000, 500));
         try {
             setSelected(true);
         } catch (java.beans.PropertyVetoException e1) {
@@ -43,8 +43,9 @@ public class TelaInicial extends javax.swing.JInternalFrame{
         }
 
         jPanel1.setBackground(new java.awt.Color(175, 238, 238));
-        jPanel1.setPreferredSize(new java.awt.Dimension(990, 490));
+        jPanel1.setPreferredSize(new java.awt.Dimension(1000, 500));
         jPanel1.setRequestFocusEnabled(false);
+        jPanel1.setVerifyInputWhenFocusTarget(false);
 
         jLabel1.setFont(new java.awt.Font("Yu Gothic UI", 0, 48)); // NOI18N
         jLabel1.setText("ZikA ");
@@ -70,7 +71,7 @@ public class TelaInicial extends javax.swing.JInternalFrame{
                         .addComponent(jLabel3)
                         .addGap(166, 166, 166))
                     .addComponent(jLabel2, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.PREFERRED_SIZE, 494, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addContainerGap(273, Short.MAX_VALUE))
+                .addContainerGap(299, Short.MAX_VALUE))
         );
         jPanel1Layout.setVerticalGroup(
             jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -88,11 +89,11 @@ public class TelaInicial extends javax.swing.JInternalFrame{
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(jPanel1, javax.swing.GroupLayout.DEFAULT_SIZE, 974, Short.MAX_VALUE)
+            .addComponent(jPanel1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(jPanel1, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.PREFERRED_SIZE, 500, javax.swing.GroupLayout.PREFERRED_SIZE)
+            .addComponent(jPanel1, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
         );
 
         pack();
