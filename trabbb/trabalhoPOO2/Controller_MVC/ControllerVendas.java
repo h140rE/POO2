@@ -1,8 +1,5 @@
 package Controller_MVC;
 
-import Model_MVC.Recibo;
-import Model_MVC.Servicos;
-import View_MVC.CadastraCliente;
 import View_MVC.JanelaPrincipal;
 import View_MVC.CadastraCliente;
 import View_MVC.TelaHBT;
@@ -12,10 +9,11 @@ import View_MVC.TelaVendas;
 import View_MVC.TelaVendasProdutos;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
+import javax.swing.JOptionPane;
 
 public class ControllerVendas {
     
-    private TelaVendas view;
+    public TelaVendas view;
     private TelaVendasProdutos viewProdutos;
     private TelaHBT viewBanho;
     private TelaVendaServico viewServico;
@@ -28,20 +26,22 @@ public class ControllerVendas {
     JanelaPrincipal viewJPrincipal;
     TelaInicial viewTelaInicial;
    
-   
-    
-    public ControllerVendas(CadastraCliente  cad, JanelaPrincipal viewJPrincipal) {
+  
+    public ControllerVendas(CadastraCliente  cad, JanelaPrincipal viewJPrincipal, TelaVendas viewTelaVendas) {
         this.viewJPrincipal = viewJPrincipal;
-         view = new TelaVendas();
-         view.getjButton_Produtos().addActionListener(new AbreProdutosListener());
-      
+         this.view = viewTelaVendas;
+            
+         
+         view.getjButton_Produtos().addActionListener(new AbreListener());
     }
     
-    class AbreProdutosListener implements ActionListener {
+    class AbreListener implements ActionListener {
 
         @Override
         public void actionPerformed(ActionEvent e) {
-            System.out.println("rola");
+
+            view.
+            
         }
     }
     

@@ -26,7 +26,6 @@ public class TrabalhoPoo {
         MarcaConsulta mar = new MarcaConsulta();
         
      
-        
         /*
         CadastraCliente cadastraC = new CadastraCliente();
         CadastraAnimal cadastraA = new CadastraAnimal();
@@ -42,7 +41,7 @@ public class TrabalhoPoo {
         //CONTROLLERS ----------------------------------//
         ControllerJFrame jf = new ControllerJFrame(telaPrincipal,telaAtendente,telaConsulta ,telaHotelBanhoTosa,telaVendas);
         ControllerAtendente controllerAtendente = new ControllerAtendente(telaPrincipal,atendentePadrao,telaAtendente, cad ,bus ,caa ,mar ,clientes);
-        ControllerVendas controllerVendas = new ControllerVendas(cad,telaPrincipal);
+        ControllerVendas controllerVendas = new ControllerVendas(cad,telaPrincipal, telaVendas);
         ControllerHBT controllerBanho;
         ControllerConsulta controllerConsulta;
        
@@ -50,5 +49,4 @@ public class TrabalhoPoo {
         //telaPrincipal.setVisible(true);
         
     }
-
 }
