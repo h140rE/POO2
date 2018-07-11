@@ -13,9 +13,10 @@ import View_MVC.TelaVendas;
 import View_MVC.Tela_Principal;
 
 public class ControllerJFrame {
-    JanelaPrincipal view  = new JanelaPrincipal();
+        JanelaPrincipal view;
     
         public ControllerJFrame(){
+        view = new JanelaPrincipal();
         view.setSize(1000,500);
         view.setVisible(true);
         view.setLocationRelativeTo(null);
