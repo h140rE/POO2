@@ -27,6 +27,9 @@ trabbb/nbproject/private/private.xml
 #autosave do Dia
 *.autosave
 
+#ignorando a Main:
+trabbb/trabalhoPOO2/Main/TrabalhoPoo.java
+
 # virtual machine crash logs, see http://www.java.com/en/download/help/error_hotspot.xml
 hs_err_pid*
 /trabbb/dist/

@@ -12,7 +12,7 @@ import javax.swing.*;
  *
  * @author xpimenta
  */
-public class TelaVendasProdutos extends javax.swing.JFrame {
+public class TelaVendasProdutos extends javax.swing.JInternalFrame {
 
     /**
      * Creates new form TelaVendasProdutos
@@ -95,6 +95,8 @@ public class TelaVendasProdutos extends javax.swing.JFrame {
             }
         ));
         jScrollPane3.setViewportView(jTable3);
+
+        setClosable(true);
 
         jPanel1.setBackground(new java.awt.Color(255, 255, 240));
 

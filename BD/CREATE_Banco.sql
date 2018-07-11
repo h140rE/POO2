@@ -1,6 +1,3 @@
-﻿1 INTO Animal (cpfDono, tipo, nome, raca, estado) VALUES 
-	('03834902004', 'c', 'Rex', 'Border', 'Finalizado');
-
 CREATE SCHEMA ZikaPET;
 --DROP SCHEMA ZikaPET CASCADE;
 SET search_path to ZikaPET;
@@ -59,7 +56,6 @@ CREATE TABLE Animal(
         tipo            char,
 	nome		varchar(30),
 	raca            varchar(30),
-	estado          varchar(30),
 	CONSTRAINT donoAnimal_fk FOREIGN KEY (cpfDono) REFERENCES cliente(cpf),
 	CONSTRAINT tipo CHECK (
 		UPPER(tipo) = 'G' OR 
@@ -148,22 +144,22 @@ INSERT INTO cliente (nome,cpf,telefone) VALUES
 	('Yardley',     '19383455098','956941482611'),
 	('Callum',      '84592076095','906977694016');
 
-INSERT INTO Animal (cpfDono, tipo, nome, raca, estado) VALUES
-        ('84592076095', 'c', 'Duque', 	'Bulldog',		'Finalizado'),
-        ('19383455098', 'g', 'Tobby', 	'Ragdoll', 		'Finalizado'),
-        ('33672413003', 'g', 'Luna', 	'Sphynx',		'Finalizado'),
-        ('03834902004', 'c', 'Huck', 	'Golden Retriever',	'Finalizado'),
-        ('17278598044', 'g', 'Sabido', 	'Angorá', 		'Finalizado'),
-        ('01143237048', 'c', 'Raj', 	'Dobermann', 		'Finalizado'),
-        ('36226158000', 'g', 'Amora', 	'Maine Coon',	 	'Finalizado'),
-        ('85390972066', 'c', 'Takito', 	'Perdigueiro', 		'Finalizado'),
-        ('51911345087', 'c', 'Link', 	'Rottweiler', 		'Finalizado'),
-        ('34976352005', 'g', 'Toquinho','Siamês', 		'Finalizado'),
-        ('01143237048', 'c', 'Suro', 	'Dobermann', 		'Finalizado'),
-        ('36226158000', 'g', 'Black', 	'Persa', 		'Finalizado'),
-        ('85390972066', 'c', 'Fedora', 	'Perdigueiro', 		'Finalizado'),
-        ('51911345087', 'c', 'Debian', 	'Rottweiler', 		'Finalizado'),
-        ('34976352005', 'g', 'Ubuntu',	'Himalaia', 		'Finalizado');
+INSERT INTO Animal (cpfDono, tipo, nome, raca) VALUES
+        ('84592076095', 'c', 'Duque', 	'Bulldog'),
+        ('19383455098', 'g', 'Tobby', 	'Ragdoll'),
+        ('33672413003', 'g', 'Luna', 	'Sphynx'),
+        ('03834902004', 'c', 'Huck', 	'Golden Retriever'),
+        ('17278598044', 'g', 'Sabido', 	'Angorá'),
+        ('01143237048', 'c', 'Raj', 	'Dobermann'),
+        ('36226158000', 'g', 'Amora', 	'Maine Coon'),
+        ('85390972066', 'c', 'Takito', 	'Perdigueiro'),
+        ('51911345087', 'c', 'Link', 	'Rottweiler'),
+        ('34976352005', 'g', 'Toquinho','Siamês'),
+        ('01143237048', 'c', 'Suro', 	'Dobermann'),
+        ('36226158000', 'g', 'Black', 	'Persa'),
+        ('85390972066', 'c', 'Fedora', 	'Perdigueiro'),
+        ('51911345087', 'c', 'Debian', 	'Rottweiler'),
+        ('34976352005', 'g', 'Ubuntu',	'Himalaia');
 
 
 

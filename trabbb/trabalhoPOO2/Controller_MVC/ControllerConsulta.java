@@ -11,6 +11,7 @@ public class ControllerConsulta {
     public ControllerConsulta(TelaConsulta view,Veterinario model) {
         this.view = view;
         this.model = model;
+        view.setSize(960, 500);
     }
 
 }

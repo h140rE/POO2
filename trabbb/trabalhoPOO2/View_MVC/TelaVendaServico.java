@@ -5,17 +5,13 @@
  */
 package View_MVC;
 
-import javax.swing.JButton;
-import javax.swing.JRadioButton;
-import javax.swing.JTextArea;
-import javax.swing.JTextField;
-import javax.swing.JTextPane;
+import javax.swing.*;
 
 /**
  *
  * @author xpimenta
  */
-public class TelaVendaServico extends javax.swing.JFrame {
+public class TelaVendaServico extends javax.swing.JInternalFrame {
 
     /**
      * Creates new form TelaVendaServico
@@ -92,6 +88,8 @@ public class TelaVendaServico extends javax.swing.JFrame {
         jLabel4.setText("Animal");
 
         jTextField1.setText("jTextField1");
+
+        setClosable(true);
 
         jPanel1.setBackground(new java.awt.Color(224, 255, 255));
 

@@ -23,22 +23,14 @@ public class ControllerTelaPrincipal {
         this.viewAtendente = tela2;
         this.viewBanho = tela3;
         this.viewConsulta = tela4;
-
-        view.getjButton1().addActionListener(new AtendenteListener());
-        view.getjButton3().addActionListener(new BanhoListener());
-        view.getjButton4().addActionListener(new ConsultaListener());
-
+        this.view.setSize(990, 490);
     }
-
-
+    
     class AtendenteListener implements ActionListener {
 
         @Override
         public void actionPerformed(ActionEvent e) {
-
-            
             viewAtendente.setVisible(true);
-            
             
         }
     }
@@ -51,7 +43,7 @@ public class ControllerTelaPrincipal {
             
             viewBanho.setVisible(true);
             
-            
+           
         }
     }
     
@@ -63,7 +55,6 @@ public class ControllerTelaPrincipal {
  
             viewConsulta.setVisible(true);
             
-
         }
     }
 

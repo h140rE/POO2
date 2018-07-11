@@ -10,8 +10,8 @@ public class TrabalhoPoo {
 
     public static void main(String[] args) {
         
-        JanelaPrincipal tela = new JanelaPrincipal();
-        tela.setVisible(true);
+        ControllerJFrame jf = new ControllerJFrame();
+         
         // TELAS ----------------------------------------//
        /* Tela_Principal tela = new Tela_Principal();
         TelaAtendente tela2 = new TelaAtendente();
