@@ -180,7 +180,7 @@ public class TelaAtendente extends javax.swing.JInternalFrame {
             .addGroup(jPanel2Layout.createSequentialGroup()
                 .addGap(75, 75, 75)
                 .addComponent(jLabel11)
-                .addContainerGap(183, Short.MAX_VALUE))
+                .addContainerGap(93, Short.MAX_VALUE))
         );
         jPanel2Layout.setVerticalGroup(
             jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -250,8 +250,10 @@ public class TelaAtendente extends javax.swing.JInternalFrame {
 
         jMenuBar2.add(jMenu4);
 
+        menuCadastraAnimal.setIcon(new javax.swing.ImageIcon(getClass().getResource("/View_MVC/Icons/iconss/application_home.png"))); // NOI18N
         menuCadastraAnimal.setText("Menu Principal");
 
+        menuCadastraCliente.setIcon(new javax.swing.ImageIcon(getClass().getResource("/View_MVC/Icons/iconss/user_add.png"))); // NOI18N
         menuCadastraCliente.setText("Cadastra Cliente");
         menuCadastraCliente.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -261,6 +263,7 @@ public class TelaAtendente extends javax.swing.JInternalFrame {
         menuCadastraAnimal.add(menuCadastraCliente);
         menuCadastraAnimal.add(jSeparator3);
 
+        menCadastraAnimal.setIcon(new javax.swing.ImageIcon(getClass().getResource("/View_MVC/Icons/iconss/user_orange.png"))); // NOI18N
         menCadastraAnimal.setText("Cadastra Animal");
         menCadastraAnimal.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -270,6 +273,7 @@ public class TelaAtendente extends javax.swing.JInternalFrame {
         menuCadastraAnimal.add(menCadastraAnimal);
         menuCadastraAnimal.add(jSeparator4);
 
+        menuBuscaCliente.setIcon(new javax.swing.ImageIcon(getClass().getResource("/View_MVC/Icons/iconss/group_add.png"))); // NOI18N
         menuBuscaCliente.setText("Busca Cliente");
         menuBuscaCliente.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -279,6 +283,7 @@ public class TelaAtendente extends javax.swing.JInternalFrame {
         menuCadastraAnimal.add(menuBuscaCliente);
         menuCadastraAnimal.add(jSeparator5);
 
+        menuMarcaConsulta.setIcon(new javax.swing.ImageIcon(getClass().getResource("/View_MVC/Icons/iconss/application_form_edit.png"))); // NOI18N
         menuMarcaConsulta.setText("Marca Consulta");
         menuMarcaConsulta.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {

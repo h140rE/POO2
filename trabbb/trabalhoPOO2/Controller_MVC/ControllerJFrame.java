@@ -20,7 +20,7 @@ public class ControllerJFrame {
         public ControllerJFrame(){
         view = new JanelaPrincipal();
         view.setSize(1000,500);
-        view.setVisible(true);d
+        view.setVisible(true);
         view.setLocationRelativeTo(null);
         view.getjMenuItem_Atendente().addActionListener(new MenuAtendenteListener());
         }
