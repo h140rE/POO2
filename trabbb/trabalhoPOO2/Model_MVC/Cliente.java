@@ -29,13 +29,6 @@ public class Cliente extends Pessoa {
         }
     }
 
-    public void pagarCartao() {
-
-    }
-
-    public void pagarCheque() {
-
-    }
     public void setRecibo(Servicos recibo){
         this.recibo = recibo;
     }

@@ -11,14 +11,26 @@ import View_MVC.TelaConsulta;
 import View_MVC.TelaHBT;
 import View_MVC.TelaVendas;
 import View_MVC.Tela_Principal;
+import java.awt.event.ActionEvent;
+import java.awt.event.ActionListener;
 
 public class ControllerJFrame {
-    JanelaPrincipal view  = new JanelaPrincipal();
+        JanelaPrincipal view;
     
         public ControllerJFrame(){
+        view = new JanelaPrincipal();
         view.setSize(1000,500);
-        view.setVisible(true);
+        view.setVisible(true);d
         view.setLocationRelativeTo(null);
+        view.getjMenuItem_Atendente().addActionListener(new MenuAtendenteListener());
+        }
+        
+        class MenuAtendenteListener implements ActionListener{
+               
+        @Override
+        public void actionPerformed(ActionEvent ae) {
+            
+        }
         }
 
     public JanelaPrincipal getView() {
