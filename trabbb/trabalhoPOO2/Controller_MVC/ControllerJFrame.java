@@ -43,7 +43,7 @@ public class ControllerJFrame {
         view.getjMenuItem_HotelBanhoTosa().addActionListener(new MenuHotelBanhoTosaListener());
         view.getjMenuItem_Vendas().addActionListener(new MenuVendasListener());
         view.getjMenuItem4().addActionListener(new SairListener());
-
+          view.setSize(1000,500);
     }
 
     class SairListener implements ActionListener {

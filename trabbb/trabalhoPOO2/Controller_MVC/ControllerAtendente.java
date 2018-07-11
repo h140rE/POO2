@@ -36,6 +36,7 @@ public class ControllerAtendente {
         this.cadastraA = cadastraA;
         this.marcaC = marcaC;
         this.clientesAtivos = cliente;
+        
 
         this.view.getMenuCadastraCliente().addActionListener(new CadastraClienteJanelaListener());
         this.view.getMenuBuscaCliente().addActionListener(new BuscaClienteJanelaListener());
@@ -46,7 +47,6 @@ public class ControllerAtendente {
         this.cadastraC.getBotaoCancela().addActionListener(new CancelaCadastraListener());
 
         this.buscaCliente.getBotaoCancela().addActionListener(new CancelaBuscaListener());
-        this.buscaCliente.getBotaoConfirma().addActionListener(new ConfirmaBuscaListener());
         this.buscaCliente.getBotaoBusca().addActionListener(new BotaoBuscaListener());
 
         this.marcaC.getBotaoCancela().addActionListener(new CancelaConsultaListener());
@@ -63,6 +63,7 @@ public class ControllerAtendente {
             view.getDesktopPanel().repaint();
 
             view.getDesktopPanel().add(cadastraC);
+            cadastraC.setSize(457, 300);
             cadastraC.show();
 
         }
@@ -76,6 +77,7 @@ public class ControllerAtendente {
             view.getDesktopPanel().repaint();
 
             view.getDesktopPanel().add(buscaCliente);
+            buscaCliente.setSize(457, 300);
             buscaCliente.show();
 
         }
@@ -89,6 +91,7 @@ public class ControllerAtendente {
             view.getDesktopPanel().repaint();
 
             view.getDesktopPanel().add(cadastraA);
+            cadastraA.setSize(457, 300);
             cadastraA.show();
         }
     }
@@ -101,6 +104,7 @@ public class ControllerAtendente {
             view.getDesktopPanel().repaint();
 
             view.getDesktopPanel().add(marcaC);
+            marcaC.setSize(457, 300);
             marcaC.show();
         }
     }
