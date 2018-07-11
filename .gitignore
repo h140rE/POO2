@@ -27,6 +27,14 @@ trabbb/nbproject/private/private.xml
 #autosave do Dia
 *.autosave
 
+### NetBeans ###
+nbproject/private/
+build/
+nbbuild/
+dist/
+nbdist/
+.nb-gradle/
+
 #ignorando a Main:
 trabbb/trabalhoPOO2/Main/TrabalhoPoo.java
 
