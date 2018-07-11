@@ -5,6 +5,11 @@
  */
 package View_MVC;
 
+import javax.swing.JButton;
+import javax.swing.JComboBox;
+import javax.swing.JSeparator;
+import javax.swing.JTextField;
+
 /**
  *
  * @author xpimenta
@@ -53,6 +58,7 @@ public class MarcaConsulta extends javax.swing.JInternalFrame {
         jLabel4.setFont(new java.awt.Font("Tahoma", 0, 18)); // NOI18N
         jLabel4.setText("CPF:");
 
+        jTextField1.setEnabled(false);
         jTextField1.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jTextField1ActionPerformed(evt);
@@ -76,7 +82,11 @@ public class MarcaConsulta extends javax.swing.JInternalFrame {
             }
         });
 
-        jComboBox1.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Item 1", "Item 2", "Item 3", "Item 4" }));
+        jComboBox1.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jComboBox1ActionPerformed(evt);
+            }
+        });
 
         javax.swing.GroupLayout JPanel_MenuPrincipal_CadastroLayout = new javax.swing.GroupLayout(JPanel_MenuPrincipal_Cadastro);
         JPanel_MenuPrincipal_Cadastro.setLayout(JPanel_MenuPrincipal_CadastroLayout);
@@ -170,7 +180,33 @@ public class MarcaConsulta extends javax.swing.JInternalFrame {
         // TODO add your handling code here:
     }//GEN-LAST:event_botaoCancelaActionPerformed
 
+    private void jComboBox1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jComboBox1ActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_jComboBox1ActionPerformed
 
+    public JButton getBotaoCancela() {
+        return botaoCancela;
+    }
+
+    public JButton getBotaoConfirma() {
+        return botaoConfirma;
+    }
+
+    public JComboBox<String> getjComboBox1() {
+        return jComboBox1;
+    }
+
+    public JSeparator getjSeparator1() {
+        return jSeparator1;
+    }
+
+    public JTextField getjTextField1() {
+        return jTextField1;
+    }
+
+
+    
+    
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JPanel JPanel_MenuPrincipal_Cadastro;
     private javax.swing.JButton botaoCancela;
