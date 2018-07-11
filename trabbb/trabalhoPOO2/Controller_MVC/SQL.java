@@ -1,18 +1,36 @@
 package Controller_MVC;
 
+import Model_MVC.Animal;
 import java.sql.*;
 import java.util.logging.Level;
 import java.util.logging.Logger;
 import javax.swing.JOptionPane;
-
+import Model_MVC.Cliente;
 public class SQL {
-    Connection conecta = null;
+    Connection conecta;
     PreparedStatement pst;
     ResultSet rs;
+    String sql;
+    PostgreSQL p = new PostgreSQL();
+    /*
+    Com inicializar:
+    
+        SQL testesql = new SQL(new PostgreSQL().login("postgres","121533"));
+        
+        após isso, pode ser usadas as funções de SQL
+    
+    */
+    
+    public SQL (Connection c)throws ClassNotFoundException,SQLException{
+        conecta =c;
+    }
+    
+    
+    //INSERTS FUNCIONAM
     public void insereCliente(String nome, String cpf, String telefone)throws ClassNotFoundException, SQLException{
         
-        String sql = "INSERT INTO cliente (nome,cpf,telefone) VALUES (?,?,?);";
-
+        sql = "INSERT INTO cliente (nome,cpf,telefone) VALUES (?,?,?);";
+         if (conecta==null)JOptionPane.showMessageDialog(null, "TÁ NULO BURRO!!");
         try {
             pst = conecta.prepareStatement(sql);
             pst.setString(1, nome);
@@ -25,14 +43,13 @@ public class SQL {
             Logger.getLogger(SQL.class.getName()).log(Level.SEVERE, null, ex);
             JOptionPane.showMessageDialog(null, "Erro!");
         }
-        conecta.close();
     }
     
     public void insereAnimal(String cpfDono, String tipoAnimal, String nomeAnimal, String raca)throws ClassNotFoundException, SQLException{
         String tipo;
         if(tipoAnimal=="1") tipo = "c";
         else tipo = "g";
-        String sql = "INSERT INTO Animal (cpfDono, tipo, nome, raca) VALUES (?,?,?,?);";
+        sql = "INSERT INTO Animal (cpfDono, tipo, nome, raca) VALUES (?,?,?,?);";
         try {
             pst = conecta.prepareStatement(sql);
             pst.setString(1, cpfDono);
@@ -46,12 +63,11 @@ public class SQL {
             Logger.getLogger(SQL.class.getName()).log(Level.SEVERE, null, ex);
             JOptionPane.showMessageDialog(null, "Erro!");
         }
-        conecta.close();
     }
     
     public void insereProdutos(String codBarras,String preco, String nome, String quantidade) throws ClassNotFoundException, SQLException{
 
-        String sql = "INSERT INTO Produtos (codBarras,preco,nome,quantidade) VALUES (?,?,?,?);";
+        sql = "INSERT INTO Produtos (codBarras,preco,nome,quantidade) VALUES (?,?,?,?);";
         try {
             pst = conecta.prepareStatement(sql);
             pst.setString(1, codBarras);
@@ -65,11 +81,13 @@ public class SQL {
             Logger.getLogger(SQL.class.getName()).log(Level.SEVERE, null, ex);
             JOptionPane.showMessageDialog(null, "Erro!");
         }
-        conecta.close();
     }
+    
+    
+    //DELETES FUNCIONAM
     public void deleteCliente(String nome, String cpf, String telefone)throws ClassNotFoundException, SQLException{
         
-        String sql = "DELETE FROM cliente WHERE cpf=?;";
+        sql = "DELETE FROM cliente WHERE cpf=?;";
 
         try {
             pst = conecta.prepareStatement(sql);
@@ -81,11 +99,11 @@ public class SQL {
             Logger.getLogger(SQL.class.getName()).log(Level.SEVERE, null, ex);
             JOptionPane.showMessageDialog(null, "Erro!");
         }
-        conecta.close();
+
     }
     
     public void deleteAnimal(String cpfDono, String nomeAnimal)throws ClassNotFoundException, SQLException{
-        String sql = "DELETE FROM Animal WHERE cpfDono=? AND nome=?);";
+        sql = "DELETE FROM Animal WHERE cpfDono=? AND nome=?);";
         try {
             pst = conecta.prepareStatement(sql);
             pst.setString(1, cpfDono);
@@ -97,12 +115,11 @@ public class SQL {
             Logger.getLogger(SQL.class.getName()).log(Level.SEVERE, null, ex);
             JOptionPane.showMessageDialog(null, "Erro!");
         }
-        conecta.close();
     }
     
     public void deleteProduto(String codBarras) throws ClassNotFoundException, SQLException{
 
-        String sql = "DELETE FROM Produtos WHERE codBarras=?;";
+        sql = "DELETE FROM Produtos WHERE codBarras=?;";
         try {
             pst = conecta.prepareStatement(sql);
             pst.setString(1, codBarras);
@@ -113,12 +130,13 @@ public class SQL {
             Logger.getLogger(SQL.class.getName()).log(Level.SEVERE, null, ex);
             JOptionPane.showMessageDialog(null, "Erro!");
         }
-        conecta.close();
     }
+    
+    //UPDATES FUNCIONAM
     
     public void updateCliente(String cpf, String nome, String telefone)throws ClassNotFoundException, SQLException{
         
-        String sql = "UPDATE cliente SET nome=?,telefone=?  WHERE cpf=?;";
+        sql = "UPDATE cliente SET nome=?,telefone=?  WHERE cpf=?;";
 
         try {
             pst = conecta.prepareStatement(sql);
@@ -132,14 +150,13 @@ public class SQL {
             Logger.getLogger(SQL.class.getName()).log(Level.SEVERE, null, ex);
             JOptionPane.showMessageDialog(null, "Erro!");
         }
-        conecta.close();
     }
     
     public void updateAnimal(String cpfDono, String tipoAnimal, String nomeAnimal, String raca)throws ClassNotFoundException, SQLException{
         String tipo;
         if(tipoAnimal=="1") tipo = "c";
         else tipo = "g";
-        String sql = "UPDATE animal SET raca=?,tipo=?  WHERE cpfDono=? AND nomeAnimal=?;";
+        sql = "UPDATE animal SET raca=?,tipo=?  WHERE cpfDono=? AND nome=?;";
         try {
             pst = conecta.prepareStatement(sql);
             pst.setString(1, raca);
@@ -153,12 +170,12 @@ public class SQL {
             Logger.getLogger(SQL.class.getName()).log(Level.SEVERE, null, ex);
             JOptionPane.showMessageDialog(null, "Erro!");
         }
-        conecta.close();
+
     }
     
     public void updateProduto(String codBarras,String preco, String nome, String quantidade) throws ClassNotFoundException, SQLException{
 
-        String sql = "UPDATE animal SET preco=?,nome=?,quantidade=?  WHERE codBarras=?;";
+        sql = "UPDATE animal SET preco=?,nome=?,quantidade=?  WHERE codBarras=?;";
         try {
             pst = conecta.prepareStatement(sql);
             pst.setString(1, preco);
@@ -172,12 +189,64 @@ public class SQL {
             Logger.getLogger(SQL.class.getName()).log(Level.SEVERE, null, ex);
             JOptionPane.showMessageDialog(null, "Erro!");
         }
-        conecta.close();
+
+    }
+    
+    
+    
+    public Cliente getClienteBanco (String cpf) throws ClassNotFoundException, SQLException{
+        sql = "SELECT * FROM  Cliente c WHERE c.cpf = ?;";
+        Cliente c = null;
+        int i;
+        String cnome,ccpf,ctelefone;
+        try {
+            pst = conecta.prepareStatement(sql);
+            pst.setString(1, cpf);
+            rs = pst.executeQuery();
+            if(rs.next()){
+                cnome = rs.getString(1);
+                ccpf = rs.getString(2);
+                ctelefone = rs.getString(3);
+                c = new Cliente(cnome, ccpf, ctelefone);
+            }else return null;
+            
+        }
+        catch (SQLException ex) {
+            Logger.getLogger(SQL.class.getName()).log(Level.SEVERE, null, ex);
+            JOptionPane.showMessageDialog(null, "Erro!");
+        }
+        return c;
+    }
+    //tem que colocar o dono do animal poha
+    public Animal getAnimalBanco (String cpfDono, String nomeAnimal) throws ClassNotFoundException, SQLException{
+        sql = "SELECT * FROM  animal WHERE cpfDono = ? AND nome = ?;";
+        Animal c = null;
+        int i;
+        String cpf, tipo,nome,raca;
+        try {
+            pst = conecta.prepareStatement(sql);
+            pst.setString(1, cpfDono);
+            pst.setString(2, nomeAnimal);
+            rs = pst.executeQuery();
+            if(rs.next()){
+                cpf = rs.getString(1);
+                nome = rs.getString(2);
+                tipo = rs.getString(3);
+                raca = rs.getString(4);
+                c = new Animal(nomeAnimal,cpfDono);
+            }else return null;
+            
+        }
+        catch (SQLException ex) {
+            Logger.getLogger(SQL.class.getName()).log(Level.SEVERE, null, ex);
+            JOptionPane.showMessageDialog(null, "Erro!");
+        }
+        return c;
     }
     
     /*              Pesquisar como consultar o cliente no github*/
     public void buscaCliente(String cpf){
-            String sql = "SELECT * FROM  Cliente c WHERE c.cpf = ?;";
+            sql = "SELECT * FROM  Cliente WHERE cpf = ?;";
 
             try {
                 pst = conecta.prepareStatement(sql);
@@ -192,7 +261,7 @@ public class SQL {
     }
     
     public void buscaAnimal(String cpf){
-            String sql = "SELECT * FROM  Animal c WHERE c.cpfdono = ?;";
+            sql = "SELECT * FROM  Animal c WHERE c.cpfdono = ?;";
 
             try {
                 pst = conecta.prepareStatement(sql);
