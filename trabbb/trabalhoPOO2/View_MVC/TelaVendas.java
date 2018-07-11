@@ -19,14 +19,14 @@ public class TelaVendas extends javax.swing.JInternalFrame{
         jPanel1 = new javax.swing.JPanel();
         jLabel1 = new javax.swing.JLabel();
         jPanel2 = new javax.swing.JPanel();
-        jButton1 = new javax.swing.JButton();
-        jButton2 = new javax.swing.JButton();
+        jButton_Produtos = new javax.swing.JButton();
+        jButton_Servicos = new javax.swing.JButton();
         jLabel2 = new javax.swing.JLabel();
         jPanel3 = new javax.swing.JPanel();
         jLabel19 = new javax.swing.JLabel();
         jScrollPane3 = new javax.swing.JScrollPane();
         jTextPane3 = new javax.swing.JTextPane();
-        jButton3 = new javax.swing.JButton();
+        jButton_BuscaCliente = new javax.swing.JButton();
         jLabel21 = new javax.swing.JLabel();
         jTextField1 = new javax.swing.JTextField();
         jLabel3 = new javax.swing.JLabel();
@@ -41,27 +41,27 @@ public class TelaVendas extends javax.swing.JInternalFrame{
 
         jPanel2.setBackground(new java.awt.Color(250, 240, 230));
 
-        jButton1.setFont(new java.awt.Font("Yu Gothic Light", 0, 24)); // NOI18N
-        jButton1.setIcon(new javax.swing.ImageIcon("A:\\Bibliotecas\\Documentos\\POO2\\trabbb\\trabalhoPOO2\\View_MVC\\Icons\\icons8-dog-house-40.png")); // NOI18N
-        jButton1.setText("Produtos");
-        jButton1.setIconTextGap(10);
-        jButton1.addActionListener(new java.awt.event.ActionListener() {
+        jButton_Produtos.setFont(new java.awt.Font("Yu Gothic Light", 0, 24)); // NOI18N
+        jButton_Produtos.setIcon(new javax.swing.ImageIcon("A:\\Bibliotecas\\Documentos\\POO2\\trabbb\\trabalhoPOO2\\View_MVC\\Icons\\icons8-dog-house-40.png")); // NOI18N
+        jButton_Produtos.setText("Produtos");
+        jButton_Produtos.setIconTextGap(10);
+        jButton_Produtos.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jButton1ActionPerformed(evt);
+                jButton_ProdutosActionPerformed(evt);
             }
         });
 
-        jButton2.setFont(new java.awt.Font("Yu Gothic Light", 0, 24)); // NOI18N
-        jButton2.setIcon(new javax.swing.ImageIcon("A:\\Bibliotecas\\Documentos\\POO2\\trabbb\\trabalhoPOO2\\View_MVC\\Icons\\icons8-bath-64.png")); // NOI18N
-        jButton2.setText("Serviços");
-        jButton2.setAlignmentX(0.5F);
-        jButton2.setAlignmentY(0.0F);
-        jButton2.setHorizontalAlignment(javax.swing.SwingConstants.TRAILING);
-        jButton2.setHorizontalTextPosition(javax.swing.SwingConstants.RIGHT);
-        jButton2.setIconTextGap(10);
-        jButton2.addActionListener(new java.awt.event.ActionListener() {
+        jButton_Servicos.setFont(new java.awt.Font("Yu Gothic Light", 0, 24)); // NOI18N
+        jButton_Servicos.setIcon(new javax.swing.ImageIcon("A:\\Bibliotecas\\Documentos\\POO2\\trabbb\\trabalhoPOO2\\View_MVC\\Icons\\icons8-bath-64.png")); // NOI18N
+        jButton_Servicos.setText("Serviços");
+        jButton_Servicos.setAlignmentX(0.5F);
+        jButton_Servicos.setAlignmentY(0.0F);
+        jButton_Servicos.setHorizontalAlignment(javax.swing.SwingConstants.TRAILING);
+        jButton_Servicos.setHorizontalTextPosition(javax.swing.SwingConstants.RIGHT);
+        jButton_Servicos.setIconTextGap(10);
+        jButton_Servicos.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jButton2ActionPerformed(evt);
+                jButton_ServicosActionPerformed(evt);
             }
         });
 
@@ -76,10 +76,10 @@ public class TelaVendas extends javax.swing.JInternalFrame{
 
         jScrollPane3.setViewportView(jTextPane3);
 
-        jButton3.setIcon(new javax.swing.ImageIcon("A:\\Bibliotecas\\Documentos\\POO2\\trabbb\\trabalhoPOO2\\View_MVC\\Icons\\icons8-pesquisar-64.png")); // NOI18N
-        jButton3.addActionListener(new java.awt.event.ActionListener() {
+        jButton_BuscaCliente.setIcon(new javax.swing.ImageIcon("A:\\Bibliotecas\\Documentos\\POO2\\trabbb\\trabalhoPOO2\\View_MVC\\Icons\\icons8-pesquisar-64.png")); // NOI18N
+        jButton_BuscaCliente.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jButton3ActionPerformed(evt);
+                jButton_BuscaClienteActionPerformed(evt);
             }
         });
 
@@ -100,7 +100,7 @@ public class TelaVendas extends javax.swing.JInternalFrame{
                         .addComponent(jScrollPane3, javax.swing.GroupLayout.PREFERRED_SIZE, 150, javax.swing.GroupLayout.PREFERRED_SIZE))
                     .addComponent(jLabel21))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(jButton3)
+                .addComponent(jButton_BuscaCliente)
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
         jPanel3Layout.setVerticalGroup(
@@ -116,7 +116,7 @@ public class TelaVendas extends javax.swing.JInternalFrame{
                             .addComponent(jScrollPane3, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)))
                     .addGroup(jPanel3Layout.createSequentialGroup()
                         .addGap(51, 51, 51)
-                        .addComponent(jButton3)))
+                        .addComponent(jButton_BuscaCliente)))
                 .addContainerGap(38, Short.MAX_VALUE))
         );
 
@@ -136,9 +136,9 @@ public class TelaVendas extends javax.swing.JInternalFrame{
                 .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(jPanel2Layout.createSequentialGroup()
                         .addGap(89, 89, 89)
-                        .addComponent(jButton1)
+                        .addComponent(jButton_Produtos)
                         .addGap(35, 35, 35)
-                        .addComponent(jButton2))
+                        .addComponent(jButton_Servicos))
                     .addGroup(jPanel2Layout.createSequentialGroup()
                         .addGap(42, 42, 42)
                         .addComponent(jLabel3)
@@ -163,8 +163,8 @@ public class TelaVendas extends javax.swing.JInternalFrame{
                         .addComponent(jLabel2)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                         .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                            .addComponent(jButton1, javax.swing.GroupLayout.PREFERRED_SIZE, 73, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(jButton2))
+                            .addComponent(jButton_Produtos, javax.swing.GroupLayout.PREFERRED_SIZE, 73, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(jButton_Servicos))
                         .addContainerGap())
                     .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel2Layout.createSequentialGroup()
                         .addComponent(jPanel3, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
@@ -207,25 +207,30 @@ public class TelaVendas extends javax.swing.JInternalFrame{
         pack();
     }// </editor-fold>//GEN-END:initComponents
 
-    private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
+    private void jButton_ProdutosActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton_ProdutosActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_jButton1ActionPerformed
+    }//GEN-LAST:event_jButton_ProdutosActionPerformed
 
-    private void jButton2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton2ActionPerformed
+    private void jButton_ServicosActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton_ServicosActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_jButton2ActionPerformed
+    }//GEN-LAST:event_jButton_ServicosActionPerformed
 
-    private void jButton3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton3ActionPerformed
+    private void jButton_BuscaClienteActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton_BuscaClienteActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_jButton3ActionPerformed
+    }//GEN-LAST:event_jButton_BuscaClienteActionPerformed
 
-    public JButton getjButton1() {
-        return jButton1;
+    public JButton getjButton_BuscaCliente() {
+        return jButton_BuscaCliente;
     }
 
-    public JButton getjButton2() {
-        return jButton2;
+    public JButton getjButton_Produtos() {
+        return jButton_Produtos;
     }
+
+    public JButton getjButton_Servicos() {
+        return jButton_Servicos;
+    }
+    
     
     
     public static void main(String args[]) {
@@ -261,9 +266,9 @@ public class TelaVendas extends javax.swing.JInternalFrame{
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
-    private javax.swing.JButton jButton1;
-    private javax.swing.JButton jButton2;
-    private javax.swing.JButton jButton3;
+    private javax.swing.JButton jButton_BuscaCliente;
+    private javax.swing.JButton jButton_Produtos;
+    private javax.swing.JButton jButton_Servicos;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel19;
     private javax.swing.JLabel jLabel2;

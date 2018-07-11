@@ -2,7 +2,9 @@ package Controller_MVC;
 
 import Model_MVC.Recibo;
 import Model_MVC.Servicos;
+import View_MVC.JanelaPrincipal;
 import View_MVC.TelaHBT;
+import View_MVC.TelaInicial;
 import View_MVC.TelaVendaServico;
 import View_MVC.TelaVendas;
 import View_MVC.TelaVendasProdutos;
@@ -18,24 +20,41 @@ public class ControllerVendas {
     private ControllerVendaProdutos controllerProdutos;
     private ControllerHBT controllerBanho;
     private ControllerVendaServico controllerServico;
-
-    public ControllerVendas(TelaVendas view) {
-        this.view = view;
-
-        view.getjButton1().addActionListener(new AbreProdutosListener());
-        view.getjButton2().addActionListener(new AbreServicosListener());
-
+    
+    JanelaPrincipal viewJPrincipal;
+    TelaInicial viewTelaInicial;
+   
+    
+    public ControllerVendas(JanelaPrincipal viewJPrincipal) {
+        this.viewJPrincipal = viewJPrincipal;
+        view = new TelaVendas();
+        viewJPrincipal.getDesktopPanel().removeAll();
+        viewJPrincipal.getDesktopPanel().repaint();
+   
+         viewJPrincipal.getDesktopPanel().add(view);
+         view.show();
+        
+        
+        
+        //viewJPrincipal.getDesktopPanel().removeAll();
+       view.getjButton_Produtos().addActionListener(new AbreProdutosListener());
+       
+       // view.getjButton2().addActionListener(new AbreServicosListener());
     }
     
     class AbreProdutosListener implements ActionListener {
 
         @Override
         public void actionPerformed(ActionEvent e) {
-
-           viewProdutos = new TelaVendasProdutos();
-           viewProdutos.setVisible(true);
-           controllerProdutos = new ControllerVendaProdutos(viewProdutos);
+            System.out.println("rola");
+            viewProdutos = new TelaVendasProdutos();
             
+            //viewJPrincipal.getDesktopPanel().removeAll();
+           // viewJPrincipal.getDesktopPanel().repaint();
+            viewJPrincipal.getDesktopPanel().add(viewProdutos);
+            viewProdutos.show();
+            
+
         }
     }
     

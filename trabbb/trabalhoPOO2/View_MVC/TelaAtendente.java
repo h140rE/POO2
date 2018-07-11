@@ -317,7 +317,7 @@ public class TelaAtendente extends javax.swing.JInternalFrame {
     }//GEN-LAST:event_jMenuItem1ActionPerformed
 
     private void menuCadastraClienteActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_menuCadastraClienteActionPerformed
-       
+
     }//GEN-LAST:event_menuCadastraClienteActionPerformed
 
     private void menCadastraAnimalActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_menCadastraAnimalActionPerformed
