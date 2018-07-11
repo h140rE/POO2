@@ -128,7 +128,6 @@ public class TelaAtendente extends javax.swing.JInternalFrame {
 
         setTitle("Tela Atendente");
         setPreferredSize(new java.awt.Dimension(900, 550));
-        setResizable(false);
 
         JButton_MenuPrincipal.setBackground(new java.awt.Color(176, 224, 230));
 

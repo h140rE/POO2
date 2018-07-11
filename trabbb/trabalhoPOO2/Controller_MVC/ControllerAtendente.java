@@ -31,12 +31,7 @@ public class ControllerAtendente {
         this.view = view;
         this.clientesAtivos = cliente;
         this.viewVendas = viewVendas;
-        view.getJButton_MenuPrincipal_Cadastro_Conformar().addActionListener(new CadastraListener());
-        view.getJButton_MenuPrincipal_Cadastro_Cancelar().addActionListener(new CancelaListener());
-        view.getJButton_MenuPrincipal_MarcaConsulta_Pesquisar().addActionListener(new ConsultaListener());
-        view.getJButton_MenuPrincipal_SistemadeVendas_Carrinho().addActionListener(new AbreVendaListener());
-        view.getRadioButtonCao().addActionListener(new RacaListenerCao());
-        view.getRadioButtonGato().addActionListener(new RacaListenerGato());
+ 
 
     }
     
@@ -111,12 +106,12 @@ public class ControllerAtendente {
             if(cao){
                 clientesAtivos.getLast().AdicionaAnimal(NomeAnimal, Raca, 1);
                 cao = false;
-                view.getButtonGroup1().clearSelection();
+               // view.getButtonGroup1().clearSelection();
                 
             }else if(gato){
                 clientesAtivos.getLast().AdicionaAnimal(NomeAnimal, Raca, 2);
                 gato = false;
-                view.getButtonGroup1().clearSelection();
+                //view.getButtonGroup1().clearSelection();
                 
             }else{
                 JOptionPane.showMessageDialog(null, "Selecione um tipo de Animal");
@@ -149,20 +144,20 @@ public class ControllerAtendente {
 
         @Override
         public void actionPerformed(ActionEvent e) {
-
+/*
             view.getjTextField1().setText("");
             view.getjTextField2().setText("");
             view.getjTextField3().setText("");
             view.getjTextField4().setText("");
             view.getjTextField5().setText("");
-        }
+        }*/
     }
 
     class ConsultaListener implements ActionListener {
 
         @Override
         public void actionPerformed(ActionEvent e) {
-
+/*
             String CPFDono,Data,Hora;
             
             CPFDono = view.getjTextPane1().getText();
@@ -170,6 +165,7 @@ public class ControllerAtendente {
             Hora = view.getjTextPane3().getText();
             
             model.marcaConsulta(CPFDono, Data, Hora);
+            */
         }
     }
 
