@@ -19,6 +19,8 @@ public class TrabalhoPoo {
         TelaHBT telaHotelBanhoTosa = new TelaHBT();
         TelaConsulta telaConsulta = new TelaConsulta();
         TelaVendas telaVendas = new TelaVendas();
+        TelaVendasProdutos vprod = new TelaVendasProdutos();
+        TelaVendaServico vserv = new TelaVendaServico();
         
         CadastraCliente  cad = new CadastraCliente();
         CadastraAnimal caa = new CadastraAnimal();
@@ -41,7 +43,7 @@ public class TrabalhoPoo {
         //CONTROLLERS ----------------------------------//
         ControllerJFrame jf = new ControllerJFrame(telaPrincipal,telaAtendente,telaConsulta ,telaHotelBanhoTosa,telaVendas);
         ControllerAtendente controllerAtendente = new ControllerAtendente(telaPrincipal,atendentePadrao,telaAtendente, cad ,bus ,caa ,mar ,clientes);
-        ControllerVendas controllerVendas = new ControllerVendas(cad,telaPrincipal, telaVendas);
+        ControllerVendas controllerVendas = new ControllerVendas(telaPrincipal,telaVendas,cuidadorPadrao, vserv, vprod);
         ControllerHBT controllerBanho;
         ControllerConsulta controllerConsulta;
        

@@ -109,14 +109,14 @@
                               <EmptySpace min="-2" pref="116" max="-2" attributes="0"/>
                           </Group>
                       </Group>
-                      <EmptySpace pref="53" max="32767" attributes="0"/>
+                      <EmptySpace pref="209" max="32767" attributes="0"/>
                   </Group>
               </Group>
             </DimensionLayout>
             <DimensionLayout dim="1">
               <Group type="103" groupAlignment="0" attributes="0">
                   <Group type="102" attributes="0">
-                      <EmptySpace max="32767" attributes="0"/>
+                      <EmptySpace pref="24" max="32767" attributes="0"/>
                       <Group type="103" groupAlignment="0" attributes="0">
                           <Group type="102" alignment="1" attributes="0">
                               <Group type="103" groupAlignment="3" attributes="0">
@@ -147,9 +147,6 @@
                 <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
                   <Font name="Yu Gothic Light" size="24" style="0"/>
                 </Property>
-                <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
-                  <Image iconType="2" name="A:\Bibliotecas\Documentos\POO2\trabbb\trabalhoPOO2\View_MVC\Icons\icons8-dog-house-40.png"/>
-                </Property>
                 <Property name="text" type="java.lang.String" value="Produtos"/>
                 <Property name="iconTextGap" type="int" value="10"/>
               </Properties>
@@ -161,9 +158,6 @@
               <Properties>
                 <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
                   <Font name="Yu Gothic Light" size="24" style="0"/>
-                </Property>
-                <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
-                  <Image iconType="2" name="A:\Bibliotecas\Documentos\POO2\trabbb\trabalhoPOO2\View_MVC\Icons\icons8-bath-64.png"/>
                 </Property>
                 <Property name="text" type="java.lang.String" value="Servi&#xe7;os"/>
                 <Property name="alignmentX" type="float" value="0.5"/>
@@ -257,11 +251,6 @@
                   </SubComponents>
                 </Container>
                 <Component class="javax.swing.JButton" name="jButton_BuscaCliente">
-                  <Properties>
-                    <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
-                      <Image iconType="2" name="A:\Bibliotecas\Documentos\POO2\trabbb\trabalhoPOO2\View_MVC\Icons\icons8-pesquisar-64.png"/>
-                    </Property>
-                  </Properties>
                   <Events>
                     <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="jButton_BuscaClienteActionPerformed"/>
                   </Events>
