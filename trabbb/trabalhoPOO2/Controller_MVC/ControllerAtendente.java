@@ -72,26 +72,21 @@ public class ControllerAtendente {
         }
         conecta.close();
     }
-    /*              Pesquisar como consultar o cliente no github
-    public void consulta(String cpf)throws ClassNotFoundException, SQLException{
+    /*              Pesquisar como consultar o cliente no github*/
+    public void buscaCliente(String cpf){
+            String sql = "SELECT * FROM  Cliente c WHERE c.cpf = ?;";
 
-        String sql = "INSERT INTO Animal (cpfDono, tipo, nome, raca) VALUES (?,?,?,?);";
-        try {
-            pst = conecta.prepareStatement(sql);
-            pst.setString(1, cpfDono);
-            pst.setString(2, tipo);
-            pst.setString(3, nomeAnimal);
-            pst.setString(4, raca);
-            pst.execute();
-            JOptionPane.showMessageDialog(null, "Animal inserido com sucesso!!");
-        }
-        catch (SQLException ex) {
-            Logger.getLogger(Inserts.class.getName()).log(Level.SEVERE, null, ex);
-            JOptionPane.showMessageDialog(null, "Erro!");
-        }
-        conecta.close();
+            try {
+                pst = conecta.prepareStatement(sql);
+                pst.setString(1, cpf);
+                rs = pst.executeQuery();
+                //PEGAR GET DA TABELA
+                //TabelaBanda.setModel(DbUtils.resultSetToTableModel(rs));
+            } catch (SQLException ex) {
+                Logger.getLogger(ControllerAtendente.class.getName()).log(Level.SEVERE, null, ex);
+            }
+
     }
-    */
 
     class CadastraListener implements ActionListener {
 
