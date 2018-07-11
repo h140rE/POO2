@@ -3,15 +3,17 @@ package Model_MVC;
 public class Animal {
 
     private String nomeAnimal;
-
+    private char tipo;
     private String raca;
-
+    String cpfDono;
     private State estado;
-    public String tipo;
+       
 
-    public Animal(String nomeAnimal, String raca) {
+    public Animal(String cpfDono, char tipo, String nomeAnimal, String raca) {
         this.nomeAnimal = nomeAnimal;
         this.raca = raca;
+        this.tipo = tipo;
+        this.cpfDono = cpfDono;
         this.setEstado(new Aguardando(this));
     }
 
@@ -43,7 +45,11 @@ public class Animal {
     public void consultar(){
         estado.setEstadoEmConsulta();
     }
-
+    
+    public char getTipo(){
+        return this.tipo;
+    }
+    
     public void entrarHotel(){
         estado.setEstadoEmEstadia();
     }
