@@ -23,7 +23,6 @@ public class ControllerTelaPrincipal {
         this.viewAtendente = tela2;
         this.viewBanho = tela3;
         this.viewConsulta = tela4;
-        this.view.setSize(990, 490);
     }
     
     class AtendenteListener implements ActionListener {
@@ -42,8 +41,6 @@ public class ControllerTelaPrincipal {
 
             
             viewBanho.setVisible(true);
-            
-           
         }
     }
     
