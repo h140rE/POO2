@@ -23,12 +23,8 @@ public class ControllerJFrame {
         TelaConsulta viewConsulta;
         TelaHBT viewHBT;
         TelaVendas viewVendas;
-        
 
-
-    
-        public ControllerJFrame(JanelaPrincipal view,TelaAtendente viewAtendente,TelaConsulta viewConsulta
-                                ,TelaHBT viewHBT,TelaVendas viewVendas){
+        public ControllerJFrame(JanelaPrincipal view,TelaAtendente viewAtendente,TelaConsulta viewConsulta, TelaHBT viewHBT,TelaVendas viewVendas){
         
         this.view = view;
         this.viewAtendente = viewAtendente;
@@ -39,8 +35,7 @@ public class ControllerJFrame {
         this.view.setVisible(true);
         this.view.setLocationRelativeTo(null);
         
-        
-        
+       
         viewTelaInicio = new TelaInicial();
         view.getDesktopPanel().add(viewTelaInicio);
         viewTelaInicio.show();
@@ -57,7 +52,6 @@ public class ControllerJFrame {
         @Override
         public void actionPerformed(ActionEvent ae) {
             view.getDesktopPanel().removeAll();
-
             view.getDesktopPanel().repaint();      
             view.getDesktopPanel().add(viewAtendente);
             viewAtendente.show();
@@ -103,8 +97,6 @@ public class ControllerJFrame {
             view.getDesktopPanel().add(viewVendas);
             viewVendas.show();
 
-
-         
         }
         }
        

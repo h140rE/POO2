@@ -1,6 +1,6 @@
 package Controller_MVC;
 
-import Controller_MVC.ControllerAtendente.CadastraClienteListener;
+import Controller_MVC.*;
 import Model_MVC.*;
 import View_MVC.*;
 
@@ -15,124 +15,154 @@ import java.util.logging.Level;
 import java.util.logging.Logger;
 import javax.swing.JOptionPane;
 
+
 public class ControllerAtendente {
     Connection conecta = null;
     PreparedStatement pst;
     ResultSet rs;
     private Atendente atendente;
     TelaAtendente view;
+    JanelaPrincipal jPrincipal;
+    BuscaCliente buscaCliente;
+    CadastraAnimal cadastraA;
+    CadastraCliente cadastraC;
+    MarcaConsulta marcaC;
     private LinkedList<Cliente> clientesAtivos;
-    private Boolean cao = false;
-    private Boolean gato = false; 
-     BuscaCliente buscaCliente;
-     CadastraAnimal cadastraA;
-     CadastraCliente cadastraC;
-     MarcaConsulta marcaConsulta;
     
-    
-    
-    public ControllerAtendente(Atendente model, TelaAtendente view,LinkedList<Cliente> cliente) {
+
+
+    public ControllerAtendente(JanelaPrincipal jPrincipal,Atendente model, TelaAtendente view , CadastraCliente cadastraC,
+            BuscaCliente buscaCliente,CadastraAnimal cadastraA  ,MarcaConsulta marcaC ,LinkedList<Cliente> cliente){
        
+       
+        this.jPrincipal = jPrincipal;
         this.atendente = model;
         this.view = view;
+        this.cadastraC = cadastraC;
+        this.buscaCliente = buscaCliente;
+        this.cadastraA = cadastraA;
+        this.marcaC = marcaC;
         this.clientesAtivos = cliente;
-        this.cadastraC = new CadastraCliente();
         
         
-        this.view.getMenuCadastraCliente().addActionListener(new CadastraClienteListener());
+       
+        this.view.getMenuCadastraCliente().addActionListener(new CadastraClienteJanelaListener());
+        this.view.getMenuBuscaCliente().addActionListener(new BuscaClienteJanelaListener());
+        this.view.getMenCadastraAnimal().addActionListener(new CadastroAnimalJanelaListener());
+        this.view.getMenuMarcaConsulta().addActionListener(new MarcaConsultaJanelaListener());
         
-        
-        
+        this.cadastraC.getBotaoConfirma().addActionListener(new AdicionaClienteListener());
+        this.cadastraC.getBotaoCancela().addActionListener(new CancelaCadastraListener());
     }
     
 
-    class CadastraClienteListener implements ActionListener {
+    class CadastraClienteJanelaListener implements ActionListener {
 
-        
+          @Override
         public void actionPerformed(ActionEvent e) {
             
             view.getDesktopPanel().removeAll();
-            view.getDesktopPanel().repaint();      
+            view.getDesktopPanel().repaint();
+            
             view.getDesktopPanel().add(cadastraC);
+            cadastraC.show();
+
+            
+
+            
+        }
+    }
+    
+     class BuscaClienteJanelaListener implements ActionListener {
+
+        @Override
+        public void actionPerformed(ActionEvent e) {
+            view.getDesktopPanel().removeAll();
+            view.getDesktopPanel().repaint();
+            
+            view.getDesktopPanel().add(buscaCliente);
+            buscaCliente.show();
             
             
-            cadastraC.setVisible(true);
+
+        }
+    }
+     
+     class CadastroAnimalJanelaListener implements ActionListener{
+
+        @Override
+        public void actionPerformed(ActionEvent ae) {
+            view.getDesktopPanel().removeAll();
+            view.getDesktopPanel().repaint();
+            
+            view.getDesktopPanel().add(cadastraA);
+            cadastraA.show();
+        }
+     }
+        
+      class MarcaConsultaJanelaListener implements ActionListener{
+
+        @Override
+        public void actionPerformed(ActionEvent ae) {
+            view.getDesktopPanel().removeAll();
+            view.getDesktopPanel().repaint();
+            
+            view.getDesktopPanel().add(marcaC);
+            marcaC.show();
+        }
+      }
+         
+    class AdicionaClienteListener implements ActionListener {
+
+        @Override
+        public void actionPerformed(ActionEvent e) {
+                       
            
-            /*String Nome, CPF, Telefone, NomeAnimal, Raca;
-            Nome = cadastroCliente.getjTextField1().toString();
-            CPF = cadastroCliente.getjTextField2().getText();
-            Telefone = cadastroCliente.getjTextField3().getText();
+            String Nome, CPF, Telefone, NomeAnimal, Raca;
+            Nome = cadastraC.getTextoNome().getText();
+            CPF = cadastraC.getTextoCPF().getText();
+            Telefone = cadastraC.getTextoTelefone().getText();
+            
+            if(Nome == " " | CPF == " " | Telefone == " "){
+                JOptionPane.showMessageDialog(null, "Preencha todos os campos");
+            }else{
+                clientesAtivos.add(atendente.atende(Nome,CPF,Telefone));
+            
+                limpaBufferCadastra();
+                adicionaTabela(clientesAtivos);
+            }
           
-            //model.cadastrar(Nome, CPF, Telefone, NomeCachorro, Raca);
-            clientesAtivos.add(atendente.atende(Nome,CPF,Telefone));*/
             
-        }
-    }
-    
-    /* class IdentificadorCadastro implements ActionListener {
-
-        @Override
-        public void actionPerformed(ActionEvent e) {
             
-            CadastroCliente = true;
-            view.getDesktopPanel().add(cadastroCliente);
-            cadastroCliente.setVisible(true);
+            
+            
+            
 
         }
     }
-    
-    class RacaListenerCao implements ActionListener {
+      
+      
+      
+    class CancelaCadastraListener implements ActionListener {
 
         @Override
         public void actionPerformed(ActionEvent e) {
-            
-            cao = true;
-
+            limpaBufferCadastra();
         }
-    }
-    
-    class RacaListenerGato implements ActionListener {
-
-        @Override
-        public void actionPerformed(ActionEvent e) {
-            
-            gato = true;
-
-        }
-    }    
-    
-
-    class CancelaListener implements ActionListener {
-
-        @Override
-        public void actionPerformed(ActionEvent e) {
-/*
-            view.getjTextField1().setText("");
-            view.getjTextField2().setText("");
-            view.getjTextField3().setText("");
-            view.getjTextField4().setText("");
-            view.getjTextField5().setText("");
-            
-        }
-    }*/
-
-    class ConsultaListener implements ActionListener {
-
-        @Override
-        public void actionPerformed(ActionEvent e) {
-/*
-            String CPFDono,Data,Hora;
-            
-            CPFDono = view.getjTextPane1().getText();
-            Data = view.getjTextPane2().getText();
-            Hora = view.getjTextPane3().getText();
-            
-            model.marcaConsulta(CPFDono, Data, Hora);
-            */
-        }
-    }
-
    
+    }
+    
+    private void adicionaTabela(LinkedList<Cliente> clientesAtivos){
+        view.getTabelaClientes().removeAll();
+        view.getTabelaClientes().setModel(new ClienteTableModel(clientesAtivos));
+    }
+    
+    private void limpaBufferCadastra(){
+        cadastraC.getTextoNome().setText("");
+        cadastraC.getTextoCPF().setText("");
+        cadastraC.getTextoTelefone().setText("");
+    }
     
 }
+     
 
