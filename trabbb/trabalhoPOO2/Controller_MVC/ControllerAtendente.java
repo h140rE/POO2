@@ -45,7 +45,7 @@ public class ControllerAtendente {
         @Override
         public void actionPerformed(ActionEvent e) {
             view.getDesktopPanel().add(cadastroCliente);
-            //cadastroCliente.show();
+            cadastroCliente.show();
            
             String Nome, CPF, Telefone, NomeAnimal, Raca;
             Nome = cadastroCliente.getjTextField1().toString();
@@ -133,4 +133,4 @@ public class ControllerAtendente {
    
     
 }
-}
+
