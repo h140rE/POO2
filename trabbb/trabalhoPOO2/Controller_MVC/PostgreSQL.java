@@ -8,12 +8,11 @@ public class PostgreSQL {
     private static Connection conectionSigleton;
     public PostgreSQL(){};
     
-    public Connection getBanco(String user, String password) throws ClassNotFoundException{
+    public synchronized Connection login(String user, String password) throws ClassNotFoundException{
         try{
             Class.forName("org.postgresql.Driver");
-            if (conectionSigleton == null){
-                Connection conectionSigleton = DriverManager.getConnection(url,user,password);
-            }
+            if (conectionSigleton == null) conectionSigleton = DriverManager.getConnection(url,user,password);
+            JOptionPane.showMessageDialog(null, "Conexão realizada nessa poha!!");
             return conectionSigleton;
         }
         catch(SQLException error){
@@ -21,6 +20,7 @@ public class PostgreSQL {
             return null;
         }
     }
+    
     public void fechaBanco() throws SQLException{
         if (conectionSigleton != null)
             conectionSigleton.close();
