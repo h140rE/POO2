@@ -39,6 +39,9 @@ public class MarcaConsulta extends javax.swing.JInternalFrame {
         botaoCancela = new javax.swing.JButton();
         jComboBox1 = new javax.swing.JComboBox<>();
 
+        setClosable(true);
+        setDefaultCloseOperation(javax.swing.WindowConstants.HIDE_ON_CLOSE);
+
         JPanel_MenuPrincipal_Cadastro.setBackground(new java.awt.Color(204, 255, 255));
 
         jLabel2.setFont(new java.awt.Font("Yu Gothic UI Light", 0, 36)); // NOI18N

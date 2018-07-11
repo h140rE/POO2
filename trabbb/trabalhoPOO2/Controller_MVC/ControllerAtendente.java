@@ -122,12 +122,18 @@ public class ControllerAtendente {
             Nome = cadastraC.getTextoNome().getText();
             CPF = cadastraC.getTextoCPF().getText();
             Telefone = cadastraC.getTextoTelefone().getText();
+            
+            if(Nome == " " | CPF == " " | Telefone == " "){
+                JOptionPane.showMessageDialog(null, "Preencha todos os campos");
+            }else{
+                clientesAtivos.add(atendente.atende(Nome,CPF,Telefone));
+            
+                limpaBufferCadastra();
+                adicionaTabela(clientesAtivos);
+            }
           
             
-            clientesAtivos.add(atendente.atende(Nome,CPF,Telefone));
             
-            limpaBufferCadastra();
-            adicionaTabela(clientesAtivos);
             
             
             

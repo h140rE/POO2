@@ -45,6 +45,9 @@ public class BuscaCliente extends javax.swing.JInternalFrame {
         jSeparator1 = new javax.swing.JSeparator();
         botaoCancela = new javax.swing.JButton();
 
+        setClosable(true);
+        setDefaultCloseOperation(javax.swing.WindowConstants.HIDE_ON_CLOSE);
+
         JPanel_MenuPrincipal_Cadastro.setBackground(new java.awt.Color(204, 255, 255));
 
         jLabel2.setFont(new java.awt.Font("Yu Gothic UI Light", 0, 36)); // NOI18N
