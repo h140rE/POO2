@@ -25,6 +25,7 @@ public class ControllerJFrame {
         TelaVendas viewVendas;
         
         ControllerConsulta controllerConsulta;
+        ControllerVendas controllerVendas;
         
         Atendente modelAtendente = new Atendente("nome", "111.222.333-44", "(34) 99999999", 1);
         Veterinario modelVeterinario = new Veterinario("Veterinario", "999.888.777-66", "(34)11111111", 1);
@@ -57,10 +58,10 @@ public class ControllerJFrame {
              viewAtendente = new TelaAtendente();
              view.getDesktopPanel().add(viewAtendente);
              viewAtendente.show();
+             
+             
             
             
-            
-         
         }
         }
         
@@ -91,8 +92,6 @@ public class ControllerJFrame {
              view.getDesktopPanel().add(viewHBT);
              viewHBT.show();
 
-        
-            
         }
         }
         
@@ -103,12 +102,9 @@ public class ControllerJFrame {
             view.getDesktopPanel().removeAll();
             view.getDesktopPanel().repaint();
             
-             viewVendas = new TelaVendas();
-             view.getDesktopPanel().add(viewVendas);
-             viewVendas.show();
-
+             
+             controllerVendas = new ControllerVendas(view);
          
-            
         }
         }
        
