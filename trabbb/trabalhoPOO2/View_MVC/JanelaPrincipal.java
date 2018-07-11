@@ -1,6 +1,7 @@
 
 package View_MVC;
 
+import javax.swing.JDesktopPane;
 import javax.swing.JMenuItem;
 
 public class JanelaPrincipal extends javax.swing.JFrame {
@@ -16,6 +17,10 @@ public class JanelaPrincipal extends javax.swing.JFrame {
 
     public JMenuItem getjMenuItem_Consulta() {
         return jMenuItem_Consulta;
+    }
+
+    public JDesktopPane getDesktopPanel() {
+        return desktopPanel;
     }
 
     public JMenuItem getjMenuItem_HotelBanhoTosa() {

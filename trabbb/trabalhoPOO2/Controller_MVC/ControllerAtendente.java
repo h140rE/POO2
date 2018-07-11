@@ -30,6 +30,8 @@ public class ControllerAtendente {
     private CadastraCliente cadastroCliente;
     private Boolean CadastroCliente = false;
     
+    
+    
     public ControllerAtendente(Atendente model, TelaAtendente view, CadastraCliente labelCliente ,LinkedList<Cliente> cliente, TelaVendas viewVendas) {
         view.getMenuCadastraCliente().addActionListener(new CadastraClienteListener());
         this.model = model;
