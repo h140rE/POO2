@@ -15,9 +15,10 @@ import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 
 public class ControllerJFrame {
-    JanelaPrincipal view  = new JanelaPrincipal();
+        JanelaPrincipal view;
     
         public ControllerJFrame(){
+        view = new JanelaPrincipal();
         view.setSize(1000,500);
         view.setVisible(true);d
         view.setLocationRelativeTo(null);
