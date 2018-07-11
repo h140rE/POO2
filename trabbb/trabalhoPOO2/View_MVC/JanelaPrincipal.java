@@ -45,7 +45,6 @@ public class JanelaPrincipal extends javax.swing.JFrame {
         jMenuItem_Vendas = new javax.swing.JMenuItem();
         jSeparator3 = new javax.swing.JPopupMenu.Separator();
         jMenuItem_HotelBanhoTosa = new javax.swing.JMenuItem();
-        jSeparator4 = new javax.swing.JPopupMenu.Separator();
         jMenu2 = new javax.swing.JMenu();
         jMenuItem4 = new javax.swing.JMenuItem();
 
@@ -83,6 +82,7 @@ public class JanelaPrincipal extends javax.swing.JFrame {
         jMenuBar1.setBackground(new java.awt.Color(153, 204, 255));
         jMenuBar1.setBorder(null);
 
+        jMenu1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/View_MVC/Icons/iconss/cog.png"))); // NOI18N
         jMenu1.setText("Funcionalidades");
         jMenu1.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -90,6 +90,7 @@ public class JanelaPrincipal extends javax.swing.JFrame {
             }
         });
 
+        jMenuItem_Atendente.setIcon(new javax.swing.ImageIcon(getClass().getResource("/View_MVC/Icons/iconss/user_female.png"))); // NOI18N
         jMenuItem_Atendente.setText("Atendente");
         jMenuItem_Atendente.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -99,6 +100,7 @@ public class JanelaPrincipal extends javax.swing.JFrame {
         jMenu1.add(jMenuItem_Atendente);
         jMenu1.add(jSeparator1);
 
+        jMenuItem_Consulta.setIcon(new javax.swing.ImageIcon(getClass().getResource("/View_MVC/Icons/iconss/heart_add.png"))); // NOI18N
         jMenuItem_Consulta.setText("Consulta");
         jMenuItem_Consulta.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -108,6 +110,7 @@ public class JanelaPrincipal extends javax.swing.JFrame {
         jMenu1.add(jMenuItem_Consulta);
         jMenu1.add(jSeparator2);
 
+        jMenuItem_Vendas.setIcon(new javax.swing.ImageIcon(getClass().getResource("/View_MVC/Icons/iconss/user_suit.png"))); // NOI18N
         jMenuItem_Vendas.setText("Vendas");
         jMenuItem_Vendas.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -117,6 +120,7 @@ public class JanelaPrincipal extends javax.swing.JFrame {
         jMenu1.add(jMenuItem_Vendas);
         jMenu1.add(jSeparator3);
 
+        jMenuItem_HotelBanhoTosa.setIcon(new javax.swing.ImageIcon(getClass().getResource("/View_MVC/Icons/iconss/weather_clouds.png"))); // NOI18N
         jMenuItem_HotelBanhoTosa.setText("Hotel/Banho/Tosa");
         jMenuItem_HotelBanhoTosa.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -124,12 +128,13 @@ public class JanelaPrincipal extends javax.swing.JFrame {
             }
         });
         jMenu1.add(jMenuItem_HotelBanhoTosa);
-        jMenu1.add(jSeparator4);
 
         jMenuBar1.add(jMenu1);
 
+        jMenu2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/View_MVC/Icons/iconss/lightning.png"))); // NOI18N
         jMenu2.setText("Opções");
 
+        jMenuItem4.setIcon(new javax.swing.ImageIcon(getClass().getResource("/View_MVC/Icons/iconss/cross.png"))); // NOI18N
         jMenuItem4.setText("Sair");
         jMenuItem4.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -163,7 +168,7 @@ public class JanelaPrincipal extends javax.swing.JFrame {
     }// </editor-fold>//GEN-END:initComponents
 
     private void jMenuItem4ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jMenuItem4ActionPerformed
-        // TODO add your handling code here:
+        this.dispose();
     }//GEN-LAST:event_jMenuItem4ActionPerformed
 
     private void jMenuItem_ConsultaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jMenuItem_ConsultaActionPerformed
@@ -240,6 +245,5 @@ public class JanelaPrincipal extends javax.swing.JFrame {
     private javax.swing.JPopupMenu.Separator jSeparator1;
     private javax.swing.JPopupMenu.Separator jSeparator2;
     private javax.swing.JPopupMenu.Separator jSeparator3;
-    private javax.swing.JPopupMenu.Separator jSeparator4;
     // End of variables declaration//GEN-END:variables
 }

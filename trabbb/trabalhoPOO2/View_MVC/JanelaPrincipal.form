@@ -38,6 +38,9 @@
       <SubComponents>
         <Menu class="javax.swing.JMenu" name="jMenu1">
           <Properties>
+            <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
+              <Image iconType="3" name="/View_MVC/Icons/iconss/cog.png"/>
+            </Property>
             <Property name="text" type="java.lang.String" value="Funcionalidades"/>
           </Properties>
           <Events>
@@ -46,6 +49,9 @@
           <SubComponents>
             <MenuItem class="javax.swing.JMenuItem" name="jMenuItem_Atendente">
               <Properties>
+                <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
+                  <Image iconType="3" name="/View_MVC/Icons/iconss/user_female.png"/>
+                </Property>
                 <Property name="text" type="java.lang.String" value="Atendente"/>
               </Properties>
               <Events>
@@ -56,6 +62,9 @@
             </MenuItem>
             <MenuItem class="javax.swing.JMenuItem" name="jMenuItem_Consulta">
               <Properties>
+                <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
+                  <Image iconType="3" name="/View_MVC/Icons/iconss/heart_add.png"/>
+                </Property>
                 <Property name="text" type="java.lang.String" value="Consulta"/>
               </Properties>
               <Events>
@@ -66,6 +75,9 @@
             </MenuItem>
             <MenuItem class="javax.swing.JMenuItem" name="jMenuItem_Vendas">
               <Properties>
+                <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
+                  <Image iconType="3" name="/View_MVC/Icons/iconss/user_suit.png"/>
+                </Property>
                 <Property name="text" type="java.lang.String" value="Vendas"/>
               </Properties>
               <Events>
@@ -76,23 +88,30 @@
             </MenuItem>
             <MenuItem class="javax.swing.JMenuItem" name="jMenuItem_HotelBanhoTosa">
               <Properties>
+                <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
+                  <Image iconType="3" name="/View_MVC/Icons/iconss/weather_clouds.png"/>
+                </Property>
                 <Property name="text" type="java.lang.String" value="Hotel/Banho/Tosa"/>
               </Properties>
               <Events>
                 <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="jMenuItem_HotelBanhoTosaActionPerformed"/>
               </Events>
             </MenuItem>
-            <MenuItem class="javax.swing.JPopupMenu$Separator" name="jSeparator4">
-            </MenuItem>
           </SubComponents>
         </Menu>
         <Menu class="javax.swing.JMenu" name="jMenu2">
           <Properties>
+            <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
+              <Image iconType="3" name="/View_MVC/Icons/iconss/lightning.png"/>
+            </Property>
             <Property name="text" type="java.lang.String" value="Op&#xe7;&#xf5;es"/>
           </Properties>
           <SubComponents>
             <MenuItem class="javax.swing.JMenuItem" name="jMenuItem4">
               <Properties>
+                <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
+                  <Image iconType="3" name="/View_MVC/Icons/iconss/cross.png"/>
+                </Property>
                 <Property name="text" type="java.lang.String" value="Sair"/>
               </Properties>
               <Events>
