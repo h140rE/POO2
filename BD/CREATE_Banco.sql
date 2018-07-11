@@ -57,6 +57,7 @@ CREATE TABLE Animal(
 	nome		varchar(30),
 	raca            varchar(30),
 	CONSTRAINT donoAnimal_fk FOREIGN KEY (cpfDono) REFERENCES cliente(cpf),
+	CONSTRAINT animal_pk PRIMARY KEY (cpfDono,nome),
 	CONSTRAINT tipo CHECK (
 		UPPER(tipo) = 'G' OR 
 		UPPER(tipo) = 'C'
