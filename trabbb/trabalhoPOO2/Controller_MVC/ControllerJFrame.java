@@ -21,6 +21,8 @@ public class ControllerJFrame {
         TelaInicial viewTelaInicio;
         TelaAtendente viewAtendente;
         TelaConsulta viewConsulta;
+        TelaHBT viewHBT;
+        TelaVendas viewVendas;
         
         ControllerConsulta controllerConsulta;
         
@@ -40,6 +42,8 @@ public class ControllerJFrame {
         
         view.getjMenuItem_Atendente().addActionListener(new MenuAtendenteListener());
         view.getjMenuItem_Consulta().addActionListener(new MenuConsultaListener());
+        view.getjMenuItem_HotelBanhoTosa().addActionListener(new MenuHotelBanhoTosaListener());
+        view.getjMenuItem_Vendas().addActionListener(new MenuVendasListener());
         
         }
         
@@ -47,21 +51,26 @@ public class ControllerJFrame {
                
         @Override
         public void actionPerformed(ActionEvent ae) {
-            viewAtendente = new TelaAtendente();
-            view.removeAll();
+            view.getDesktopPanel().removeAll();
+            view.getDesktopPanel().repaint();
+            
+             viewAtendente = new TelaAtendente();
+             view.getDesktopPanel().add(viewAtendente);
+             viewAtendente.show();
             
             
-            //view.add(viewAtendente);
-           // viewAtendente.show();
             
+         
         }
         }
+        
         class MenuConsultaListener implements ActionListener{
                
         @Override
         public void actionPerformed(ActionEvent ae) {
             view.getDesktopPanel().remove(viewTelaInicio);
             view.getDesktopPanel().repaint();
+            
             viewConsulta = new TelaConsulta();
             view.getDesktopPanel().add(viewConsulta);
             viewConsulta.show();
@@ -70,6 +79,39 @@ public class ControllerJFrame {
           
         }
         }
+        
+          class MenuHotelBanhoTosaListener implements ActionListener{
+               
+        @Override
+        public void actionPerformed(ActionEvent ae) {
+            view.getDesktopPanel().removeAll();
+            view.getDesktopPanel().repaint();
+            
+             viewHBT = new TelaHBT();
+             view.getDesktopPanel().add(viewHBT);
+             viewHBT.show();
+
+        
+            
+        }
+        }
+        
+           class MenuVendasListener implements ActionListener{
+               
+        @Override
+        public void actionPerformed(ActionEvent ae) {
+            view.getDesktopPanel().removeAll();
+            view.getDesktopPanel().repaint();
+            
+             viewVendas = new TelaVendas();
+             view.getDesktopPanel().add(viewVendas);
+             viewVendas.show();
+
+         
+            
+        }
+        }
+       
 
     public JanelaPrincipal getView() {
         return view;
