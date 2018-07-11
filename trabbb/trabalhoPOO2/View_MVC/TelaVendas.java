@@ -1,6 +1,8 @@
 package View_MVC;
 
 import javax.swing.JButton;
+import javax.swing.JTextField;
+import javax.swing.JTextPane;
 
 public class TelaVendas extends javax.swing.JInternalFrame{
 
@@ -229,6 +231,14 @@ public class TelaVendas extends javax.swing.JInternalFrame{
 
     public JButton getjButton_Servicos() {
         return jButton_Servicos;
+    }
+
+    public JTextField getjTextField1() {
+        return jTextField1;
+    }
+
+    public JTextPane getjTextPane3() {
+        return jTextPane3;
     }
     
     
