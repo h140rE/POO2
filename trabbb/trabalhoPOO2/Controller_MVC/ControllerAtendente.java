@@ -20,14 +20,14 @@ public class ControllerAtendente {
     PreparedStatement pst;
     ResultSet rs;
     private Atendente atendente;
-    private TelaAtendente view;
+    TelaAtendente view;
     private LinkedList<Cliente> clientesAtivos;
     private Boolean cao = false;
     private Boolean gato = false; 
-    private BuscaCliente buscaCliente;
-    private CadastraAnimal cadastraA;
-    private CadastraCliente cadastraC;
-    private MarcaConsulta marcaConsulta;
+     BuscaCliente buscaCliente;
+     CadastraAnimal cadastraA;
+     CadastraCliente cadastraC;
+     MarcaConsulta marcaConsulta;
     
     
     
@@ -37,6 +37,8 @@ public class ControllerAtendente {
         this.view = view;
         this.clientesAtivos = cliente;
         this.cadastraC = new CadastraCliente();
+        
+        
         this.view.getMenuCadastraCliente().addActionListener(new CadastraClienteListener());
         
         
@@ -46,13 +48,15 @@ public class ControllerAtendente {
 
     class CadastraClienteListener implements ActionListener {
 
-        @Override
+        
         public void actionPerformed(ActionEvent e) {
             
             view.getDesktopPanel().removeAll();
             view.getDesktopPanel().repaint();      
             view.getDesktopPanel().add(cadastraC);
-            cadastraC.show();
+            
+            
+            cadastraC.setVisible(true);
            
             /*String Nome, CPF, Telefone, NomeAnimal, Raca;
             Nome = cadastroCliente.getjTextField1().toString();
