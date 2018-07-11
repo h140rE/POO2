@@ -24,16 +24,20 @@ public class ControllerJFrame {
         TelaHBT viewHBT;
         TelaVendas viewVendas;
         
-        ControllerConsulta controllerConsulta;
         
-        Atendente modelAtendente = new Atendente("nome", "111.222.333-44", "(34) 99999999", 1);
-        Veterinario modelVeterinario = new Veterinario("Veterinario", "999.888.777-66", "(34)11111111", 1);
     
-        public ControllerJFrame(){
-        view = new JanelaPrincipal();
-        view.setSize(1000,500);
-        view.setVisible(true);
-        view.setLocationRelativeTo(null);
+        public ControllerJFrame(JanelaPrincipal view,TelaAtendente viewAtendente,TelaConsulta viewConsulta
+                                ,TelaHBT viewHBT,TelaVendas viewVendas){
+        
+        this.view = view;
+        this.viewAtendente = viewAtendente;
+        this.viewConsulta = viewConsulta;
+        this.viewHBT = viewHBT;
+        this.viewVendas = viewVendas;
+        this.view.setSize(1000,500);
+        this.view.setVisible(true);
+        this.view.setLocationRelativeTo(null);
+        
         
         
         viewTelaInicio = new TelaInicial();
@@ -52,11 +56,9 @@ public class ControllerJFrame {
         @Override
         public void actionPerformed(ActionEvent ae) {
             view.getDesktopPanel().removeAll();
-            view.getDesktopPanel().repaint();
-            
-             viewAtendente = new TelaAtendente();
-             view.getDesktopPanel().add(viewAtendente);
-             viewAtendente.show();
+            view.getDesktopPanel().repaint();      
+            view.getDesktopPanel().add(viewAtendente);
+            viewAtendente.show();
             
             
             
@@ -69,13 +71,11 @@ public class ControllerJFrame {
         @Override
         public void actionPerformed(ActionEvent ae) {
             view.getDesktopPanel().remove(viewTelaInicio);
-            view.getDesktopPanel().repaint();
-            
-            viewConsulta = new TelaConsulta();
+            view.getDesktopPanel().repaint();                        
             view.getDesktopPanel().add(viewConsulta);
             viewConsulta.show();
             
-           // controllerConsulta = new ControllerConsulta(viewConsulta, modelVeterinario);
+           
           
         }
         }
@@ -86,10 +86,8 @@ public class ControllerJFrame {
         public void actionPerformed(ActionEvent ae) {
             view.getDesktopPanel().removeAll();
             view.getDesktopPanel().repaint();
-            
-             viewHBT = new TelaHBT();
-             view.getDesktopPanel().add(viewHBT);
-             viewHBT.show();
+            view.getDesktopPanel().add(viewHBT);
+            viewHBT.show();
 
         
             
@@ -102,10 +100,8 @@ public class ControllerJFrame {
         public void actionPerformed(ActionEvent ae) {
             view.getDesktopPanel().removeAll();
             view.getDesktopPanel().repaint();
-            
-             viewVendas = new TelaVendas();
-             view.getDesktopPanel().add(viewVendas);
-             viewVendas.show();
+            view.getDesktopPanel().add(viewVendas);
+            viewVendas.show();
 
          
             

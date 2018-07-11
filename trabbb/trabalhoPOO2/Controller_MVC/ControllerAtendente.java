@@ -1,11 +1,9 @@
 package Controller_MVC;
 
 import Controller_MVC.ControllerAtendente.CadastraClienteListener;
-import Model_MVC.Atendente;
-import Model_MVC.Cliente;
-import View_MVC.CadastraCliente;
-import View_MVC.TelaAtendente;
-import View_MVC.TelaVendas;
+import Model_MVC.*;
+import View_MVC.*;
+
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 import java.sql.Connection;
@@ -21,24 +19,28 @@ public class ControllerAtendente {
     Connection conecta = null;
     PreparedStatement pst;
     ResultSet rs;
-    private Atendente model;
+    private Atendente atendente;
     private TelaAtendente view;
-    private TelaVendas viewVendas;
     private LinkedList<Cliente> clientesAtivos;
     private Boolean cao = false;
     private Boolean gato = false; 
-    private CadastraCliente cadastroCliente;
-    private Boolean CadastroCliente = false;
+    private BuscaCliente buscaCliente;
+    private CadastraAnimal cadastraA;
+    private CadastraCliente cadastraC;
+    private MarcaConsulta marcaConsulta;
     
     
     
-    public ControllerAtendente(Atendente model, TelaAtendente view, CadastraCliente labelCliente ,LinkedList<Cliente> cliente, TelaVendas viewVendas) {
-        view.getMenuCadastraCliente().addActionListener(new CadastraClienteListener());
-        this.model = model;
+    public ControllerAtendente(Atendente model, TelaAtendente view,LinkedList<Cliente> cliente) {
+       
+        this.atendente = model;
         this.view = view;
         this.clientesAtivos = cliente;
-        this.cadastroCliente = labelCliente;
-        this.viewVendas = viewVendas;
+        this.cadastraC = new CadastraCliente();
+        this.view.getMenuCadastraCliente().addActionListener(new CadastraClienteListener());
+        
+        
+        
     }
     
 
@@ -46,21 +48,24 @@ public class ControllerAtendente {
 
         @Override
         public void actionPerformed(ActionEvent e) {
-            view.getDesktopPanel().add(cadastroCliente);
-            cadastroCliente.show();
+            
+            view.getDesktopPanel().removeAll();
+            view.getDesktopPanel().repaint();      
+            view.getDesktopPanel().add(cadastraC);
+            cadastraC.show();
            
-            String Nome, CPF, Telefone, NomeAnimal, Raca;
+            /*String Nome, CPF, Telefone, NomeAnimal, Raca;
             Nome = cadastroCliente.getjTextField1().toString();
             CPF = cadastroCliente.getjTextField2().getText();
             Telefone = cadastroCliente.getjTextField3().getText();
           
             //model.cadastrar(Nome, CPF, Telefone, NomeCachorro, Raca);
-            clientesAtivos.add(model.atende(Nome,CPF,Telefone));
+            clientesAtivos.add(atendente.atende(Nome,CPF,Telefone));*/
             
         }
     }
     
-     class IdentificadorCadastro implements ActionListener {
+    /* class IdentificadorCadastro implements ActionListener {
 
         @Override
         public void actionPerformed(ActionEvent e) {
@@ -103,9 +108,9 @@ public class ControllerAtendente {
             view.getjTextField3().setText("");
             view.getjTextField4().setText("");
             view.getjTextField5().setText("");
-            */
+            
         }
-    }
+    }*/
 
     class ConsultaListener implements ActionListener {
 
@@ -123,15 +128,6 @@ public class ControllerAtendente {
         }
     }
 
-    class AbreVendaListener implements ActionListener {
-
-        @Override
-        public void actionPerformed(ActionEvent e) {
-           viewVendas.setVisible(true);
-           
-        }
-    }
-    
    
     
 }
