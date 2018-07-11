@@ -18,8 +18,15 @@ public class Cliente extends Pessoa {
 
 
 
-    public void pagarDinheiro() {
-
+    public void pagarDinheiro(float dinheiro) {
+        float resultado = dinheiro - this.recibo.pagar();
+        if(resultado < 0){
+            JOptionPane.showMessageDialog(null, "Valor insuficiente, Faltam: R$" + resultado);
+        }else{
+            JOptionPane.showMessageDialog(null, "Troco igual a R$" + resultado);
+            //GUARDAR RECIBO NO BANCO
+            this.recibo = null;
+        }
     }
 
     public void pagarCartao() {
@@ -55,10 +62,12 @@ public class Cliente extends Pessoa {
     }
     
     public void listaAnimais(){
-        System.out.println("Cliente:" + this.getNome());
+        String acumula;
+        acumula = "Cliente:" + this.getNome() + "\n";
         for(int i=0; i < animais.size(); i++){
-            System.out.println(i + " - " +animais.get(i).dadosAnimal() +"\t Tipo: " + animais.get(i).tipo );
+            acumula += i + " - " +animais.get(i).dadosAnimal() +"\t Tipo: " + animais.get(i).tipo + "\n";
         }
+        JOptionPane.showMessageDialog(null, acumula);
     }
     public Animal getAnimal(int i){
         return this.animais.get(i);
