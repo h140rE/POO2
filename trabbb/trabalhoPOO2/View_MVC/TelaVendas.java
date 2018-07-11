@@ -34,9 +34,10 @@ public class TelaVendas extends javax.swing.JInternalFrame{
         jLabel3 = new javax.swing.JLabel();
 
         setClosable(true);
+        setPreferredSize(new java.awt.Dimension(1000, 383));
 
         jPanel1.setBackground(new java.awt.Color(255, 250, 205));
-        jPanel1.setPreferredSize(new java.awt.Dimension(800, 330));
+        jPanel1.setPreferredSize(new java.awt.Dimension(1000, 330));
 
         jLabel1.setFont(new java.awt.Font("Yu Gothic Light", 0, 48)); // NOI18N
         jLabel1.setText("Sistema de vendas");
@@ -44,7 +45,6 @@ public class TelaVendas extends javax.swing.JInternalFrame{
         jPanel2.setBackground(new java.awt.Color(250, 240, 230));
 
         jButton_Produtos.setFont(new java.awt.Font("Yu Gothic Light", 0, 24)); // NOI18N
-        jButton_Produtos.setIcon(new javax.swing.ImageIcon("A:\\Bibliotecas\\Documentos\\POO2\\trabbb\\trabalhoPOO2\\View_MVC\\Icons\\icons8-dog-house-40.png")); // NOI18N
         jButton_Produtos.setText("Produtos");
         jButton_Produtos.setIconTextGap(10);
         jButton_Produtos.addActionListener(new java.awt.event.ActionListener() {
@@ -54,7 +54,6 @@ public class TelaVendas extends javax.swing.JInternalFrame{
         });
 
         jButton_Servicos.setFont(new java.awt.Font("Yu Gothic Light", 0, 24)); // NOI18N
-        jButton_Servicos.setIcon(new javax.swing.ImageIcon("A:\\Bibliotecas\\Documentos\\POO2\\trabbb\\trabalhoPOO2\\View_MVC\\Icons\\icons8-bath-64.png")); // NOI18N
         jButton_Servicos.setText("Serviços");
         jButton_Servicos.setAlignmentX(0.5F);
         jButton_Servicos.setAlignmentY(0.0F);
@@ -78,7 +77,6 @@ public class TelaVendas extends javax.swing.JInternalFrame{
 
         jScrollPane3.setViewportView(jTextPane3);
 
-        jButton_BuscaCliente.setIcon(new javax.swing.ImageIcon("A:\\Bibliotecas\\Documentos\\POO2\\trabbb\\trabalhoPOO2\\View_MVC\\Icons\\icons8-pesquisar-64.png")); // NOI18N
         jButton_BuscaCliente.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jButton_BuscaClienteActionPerformed(evt);
@@ -140,7 +138,7 @@ public class TelaVendas extends javax.swing.JInternalFrame{
                         .addGap(89, 89, 89)
                         .addComponent(jButton_Produtos)
                         .addGap(35, 35, 35)
-                        .addComponent(jButton_Servicos))
+                        .addComponent(jButton_Servicos, javax.swing.GroupLayout.PREFERRED_SIZE, 126, javax.swing.GroupLayout.PREFERRED_SIZE))
                     .addGroup(jPanel2Layout.createSequentialGroup()
                         .addGap(42, 42, 42)
                         .addComponent(jLabel3)
@@ -150,7 +148,7 @@ public class TelaVendas extends javax.swing.JInternalFrame{
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                         .addComponent(jLabel2)
                         .addGap(116, 116, 116)))
-                .addContainerGap(53, Short.MAX_VALUE))
+                .addContainerGap(266, Short.MAX_VALUE))
         );
         jPanel2Layout.setVerticalGroup(
             jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -164,9 +162,9 @@ public class TelaVendas extends javax.swing.JInternalFrame{
                         .addGap(46, 46, 46)
                         .addComponent(jLabel2)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                            .addComponent(jButton_Produtos, javax.swing.GroupLayout.PREFERRED_SIZE, 73, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(jButton_Servicos))
+                        .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                            .addComponent(jButton_Produtos, javax.swing.GroupLayout.DEFAULT_SIZE, 73, Short.MAX_VALUE)
+                            .addComponent(jButton_Servicos, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
                         .addContainerGap())
                     .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel2Layout.createSequentialGroup()
                         .addComponent(jPanel3, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
@@ -199,7 +197,7 @@ public class TelaVendas extends javax.swing.JInternalFrame{
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(jPanel1, javax.swing.GroupLayout.PREFERRED_SIZE, 950, javax.swing.GroupLayout.PREFERRED_SIZE)
+            .addComponent(jPanel1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)

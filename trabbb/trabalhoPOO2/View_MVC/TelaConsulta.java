@@ -75,8 +75,10 @@ public class TelaConsulta extends javax.swing.JInternalFrame {
         );
 
         setClosable(true);
+        setPreferredSize(new java.awt.Dimension(1000, 500));
 
         JPanel_TelaSistemaConsulta.setBackground(new java.awt.Color(250, 255, 240));
+        JPanel_TelaSistemaConsulta.setPreferredSize(new java.awt.Dimension(1000, 500));
 
         jLabel1.setFont(new java.awt.Font("Yu Gothic Light", 0, 36)); // NOI18N
         jLabel1.setText("Sistema de Consultas");
@@ -146,7 +148,7 @@ public class TelaConsulta extends javax.swing.JInternalFrame {
             JPanel_TelaSistemaDeConsulta_ListaProdutosSelecionadosLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(JPanel_TelaSistemaDeConsulta_ListaProdutosSelecionadosLayout.createSequentialGroup()
                 .addComponent(jLabel9)
-                .addContainerGap(195, Short.MAX_VALUE))
+                .addContainerGap(197, Short.MAX_VALUE))
             .addGroup(JPanel_TelaSistemaDeConsulta_ListaProdutosSelecionadosLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                 .addGroup(JPanel_TelaSistemaDeConsulta_ListaProdutosSelecionadosLayout.createSequentialGroup()
                     .addGap(25, 25, 25)
@@ -371,14 +373,14 @@ public class TelaConsulta extends javax.swing.JInternalFrame {
         JPanel_TelaSistemaConsultaLayout.setHorizontalGroup(
             JPanel_TelaSistemaConsultaLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(JPanel_TelaSistemaConsultaLayout.createSequentialGroup()
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addContainerGap(45, Short.MAX_VALUE)
                 .addComponent(JPanel_TelaSistemaDeConsulta_VerificaDados, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addGroup(JPanel_TelaSistemaConsultaLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
                     .addComponent(jLabel1)
                     .addComponent(jPanel4, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                     .addComponent(jPanel2, javax.swing.GroupLayout.PREFERRED_SIZE, 578, Short.MAX_VALUE))
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                .addContainerGap(45, Short.MAX_VALUE))
         );
         JPanel_TelaSistemaConsultaLayout.setVerticalGroup(
             JPanel_TelaSistemaConsultaLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -391,7 +393,7 @@ public class TelaConsulta extends javax.swing.JInternalFrame {
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                         .addComponent(jPanel2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                     .addComponent(JPanel_TelaSistemaDeConsulta_VerificaDados, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addContainerGap(18, Short.MAX_VALUE))
+                .addContainerGap(63, Short.MAX_VALUE))
         );
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
@@ -400,7 +402,7 @@ public class TelaConsulta extends javax.swing.JInternalFrame {
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
                 .addComponent(JPanel_TelaSistemaConsulta, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(0, 8, Short.MAX_VALUE))
+                .addGap(0, 0, Short.MAX_VALUE))
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
