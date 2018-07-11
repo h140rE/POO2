@@ -1,6 +1,9 @@
 package Controller_MVC;
 
-import Model_MVC.Cuidador;
+
+import View_MVC.*;
+import Model_MVC.*;
+
 import View_MVC.TelaVendaServico;
 import View_MVC.TelaVendas;
 import View_MVC.TelaVendasProdutos;
@@ -14,12 +17,14 @@ public class ControllerVendas {
     private Cuidador model;
     private TelaVendaServico viewServico;
     private TelaVendasProdutos viewProdutos;
+    private JanelaPrincipal viewprinc;
 
-    public ControllerVendas(TelaVendas view, Cuidador model, TelaVendaServico viewServico, TelaVendasProdutos viewProdutos) {
+    public ControllerVendas(JanelaPrincipal viewprinc ,TelaVendas view, Cuidador model, TelaVendaServico viewServico, TelaVendasProdutos viewProdutos) {
         this.view = view;
         this.model = model;
         this.viewProdutos = viewProdutos;
         this.viewServico = viewServico;
+        this.viewprinc = viewprinc;
         view.setSize(960, 500);
 
         view.getjButton_Produtos().addActionListener(new AbreProdutosListener());
@@ -32,9 +37,9 @@ public class ControllerVendas {
 
         @Override
         public void actionPerformed(ActionEvent e) {
-
-            JOptionPane.showMessageDialog(null, "Não Implementado!!!");
-
+            
+            viewprinc.getDesktopPanel().add(viewProdutos);
+            viewProdutos.show();
         }
     }
 
@@ -60,7 +65,8 @@ public class ControllerVendas {
         @Override
         public void actionPerformed(ActionEvent e) {
 
-            JOptionPane.showMessageDialog(null, "Não Implementado!!!");
+            viewprinc.getDesktopPanel().add(viewServico);
+            viewServico.show();
 
         }
     }

@@ -53,7 +53,7 @@ public class CadastraAnimal extends javax.swing.JInternalFrame {
         setClosable(true);
         setDefaultCloseOperation(javax.swing.WindowConstants.HIDE_ON_CLOSE);
 
-        JPanel_MenuPrincipal_Cadastro.setBackground(new java.awt.Color(204, 255, 255));
+        JPanel_MenuPrincipal_Cadastro.setBackground(new java.awt.Color(255, 240, 245));
 
         jLabel2.setFont(new java.awt.Font("Yu Gothic UI Light", 0, 36)); // NOI18N
         jLabel2.setText("Cadastro Animal");
@@ -82,10 +82,10 @@ public class CadastraAnimal extends javax.swing.JInternalFrame {
         });
 
         jLabel8.setFont(new java.awt.Font("Tahoma", 0, 18)); // NOI18N
-        jLabel8.setText("Nome");
+        jLabel8.setText("Nome:");
 
         jLabel9.setFont(new java.awt.Font("Tahoma", 0, 18)); // NOI18N
-        jLabel9.setText("Raça");
+        jLabel9.setText("Raça:");
 
         textoRacaAnimal.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -93,10 +93,21 @@ public class CadastraAnimal extends javax.swing.JInternalFrame {
             }
         });
 
-        buttonGroup1.add(RadioButtonCao);
-        RadioButtonCao.setText("Cão");
+        jPanel1.setBackground(new java.awt.Color(255, 240, 245));
 
+        RadioButtonCao.setBackground(new java.awt.Color(255, 240, 245));
+        buttonGroup1.add(RadioButtonCao);
+        RadioButtonCao.setFont(new java.awt.Font("Yu Gothic UI Light", 1, 12)); // NOI18N
+        RadioButtonCao.setText("Cão");
+        RadioButtonCao.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                RadioButtonCaoActionPerformed(evt);
+            }
+        });
+
+        radioButtonGato.setBackground(new java.awt.Color(255, 240, 245));
         buttonGroup1.add(radioButtonGato);
+        radioButtonGato.setFont(new java.awt.Font("Yu Gothic UI Light", 1, 12)); // NOI18N
         radioButtonGato.setText("Gato");
 
         javax.swing.GroupLayout jPanel1Layout = new javax.swing.GroupLayout(jPanel1);
@@ -104,11 +115,11 @@ public class CadastraAnimal extends javax.swing.JInternalFrame {
         jPanel1Layout.setHorizontalGroup(
             jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jPanel1Layout.createSequentialGroup()
-                .addGap(0, 0, 0)
+                .addContainerGap()
                 .addComponent(RadioButtonCao)
-                .addGap(18, 18, 18)
+                .addGap(12, 12, 12)
                 .addComponent(radioButtonGato)
-                .addContainerGap(9, Short.MAX_VALUE))
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
         jPanel1Layout.setVerticalGroup(
             jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -117,15 +128,29 @@ public class CadastraAnimal extends javax.swing.JInternalFrame {
                 .addComponent(radioButtonGato, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
 
+<<<<<<< HEAD
         botaoConfirmaAnimal.setText("Cadastrar");
         botaoConfirmaAnimal.addActionListener(new java.awt.event.ActionListener() {
+=======
+        botaoConfirma.setFont(new java.awt.Font("Yu Gothic UI Light", 0, 24)); // NOI18N
+        botaoConfirma.setIcon(new javax.swing.ImageIcon("A:\\Bibliotecas\\Documentos\\POO2\\trabbb\\trabalhoPOO2\\View_MVC\\Icons\\icons8-checkmark-64.png")); // NOI18N
+        botaoConfirma.setText("Cadastrar");
+        botaoConfirma.addActionListener(new java.awt.event.ActionListener() {
+>>>>>>> 54d0be88ee3cd808807c76cf9aa83fb47322f7dd
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 botaoConfirmaAnimalActionPerformed(evt);
             }
         });
 
+<<<<<<< HEAD
         botaoCancelaAnimal.setText("Cancelar");
         botaoCancelaAnimal.addActionListener(new java.awt.event.ActionListener() {
+=======
+        botaoCancela.setFont(new java.awt.Font("Yu Gothic UI Light", 0, 24)); // NOI18N
+        botaoCancela.setIcon(new javax.swing.ImageIcon("A:\\Bibliotecas\\Documentos\\POO2\\trabbb\\trabalhoPOO2\\View_MVC\\Icons\\icons8-cancel-64.png")); // NOI18N
+        botaoCancela.setText("Cancela");
+        botaoCancela.addActionListener(new java.awt.event.ActionListener() {
+>>>>>>> 54d0be88ee3cd808807c76cf9aa83fb47322f7dd
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 botaoCancelaAnimalActionPerformed(evt);
             }
@@ -136,15 +161,28 @@ public class CadastraAnimal extends javax.swing.JInternalFrame {
         JPanel_MenuPrincipal_CadastroLayout.setHorizontalGroup(
             JPanel_MenuPrincipal_CadastroLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(JPanel_MenuPrincipal_CadastroLayout.createSequentialGroup()
+<<<<<<< HEAD
                 .addGap(4, 4, 4)
                 .addComponent(jLabel3)
                 .addGap(18, 18, 18)
                 .addComponent(donoCadastraAnimal, javax.swing.GroupLayout.PREFERRED_SIZE, 159, javax.swing.GroupLayout.PREFERRED_SIZE)
+=======
+                .addGap(42, 42, 42)
+                .addGroup(JPanel_MenuPrincipal_CadastroLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(jLabel8)
+                    .addComponent(jLabel9))
+                .addGap(33, 33, 33)
+                .addGroup(JPanel_MenuPrincipal_CadastroLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                    .addComponent(jTextField5, javax.swing.GroupLayout.PREFERRED_SIZE, 181, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(jTextField4, javax.swing.GroupLayout.PREFERRED_SIZE, 181, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(jTextField1, javax.swing.GroupLayout.PREFERRED_SIZE, 180, javax.swing.GroupLayout.PREFERRED_SIZE))
+>>>>>>> 54d0be88ee3cd808807c76cf9aa83fb47322f7dd
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                 .addComponent(jLabel10))
             .addGroup(JPanel_MenuPrincipal_CadastroLayout.createSequentialGroup()
                 .addGroup(JPanel_MenuPrincipal_CadastroLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(JPanel_MenuPrincipal_CadastroLayout.createSequentialGroup()
+<<<<<<< HEAD
                         .addGap(21, 21, 21)
                         .addComponent(jLabel6))
                     .addGroup(JPanel_MenuPrincipal_CadastroLayout.createSequentialGroup()
@@ -176,6 +214,31 @@ public class CadastraAnimal extends javax.swing.JInternalFrame {
                                 .addGap(18, 18, 18)
                                 .addComponent(textoRacaAnimal, javax.swing.GroupLayout.PREFERRED_SIZE, 181, javax.swing.GroupLayout.PREFERRED_SIZE)))))
                 .addGap(0, 36, Short.MAX_VALUE))
+=======
+                        .addGap(47, 47, 47)
+                        .addComponent(jLabel3)
+                        .addGap(0, 0, Short.MAX_VALUE))
+                    .addGroup(JPanel_MenuPrincipal_CadastroLayout.createSequentialGroup()
+                        .addGap(22, 22, 22)
+                        .addGroup(JPanel_MenuPrincipal_CadastroLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addGroup(JPanel_MenuPrincipal_CadastroLayout.createSequentialGroup()
+                                .addComponent(jLabel6)
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                                .addComponent(jPanel1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                            .addGroup(JPanel_MenuPrincipal_CadastroLayout.createSequentialGroup()
+                                .addComponent(botaoConfirma, javax.swing.GroupLayout.PREFERRED_SIZE, 200, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                .addComponent(botaoCancela, javax.swing.GroupLayout.PREFERRED_SIZE, 200, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addGap(0, 21, Short.MAX_VALUE))
+                            .addGroup(JPanel_MenuPrincipal_CadastroLayout.createSequentialGroup()
+                                .addComponent(jLabel7)
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)))))
+                .addContainerGap())
+            .addGroup(JPanel_MenuPrincipal_CadastroLayout.createSequentialGroup()
+                .addGap(84, 84, 84)
+                .addComponent(jLabel2, javax.swing.GroupLayout.PREFERRED_SIZE, 260, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(0, 0, Short.MAX_VALUE))
+>>>>>>> 54d0be88ee3cd808807c76cf9aa83fb47322f7dd
         );
         JPanel_MenuPrincipal_CadastroLayout.setVerticalGroup(
             JPanel_MenuPrincipal_CadastroLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -185,6 +248,7 @@ public class CadastraAnimal extends javax.swing.JInternalFrame {
                 .addGap(126, 126, 126))
             .addGroup(JPanel_MenuPrincipal_CadastroLayout.createSequentialGroup()
                 .addComponent(jLabel2, javax.swing.GroupLayout.PREFERRED_SIZE, 38, javax.swing.GroupLayout.PREFERRED_SIZE)
+<<<<<<< HEAD
                 .addGap(21, 21, 21)
                 .addComponent(jLabel6)
                 .addGap(16, 16, 16)
@@ -209,13 +273,42 @@ public class CadastraAnimal extends javax.swing.JInternalFrame {
                             .addComponent(botaoCancelaAnimal, javax.swing.GroupLayout.PREFERRED_SIZE, 40, javax.swing.GroupLayout.PREFERRED_SIZE)))
                     .addComponent(jPanel1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addContainerGap(19, Short.MAX_VALUE))
+=======
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addGroup(JPanel_MenuPrincipal_CadastroLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                    .addComponent(jPanel1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(jLabel6))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addGroup(JPanel_MenuPrincipal_CadastroLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(jLabel3)
+                    .addComponent(jTextField1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                .addComponent(jLabel7)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addGroup(JPanel_MenuPrincipal_CadastroLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(jLabel8)
+                    .addComponent(jTextField4, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addGroup(JPanel_MenuPrincipal_CadastroLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(jTextField5, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(jLabel9))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                .addGroup(JPanel_MenuPrincipal_CadastroLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(botaoConfirma, javax.swing.GroupLayout.PREFERRED_SIZE, 57, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(botaoCancela, javax.swing.GroupLayout.PREFERRED_SIZE, 0, Short.MAX_VALUE))
+                .addGap(10, 10, 10))
+>>>>>>> 54d0be88ee3cd808807c76cf9aa83fb47322f7dd
         );
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+<<<<<<< HEAD
             .addComponent(JPanel_MenuPrincipal_Cadastro, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+=======
+            .addComponent(JPanel_MenuPrincipal_Cadastro, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+>>>>>>> 54d0be88ee3cd808807c76cf9aa83fb47322f7dd
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -276,6 +369,10 @@ public class CadastraAnimal extends javax.swing.JInternalFrame {
     public JTextField getTextoRacaAnimal() {
         return textoRacaAnimal;
     }
+
+    private void RadioButtonCaoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_RadioButtonCaoActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_RadioButtonCaoActionPerformed
 
 
     // Variables declaration - do not modify//GEN-BEGIN:variables

@@ -10,7 +10,10 @@ import java.awt.event.MouseEvent;
 import java.sql.Connection;
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
+import java.sql.SQLException;
 import java.util.LinkedList;
+import java.util.logging.Level;
+import java.util.logging.Logger;
 import javax.swing.JOptionPane;
 
 public class ControllerAtendente {
@@ -26,12 +29,16 @@ public class ControllerAtendente {
     CadastraCliente cadastraC;
     MarcaConsulta marcaC;
     private LinkedList<Cliente> clientesAtivos;
+<<<<<<< HEAD
     ClienteTableModel tableModel;
     Boolean cao = false;
     Boolean gato = false;
+=======
+    SQL testesql;
+>>>>>>> 54d0be88ee3cd808807c76cf9aa83fb47322f7dd
 
     public ControllerAtendente(JanelaPrincipal jPrincipal, Atendente model, TelaAtendente view, CadastraCliente cadastraC,
-            BuscaCliente buscaCliente, CadastraAnimal cadastraA, MarcaConsulta marcaC, LinkedList<Cliente> cliente) {
+            BuscaCliente buscaCliente, CadastraAnimal cadastraA, MarcaConsulta marcaC, LinkedList<Cliente> cliente, SQL testesql) {
 
         this.jPrincipal = jPrincipal;
         this.atendente = model;
@@ -41,7 +48,11 @@ public class ControllerAtendente {
         this.cadastraA = cadastraA;
         this.marcaC = marcaC;
         this.clientesAtivos = cliente;
+<<<<<<< HEAD
         this.tableModel = new ClienteTableModel(cliente);
+=======
+        this.testesql = testesql;
+>>>>>>> 54d0be88ee3cd808807c76cf9aa83fb47322f7dd
 
         this.view.getTabelaClientes().setModel(tableModel);
         this.view.getTabelaClientes().addMouseListener(new ClicaTabela());
@@ -54,7 +65,6 @@ public class ControllerAtendente {
         this.cadastraC.getBotaoCancela().addActionListener(new CancelaCadastraListener());
 
         this.buscaCliente.getBotaoCancela().addActionListener(new CancelaBuscaListener());
-        this.buscaCliente.getBotaoConfirma().addActionListener(new ConfirmaBuscaListener());
         this.buscaCliente.getBotaoBusca().addActionListener(new BotaoBuscaListener());
 
         this.marcaC.getBotaoCancela().addActionListener(new CancelaConsultaListener());
@@ -76,6 +86,7 @@ public class ControllerAtendente {
             view.getDesktopPanel().repaint();
 
             view.getDesktopPanel().add(cadastraC);
+            cadastraC.setSize(457, 300);
             cadastraC.show();
 
         }
@@ -89,6 +100,7 @@ public class ControllerAtendente {
             view.getDesktopPanel().repaint();
 
             view.getDesktopPanel().add(buscaCliente);
+            buscaCliente.setSize(457, 300);
             buscaCliente.show();
 
         }
@@ -102,6 +114,7 @@ public class ControllerAtendente {
             view.getDesktopPanel().repaint();
 
             view.getDesktopPanel().add(cadastraA);
+            cadastraA.setSize(457, 300);
             cadastraA.show();
         }
     }
@@ -114,6 +127,7 @@ public class ControllerAtendente {
             view.getDesktopPanel().repaint();
 
             view.getDesktopPanel().add(marcaC);
+            marcaC.setSize(457, 300);
             marcaC.show();
         }
     }
@@ -131,12 +145,24 @@ public class ControllerAtendente {
             if (Nome.equals("") || CPF.equals("") || Telefone.equals("")) {
                 JOptionPane.showMessageDialog(null, "Preencha todos os campos");
             } else {
+<<<<<<< HEAD
                 clientesAtivos.add(atendente.atende(Nome, CPF, Telefone));
 
                 limpaBufferCadastra();
                 adicionaTabela(clientesAtivos.getLast());
+=======
+                try {
+                    testesql.insereCliente(Nome, CPF, Telefone);
+                    clientesAtivos.add(atendente.atende(Nome, CPF, Telefone));
+                    limpaBufferCadastra();
+                    adicionaTabela(clientesAtivos);
+                } catch (ClassNotFoundException ex) {
+                    Logger.getLogger(ControllerAtendente.class.getName()).log(Level.SEVERE, null, ex);
+                } catch (SQLException ex) {
+                    Logger.getLogger(ControllerAtendente.class.getName()).log(Level.SEVERE, null, ex);
+                }
+>>>>>>> 54d0be88ee3cd808807c76cf9aa83fb47322f7dd
             }
-
         }
     }
 
@@ -146,7 +172,6 @@ public class ControllerAtendente {
         public void actionPerformed(ActionEvent e) {
             limpaBufferCadastra();
         }
-
     }
 
     private void adicionaTabela(Cliente clientesAtivos) {
@@ -185,7 +210,9 @@ public class ControllerAtendente {
             if (NomeCliente.equals("")) {
                 JOptionPane.showMessageDialog(null, "Preencha todos os campos!!!");
             } else {
-                JOptionPane.showMessageDialog(null, "Não implementado!!!");
+                   clientesAtivos.add(atendente.atende(buscaCliente.getjTextField1().getText(), buscaCliente.getjTextField2().getText(),
+                           buscaCliente.getjTextField3().getText()));
+                
 
             }
 
@@ -198,12 +225,37 @@ public class ControllerAtendente {
         @Override
         public void actionPerformed(ActionEvent e) {
 
-            String NomeCliente = buscaCliente.getjTextField1().getText();
+            String CPF = buscaCliente.getjTextField1().getText();
 
-            if (NomeCliente.equals("")) {
+            if (CPF.equals("")) {
                 JOptionPane.showMessageDialog(null, "Preencha todos os campos!!!");
             } else {
-                JOptionPane.showMessageDialog(null, "Não implementado!!!");
+                try {
+                    Cliente c = testesql.getClienteBanco(CPF);
+
+                    if (c == null) {
+                        JOptionPane.showMessageDialog(null, "Cliente não encontrado!!!");
+                    }
+                    buscaCliente.getjTextField2().setText(c.getNome());
+                    buscaCliente.getjTextField3().setText(c.getTelefone());
+
+                    clientesAtivos.add(atendente.atende(buscaCliente.getjTextField1().getText(), buscaCliente.getjTextField2().getText(),
+                            buscaCliente.getjTextField3().getText()));
+
+                    limpaBufferBusca();
+
+                    adicionaTabela(clientesAtivos);
+
+
+                    buscaCliente.getjTextField2().setText(c.getNome());
+                    buscaCliente.getjTextField3().setText(c.getTelefone());
+                    
+
+                } catch (ClassNotFoundException ex) {
+                    Logger.getLogger(ControllerAtendente.class.getName()).log(Level.SEVERE, null, ex);
+                } catch (SQLException ex) {
+                    Logger.getLogger(ControllerAtendente.class.getName()).log(Level.SEVERE, null, ex);
+                }
 
             }
         }

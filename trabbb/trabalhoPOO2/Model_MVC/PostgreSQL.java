@@ -1,4 +1,4 @@
-package Controller_MVC;
+package Model_MVC;
 import java.sql.*;
 import javax.swing.JOptionPane;
 //Nome do BD:       ZikaPET

@@ -34,9 +34,8 @@ public class TelaInicial extends javax.swing.JInternalFrame{
         jLabel3 = new javax.swing.JLabel();
         jLabel2 = new javax.swing.JLabel();
 
-        setClosable(true);
         setDefaultCloseOperation(javax.swing.WindowConstants.DISPOSE_ON_CLOSE);
-        setPreferredSize(new java.awt.Dimension(990, 490));
+        setPreferredSize(new java.awt.Dimension(1000, 500));
         try {
             setSelected(true);
         } catch (java.beans.PropertyVetoException e1) {
@@ -44,8 +43,9 @@ public class TelaInicial extends javax.swing.JInternalFrame{
         }
 
         jPanel1.setBackground(new java.awt.Color(175, 238, 238));
-        jPanel1.setPreferredSize(new java.awt.Dimension(990, 490));
+        jPanel1.setPreferredSize(new java.awt.Dimension(1000, 500));
         jPanel1.setRequestFocusEnabled(false);
+        jPanel1.setVerifyInputWhenFocusTarget(false);
 
         jLabel1.setFont(new java.awt.Font("Yu Gothic UI", 0, 48)); // NOI18N
         jLabel1.setText("ZikA ");
@@ -62,17 +62,16 @@ public class TelaInicial extends javax.swing.JInternalFrame{
         jPanel1Layout.setHorizontalGroup(
             jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jPanel1Layout.createSequentialGroup()
-                .addContainerGap(275, Short.MAX_VALUE)
+                .addGap(207, 207, 207)
                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel1Layout.createSequentialGroup()
                         .addComponent(jLabel1, javax.swing.GroupLayout.PREFERRED_SIZE, 107, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addGap(417, 417, 417))
+                        .addGap(188, 188, 188))
                     .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel1Layout.createSequentialGroup()
                         .addComponent(jLabel3)
-                        .addGap(395, 395, 395))
-                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel1Layout.createSequentialGroup()
-                        .addComponent(jLabel2, javax.swing.GroupLayout.PREFERRED_SIZE, 494, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addGap(229, 229, 229))))
+                        .addGap(166, 166, 166))
+                    .addComponent(jLabel2, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.PREFERRED_SIZE, 494, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addContainerGap(299, Short.MAX_VALUE))
         );
         jPanel1Layout.setVerticalGroup(
             jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -90,11 +89,11 @@ public class TelaInicial extends javax.swing.JInternalFrame{
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(jPanel1, javax.swing.GroupLayout.DEFAULT_SIZE, 974, Short.MAX_VALUE)
+            .addComponent(jPanel1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(jPanel1, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.PREFERRED_SIZE, 500, javax.swing.GroupLayout.PREFERRED_SIZE)
+            .addComponent(jPanel1, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
         );
 
         pack();

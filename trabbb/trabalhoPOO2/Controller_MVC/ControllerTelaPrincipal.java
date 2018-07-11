@@ -23,14 +23,17 @@ public class ControllerTelaPrincipal {
         this.viewAtendente = tela2;
         this.viewBanho = tela3;
         this.viewConsulta = tela4;
+        //viewAtendente.getDesktopPanel().setSize(1000, 500);
+        
     }
     
     class AtendenteListener implements ActionListener {
 
         @Override
         public void actionPerformed(ActionEvent e) {
+           
             viewAtendente.setVisible(true);
-            
+
         }
     }
     
