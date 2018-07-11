@@ -30,6 +30,12 @@ public class JanelaPrincipal extends javax.swing.JFrame {
     public JMenuItem getjMenuItem_Vendas() {
         return jMenuItem_Vendas;
     }
+
+    public JMenuItem getjMenuItem4() {
+        return jMenuItem4;
+    }
+    
+    
     
 
     @SuppressWarnings("unchecked")

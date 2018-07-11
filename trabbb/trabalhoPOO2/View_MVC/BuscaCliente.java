@@ -234,7 +234,13 @@ public class BuscaCliente extends javax.swing.JInternalFrame {
         return jTextField3;
     }
 
+    public JButton getBotaoCancela() {
+        return botaoCancela;
+    }
 
+
+    
+    
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JPanel JPanel_MenuPrincipal_Cadastro;
     private javax.swing.JButton botaoBusca;
