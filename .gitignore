@@ -28,12 +28,12 @@ trabbb/nbproject/private/private.xml
 *.autosave
 
 ### NetBeans ###
-nbproject/private/
-build/
-nbbuild/
-dist/
-nbdist/
-.nb-gradle/
+trabbb/nbproject/private/
+trabbb/build/
+trabbb/nbbuild/
+trabbb/dist/
+trabbb/nbdist/
+trabbb/.nb-gradle/
 
 #ignorando a Main:
 trabbb/trabalhoPOO2/Main/TrabalhoPoo.java
