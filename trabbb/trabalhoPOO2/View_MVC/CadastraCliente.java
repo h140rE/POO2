@@ -5,17 +5,31 @@
  */
 package View_MVC;
 
+import javax.swing.JTextField;
+
 /**
  *
  * @author higor
  */
-public class CadastraCliente extends javax.swing.JPanel {
+public class CadastraCliente extends javax.swing.JInternalFrame {
 
     /**
      * Creates new form CadastraCliente
      */
     public CadastraCliente() {
         initComponents();
+    }
+
+    public JTextField getjTextField1() {
+        return jTextField1;
+    }
+
+    public JTextField getjTextField2() {
+        return jTextField2;
+    }
+
+    public JTextField getjTextField3() {
+        return jTextField3;
     }
 
     /**

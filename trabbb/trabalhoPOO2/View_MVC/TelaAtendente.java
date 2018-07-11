@@ -12,6 +12,9 @@ import javax.swing.JTextField;
 import Controller_MVC.*;
 import java.awt.event.ActionListener;
 import javax.swing.ButtonGroup;
+import javax.swing.JDesktopPane;
+import javax.swing.JMenu;
+import javax.swing.JMenuItem;
 import javax.swing.JRadioButton;
 import javax.swing.JTextPane;
 
@@ -25,10 +28,7 @@ public class TelaAtendente extends javax.swing.JInternalFrame {
      * Creates new form TelaAtendent
      */
     public TelaAtendente() {
-        initComponents();
-        desktopPanel.setVisible(true);
-        
-        
+        initComponents();   
     }
 
     /**
@@ -180,7 +180,7 @@ public class TelaAtendente extends javax.swing.JInternalFrame {
             .addGroup(jPanel2Layout.createSequentialGroup()
                 .addGap(75, 75, 75)
                 .addComponent(jLabel11)
-                .addContainerGap(98, Short.MAX_VALUE))
+                .addContainerGap(183, Short.MAX_VALUE))
         );
         jPanel2Layout.setVerticalGroup(
             jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -202,7 +202,7 @@ public class TelaAtendente extends javax.swing.JInternalFrame {
         );
         desktopPanelLayout.setVerticalGroup(
             desktopPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 421, Short.MAX_VALUE)
+            .addGap(0, 0, Short.MAX_VALUE)
         );
 
         javax.swing.GroupLayout JButton_MenuPrincipalLayout = new javax.swing.GroupLayout(JButton_MenuPrincipal);
@@ -226,10 +226,10 @@ public class TelaAtendente extends javax.swing.JInternalFrame {
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                 .addComponent(jLabel1, javax.swing.GroupLayout.PREFERRED_SIZE, 56, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                .addGroup(JButton_MenuPrincipalLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(desktopPanel, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(jPanel2, javax.swing.GroupLayout.PREFERRED_SIZE, 253, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addGap(86, 86, 86))
+                .addGroup(JButton_MenuPrincipalLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                    .addComponent(jPanel2, javax.swing.GroupLayout.PREFERRED_SIZE, 253, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(desktopPanel))
+                .addGap(254, 254, 254))
         );
 
         jMenuItem1.setText("Cadastra Cliente");
@@ -295,13 +295,11 @@ public class TelaAtendente extends javax.swing.JInternalFrame {
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(layout.createSequentialGroup()
-                .addComponent(JButton_MenuPrincipal, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(0, 0, Short.MAX_VALUE))
+            .addComponent(JButton_MenuPrincipal, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(JButton_MenuPrincipal, javax.swing.GroupLayout.PREFERRED_SIZE, 550, Short.MAX_VALUE)
+            .addComponent(JButton_MenuPrincipal, javax.swing.GroupLayout.PREFERRED_SIZE, 490, javax.swing.GroupLayout.PREFERRED_SIZE)
         );
 
         bindingGroup.bind();
@@ -314,28 +312,61 @@ public class TelaAtendente extends javax.swing.JInternalFrame {
     }//GEN-LAST:event_jMenuItem1ActionPerformed
 
     private void menuCadastraClienteActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_menuCadastraClienteActionPerformed
-        CadastraCliente tela1 = new CadastraCliente();
-        desktopPanel.add(tela1);
-        tela1.setVisible(true);
+       
     }//GEN-LAST:event_menuCadastraClienteActionPerformed
 
     private void menCadastraAnimalActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_menCadastraAnimalActionPerformed
-        CadastraAnimal tela2 = new CadastraAnimal();
-        desktopPanel.add(tela2);
-        tela2.setVisible(true);
+    
     }//GEN-LAST:event_menCadastraAnimalActionPerformed
 
     private void menuBuscaClienteActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_menuBuscaClienteActionPerformed
-        BuscaCliente  tela1 = new BuscaCliente();
-        desktopPanel.add(tela1);
-        tela1.setVisible(true);
+      
     }//GEN-LAST:event_menuBuscaClienteActionPerformed
 
     private void menuMarcaConsultaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_menuMarcaConsultaActionPerformed
-        MarcaConsulta tela1 = new MarcaConsulta();
-        desktopPanel.add(tela1);
-        tela1.setVisible(true);
+       
     }//GEN-LAST:event_menuMarcaConsultaActionPerformed
+
+    public JMenuItem getMenCadastraAnimal() {
+        return menCadastraAnimal;
+    }
+
+    public void setMenCadastraAnimal(JMenuItem menCadastraAnimal) {
+        this.menCadastraAnimal = menCadastraAnimal;
+    }
+
+    public JMenuItem getMenuBuscaCliente() {
+        return menuBuscaCliente;
+    }
+
+    public void setMenuBuscaCliente(JMenuItem menuBuscaCliente) {
+        this.menuBuscaCliente = menuBuscaCliente;
+    }
+
+    public JMenu getMenuCadastraAnimal() {
+        return menuCadastraAnimal;
+    }
+
+    public void setMenuCadastraAnimal(JMenu menuCadastraAnimal) {
+        this.menuCadastraAnimal = menuCadastraAnimal;
+    }
+
+    public JMenuItem getMenuCadastraCliente() {
+        return menuCadastraCliente;
+    }
+
+    public void setMenuCadastraCliente(JMenuItem menuCadastraCliente) {
+        this.menuCadastraCliente = menuCadastraCliente;
+    }
+
+    public JMenuItem getMenuMarcaConsulta() {
+        return menuMarcaConsulta;
+    }
+
+    public void setMenuMarcaConsulta(JMenuItem menuMarcaConsulta) {
+        this.menuMarcaConsulta = menuMarcaConsulta;
+    }
+    
 
     /*public JTextField getjTextField1() {
         return jTextField1;
@@ -397,6 +428,14 @@ public class TelaAtendente extends javax.swing.JInternalFrame {
         return buttonGroup1;
     }
     */
+
+    public JDesktopPane getDesktopPanel() {
+        return desktopPanel;
+    }
+
+    public void setDesktopPanel(JDesktopPane desktopPanel) {
+        this.desktopPanel = desktopPanel;
+    }
     
  
 

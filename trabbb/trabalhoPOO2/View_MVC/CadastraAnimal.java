@@ -9,7 +9,7 @@ package View_MVC;
  *
  * @author higor
  */
-public class CadastraAnimal extends javax.swing.JPanel {
+public class CadastraAnimal extends javax.swing.JInternalFrame {
 
     /**
      * Creates new form CadastraAnimal

@@ -9,7 +9,7 @@ package View_MVC;
  *
  * @author higor
  */
-public class BuscaCliente extends javax.swing.JPanel {
+public class BuscaCliente extends javax.swing.JInternalFrame {
 
     /**
      * Creates new form BuscaCliente

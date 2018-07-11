@@ -1,6 +1,8 @@
 
 package View_MVC;
 
+import javax.swing.JMenuItem;
+
 public class JanelaPrincipal extends javax.swing.JFrame {
     Tela_Principal telaPrincipal = new Tela_Principal();
     TelaConsulta telaConsulta = new TelaConsulta();  
@@ -13,6 +15,22 @@ public class JanelaPrincipal extends javax.swing.JFrame {
         this.desktopPanel.add(telaPrincipal);
         telaPrincipal.setVisible(true);
         telaPrincipal.setSize(900, 560);
+    }
+
+    public JMenuItem getjMenuItem_Atendente() {
+        return jMenuItem_Atendente;
+    }
+
+    public JMenuItem getjMenuItem_Consulta() {
+        return jMenuItem_Consulta;
+    }
+
+    public JMenuItem getjMenuItem_HotelBanhoTosa() {
+        return jMenuItem_HotelBanhoTosa;
+    }
+
+    public JMenuItem getjMenuItem_Vendas() {
+        return jMenuItem_Vendas;
     }
 
     @SuppressWarnings("unchecked")
