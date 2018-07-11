@@ -29,8 +29,8 @@ public class TelaAtendente extends javax.swing.JInternalFrame {
     ClienteTableModel tableModel;
     public TelaAtendente() {
         initComponents();
-        tableModel = new ClienteTableModel();
-        this.tabelaClientes.setModel(tableModel);
+
+        
         
     }
 
