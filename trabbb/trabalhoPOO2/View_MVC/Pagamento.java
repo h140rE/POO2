@@ -14,12 +14,12 @@ import javax.swing.JTextField;
  *
  * @author xpimenta
  */
-public class MarcaConsulta extends javax.swing.JInternalFrame {
+public class Pagamento extends javax.swing.JInternalFrame {
 
     /**
      * Creates new form MarcaConsultaa
      */
-    public MarcaConsulta() {
+    public Pagamento() {
         initComponents();
     }
 
@@ -34,14 +34,11 @@ public class MarcaConsulta extends javax.swing.JInternalFrame {
 
         JPanel_MenuPrincipal_Cadastro = new javax.swing.JPanel();
         jLabel2 = new javax.swing.JLabel();
-        jLabel3 = new javax.swing.JLabel();
         jLabel4 = new javax.swing.JLabel();
-        jTextField1 = new javax.swing.JTextField();
+        jPagamento = new javax.swing.JTextField();
         jLabel6 = new javax.swing.JLabel();
         jLabel10 = new javax.swing.JLabel();
-        jSeparator1 = new javax.swing.JSeparator();
-        jComboBox1 = new javax.swing.JComboBox<>();
-        botaoConfirma = new javax.swing.JButton();
+        geraRecibo = new javax.swing.JButton();
         botaoCancela = new javax.swing.JButton();
 
         setClosable(true);
@@ -51,42 +48,31 @@ public class MarcaConsulta extends javax.swing.JInternalFrame {
         JPanel_MenuPrincipal_Cadastro.setBackground(new java.awt.Color(248, 248, 255));
 
         jLabel2.setFont(new java.awt.Font("Yu Gothic UI Light", 0, 36)); // NOI18N
-        jLabel2.setText("Marca Consulta");
-
-        jLabel3.setFont(new java.awt.Font("Tahoma", 0, 18)); // NOI18N
-        jLabel3.setText("Seleciona Animal:");
+        jLabel2.setText("Pagamento");
 
         jLabel4.setFont(new java.awt.Font("Tahoma", 0, 18)); // NOI18N
-        jLabel4.setText("CPF:");
+        jLabel4.setText("Nome:");
 
-        jTextField1.setEnabled(false);
-        jTextField1.addActionListener(new java.awt.event.ActionListener() {
+        jPagamento.setEnabled(false);
+        jPagamento.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jTextField1ActionPerformed(evt);
+                jPagamentoActionPerformed(evt);
             }
         });
 
         jLabel6.setFont(new java.awt.Font("Tahoma", 1, 18)); // NOI18N
         jLabel6.setText("Dados Pessoa");
 
-        jComboBox1.addActionListener(new java.awt.event.ActionListener() {
+        geraRecibo.setFont(new java.awt.Font("Yu Gothic UI Light", 0, 24)); // NOI18N
+        geraRecibo.setText("Gera recibo");
+        geraRecibo.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jComboBox1ActionPerformed(evt);
-            }
-        });
-
-        botaoConfirma.setFont(new java.awt.Font("Yu Gothic UI Light", 0, 24)); // NOI18N
-        botaoConfirma.setIcon(new javax.swing.ImageIcon("A:\\Bibliotecas\\Documentos\\POO2\\trabbb\\trabalhoPOO2\\View_MVC\\Icons\\icons8-checkmark-64.png")); // NOI18N
-        botaoConfirma.setText("Cadastrar");
-        botaoConfirma.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                botaoConfirmaActionPerformed(evt);
+                geraReciboActionPerformed(evt);
             }
         });
 
         botaoCancela.setFont(new java.awt.Font("Yu Gothic UI Light", 0, 24)); // NOI18N
-        botaoCancela.setIcon(new javax.swing.ImageIcon("A:\\Bibliotecas\\Documentos\\POO2\\trabbb\\trabalhoPOO2\\View_MVC\\Icons\\icons8-cancel-64.png")); // NOI18N
-        botaoCancela.setText("Cancela");
+        botaoCancela.setText("Recebe $$");
         botaoCancela.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 botaoCancelaActionPerformed(evt);
@@ -101,14 +87,9 @@ public class MarcaConsulta extends javax.swing.JInternalFrame {
                 .addGap(24, 24, 24)
                 .addGroup(JPanel_MenuPrincipal_CadastroLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(JPanel_MenuPrincipal_CadastroLayout.createSequentialGroup()
-                        .addGroup(JPanel_MenuPrincipal_CadastroLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addGroup(JPanel_MenuPrincipal_CadastroLayout.createSequentialGroup()
-                                .addGap(46, 46, 46)
-                                .addComponent(jSeparator1, javax.swing.GroupLayout.PREFERRED_SIZE, 292, javax.swing.GroupLayout.PREFERRED_SIZE))
-                            .addGroup(JPanel_MenuPrincipal_CadastroLayout.createSequentialGroup()
-                                .addComponent(botaoConfirma, javax.swing.GroupLayout.PREFERRED_SIZE, 200, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                .addComponent(botaoCancela, javax.swing.GroupLayout.PREFERRED_SIZE, 200, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                        .addComponent(geraRecibo, javax.swing.GroupLayout.PREFERRED_SIZE, 200, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                        .addComponent(botaoCancela, javax.swing.GroupLayout.PREFERRED_SIZE, 200, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                         .addComponent(jLabel10))
                     .addComponent(jLabel6)
@@ -116,15 +97,11 @@ public class MarcaConsulta extends javax.swing.JInternalFrame {
                         .addGap(19, 19, 19)
                         .addGroup(JPanel_MenuPrincipal_CadastroLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
                             .addComponent(jLabel2, javax.swing.GroupLayout.PREFERRED_SIZE, 265, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addGroup(JPanel_MenuPrincipal_CadastroLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                                .addGroup(JPanel_MenuPrincipal_CadastroLayout.createSequentialGroup()
-                                    .addComponent(jLabel4)
-                                    .addGap(18, 18, 18)
-                                    .addComponent(jTextField1, javax.swing.GroupLayout.PREFERRED_SIZE, 191, javax.swing.GroupLayout.PREFERRED_SIZE))
-                                .addGroup(JPanel_MenuPrincipal_CadastroLayout.createSequentialGroup()
-                                    .addComponent(jLabel3)
-                                    .addGap(18, 18, 18)
-                                    .addComponent(jComboBox1, javax.swing.GroupLayout.PREFERRED_SIZE, 184, javax.swing.GroupLayout.PREFERRED_SIZE))))))
+                            .addGroup(JPanel_MenuPrincipal_CadastroLayout.createSequentialGroup()
+                                .addComponent(jLabel4)
+                                .addGap(18, 18, 18)
+                                .addComponent(jPagamento, javax.swing.GroupLayout.PREFERRED_SIZE, 191, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addGap(109, 109, 109)))))
                 .addContainerGap(41, Short.MAX_VALUE))
         );
         JPanel_MenuPrincipal_CadastroLayout.setVerticalGroup(
@@ -139,21 +116,15 @@ public class MarcaConsulta extends javax.swing.JInternalFrame {
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                         .addGroup(JPanel_MenuPrincipal_CadastroLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                             .addComponent(jLabel4)
-                            .addComponent(jTextField1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                        .addGap(17, 17, 17)
-                        .addComponent(jSeparator1, javax.swing.GroupLayout.PREFERRED_SIZE, 10, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                            .addComponent(jPagamento, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                        .addGap(73, 73, 73)
                         .addGroup(JPanel_MenuPrincipal_CadastroLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                            .addComponent(jLabel3)
-                            .addComponent(jComboBox1, javax.swing.GroupLayout.PREFERRED_SIZE, 26, javax.swing.GroupLayout.PREFERRED_SIZE))
-                        .addGap(18, 18, 18)
-                        .addGroup(JPanel_MenuPrincipal_CadastroLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                            .addComponent(botaoConfirma, javax.swing.GroupLayout.PREFERRED_SIZE, 57, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(geraRecibo, javax.swing.GroupLayout.PREFERRED_SIZE, 57, javax.swing.GroupLayout.PREFERRED_SIZE)
                             .addComponent(botaoCancela, javax.swing.GroupLayout.PREFERRED_SIZE, 57, javax.swing.GroupLayout.PREFERRED_SIZE)))
                     .addGroup(JPanel_MenuPrincipal_CadastroLayout.createSequentialGroup()
                         .addGap(165, 165, 165)
                         .addComponent(jLabel10)))
-                .addContainerGap(30, Short.MAX_VALUE))
+                .addContainerGap(13, Short.MAX_VALUE))
         );
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
@@ -172,17 +143,13 @@ public class MarcaConsulta extends javax.swing.JInternalFrame {
         pack();
     }// </editor-fold>//GEN-END:initComponents
 
-    private void jTextField1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jTextField1ActionPerformed
+    private void jPagamentoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jPagamentoActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_jTextField1ActionPerformed
+    }//GEN-LAST:event_jPagamentoActionPerformed
 
-    private void jComboBox1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jComboBox1ActionPerformed
+    private void geraReciboActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_geraReciboActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_jComboBox1ActionPerformed
-
-    private void botaoConfirmaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_botaoConfirmaActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_botaoConfirmaActionPerformed
+    }//GEN-LAST:event_geraReciboActionPerformed
 
     private void botaoCancelaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_botaoCancelaActionPerformed
         // TODO add your handling code here:
@@ -192,20 +159,11 @@ public class MarcaConsulta extends javax.swing.JInternalFrame {
         return botaoCancela;
     }
 
-    public JButton getBotaoConfirma() {
-        return botaoConfirma;
+    public JButton getGeraRecibo() {
+        return geraRecibo;
     }
-
-    public JComboBox<String> getjComboBox1() {
-        return jComboBox1;
-    }
-
-    public JSeparator getjSeparator1() {
-        return jSeparator1;
-    }
-
     public JTextField getjTextField1() {
-        return jTextField1;
+        return jPagamento;
     }
 
 
@@ -214,14 +172,11 @@ public class MarcaConsulta extends javax.swing.JInternalFrame {
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JPanel JPanel_MenuPrincipal_Cadastro;
     private javax.swing.JButton botaoCancela;
-    private javax.swing.JButton botaoConfirma;
-    private javax.swing.JComboBox<String> jComboBox1;
+    private javax.swing.JButton geraRecibo;
     private javax.swing.JLabel jLabel10;
     private javax.swing.JLabel jLabel2;
-    private javax.swing.JLabel jLabel3;
     private javax.swing.JLabel jLabel4;
     private javax.swing.JLabel jLabel6;
-    private javax.swing.JSeparator jSeparator1;
-    private javax.swing.JTextField jTextField1;
+    private javax.swing.JTextField jPagamento;
     // End of variables declaration//GEN-END:variables
 }

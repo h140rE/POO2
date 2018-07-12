@@ -27,7 +27,7 @@ public class ControllerAtendente {
     BuscaCliente buscaCliente;
     CadastraAnimal cadastraA;
     CadastraCliente cadastraC;
-    MarcaConsulta marcaC;
+    Pagamento marcaC;
     private LinkedList<Cliente> clientesAtivos;
 
     ClienteTableModel tableModel;
@@ -37,7 +37,7 @@ public class ControllerAtendente {
     SQL testesql;
 
     public ControllerAtendente(JanelaPrincipal jPrincipal, Atendente model, TelaAtendente view, CadastraCliente cadastraC,
-            BuscaCliente buscaCliente, CadastraAnimal cadastraA, MarcaConsulta marcaC, LinkedList<Cliente> cliente, SQL testesql) {
+            BuscaCliente buscaCliente, CadastraAnimal cadastraA, Pagamento marcaC, LinkedList<Cliente> cliente, SQL testesql) {
 
         this.jPrincipal = jPrincipal;
         this.atendente = model;
@@ -66,7 +66,7 @@ public class ControllerAtendente {
         this.buscaCliente.getBotaoBusca().addActionListener(new BotaoBuscaListener());
 
         this.marcaC.getBotaoCancela().addActionListener(new CancelaConsultaListener());
-        this.marcaC.getBotaoConfirma().addActionListener(new ConfirmaConsultaListener());
+        this.marcaC.getGeraRecibo().addActionListener(new GeraReciboListener());
 
         this.cadastraA.getBotaoConfirma().addActionListener(new CadastraAnimalListener());
         this.cadastraA.getBotaoCancela().addActionListener(new CancelaAnimalListener());
@@ -261,18 +261,19 @@ public class ControllerAtendente {
 
         @Override
         public void actionPerformed(ActionEvent e) {
-
+            
             marcaC.getjTextField1().setText("");
 
         }
     }
 
-    class ConfirmaConsultaListener implements ActionListener {
+    class GeraReciboListener implements ActionListener {
 
         @Override
         public void actionPerformed(ActionEvent e) {
-
-            JOptionPane.showMessageDialog(null, "Consulta Marcada!!!");
+            Cliente cli = cli = tableModel.getCliente(view.getTabelaClientes().getSelectedRow());
+            cli.setRecibo(atendente.criaRecibo());
+            atendente.Imprime(cli);
 
         }
 
@@ -347,6 +348,7 @@ public class ControllerAtendente {
             cli = tableModel.getCliente(view.getTabelaClientes().getSelectedRow());
             view.getTabelaClientes().getSelectedRow();
             cadastraA.getjTextField1().setText(cli.getNome());
+            marcaC.getjTextField1().setText(cli.getNome());
 
         }
 
