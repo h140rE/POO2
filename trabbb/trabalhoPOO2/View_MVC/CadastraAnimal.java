@@ -5,6 +5,11 @@
  */
 package View_MVC;
 
+import javax.swing.ButtonGroup;
+import javax.swing.JButton;
+import javax.swing.JRadioButton;
+import javax.swing.JTextField;
+
 /**
  *
  * @author xpimenta
@@ -255,6 +260,38 @@ public class CadastraAnimal extends javax.swing.JInternalFrame {
         // TODO add your handling code here:
     }//GEN-LAST:event_RadioButtonCaoActionPerformed
 
+    public JRadioButton getRadioButtonCao() {
+        return RadioButtonCao;
+    }
+
+    public JButton getBotaoCancela() {
+        return botaoCancela;
+    }
+
+    public JButton getBotaoConfirma() {
+        return botaoConfirma;
+    }
+
+    public ButtonGroup getButtonGroup1() {
+        return buttonGroup1;
+    }
+
+    public JRadioButton getRadioButtonGato() {
+        return radioButtonGato;
+    }
+
+    public JTextField getjTextField1() {
+        return jTextField1;
+    }
+
+    public JTextField getjTextField4() {
+        return jTextField4;
+    }
+
+    public JTextField getjTextField5() {
+        return jTextField5;
+    }
+    
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JPanel JPanel_MenuPrincipal_Cadastro;
