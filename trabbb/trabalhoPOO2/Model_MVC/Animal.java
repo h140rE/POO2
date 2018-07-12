@@ -32,23 +32,19 @@ public class Animal {
         return temp;
     }
 
-    public void aguardar(){
+    public void aguardar() {
         estado.setEstadoAguardando();
     }
 
-    public void tomarBanho(){
+    public void tomarBanho() {
         estado.setEstadoEmBanho();
     }
 
-    public void consultar(){
-        estado.setEstadoEmConsulta();
-    }
-
-    public void entrarHotel(){
+    public void entrarHotel() {
         estado.setEstadoEmEstadia();
     }
 
-    public void finalizar(){
+    public void finalizar() {
         estado.setEstadoFinalizado();
     }
 }

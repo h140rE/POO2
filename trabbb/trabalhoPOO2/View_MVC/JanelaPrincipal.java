@@ -51,7 +51,6 @@ public class JanelaPrincipal extends javax.swing.JFrame {
         jMenuItem_Vendas = new javax.swing.JMenuItem();
         jSeparator2 = new javax.swing.JPopupMenu.Separator();
         jMenuItem_HotelBanhoTosa = new javax.swing.JMenuItem();
-        jSeparator3 = new javax.swing.JPopupMenu.Separator();
         jMenu2 = new javax.swing.JMenu();
         jMenuItem4 = new javax.swing.JMenuItem();
 
@@ -125,7 +124,6 @@ public class JanelaPrincipal extends javax.swing.JFrame {
             }
         });
         jMenu1.add(jMenuItem_HotelBanhoTosa);
-        jMenu1.add(jSeparator3);
 
         jMenuBar1.add(jMenu1);
 
@@ -237,6 +235,5 @@ public class JanelaPrincipal extends javax.swing.JFrame {
     private javax.swing.JPopupMenu jPopupMenu4;
     private javax.swing.JPopupMenu.Separator jSeparator1;
     private javax.swing.JPopupMenu.Separator jSeparator2;
-    private javax.swing.JPopupMenu.Separator jSeparator3;
     // End of variables declaration//GEN-END:variables
 }

@@ -18,12 +18,6 @@ public class EmEstadia extends State {
     }
 
     @Override
-    public void setEstadoEmConsulta() {
-
-        this.getAnimal().setEstado(new EmConsulta(this.getAnimal()));
-    }
-
-    @Override
     public void setEstadoEmEstadia() {
         System.out.println("Estado Corrente");
     }

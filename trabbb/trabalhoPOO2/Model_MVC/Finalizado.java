@@ -18,12 +18,6 @@ public class Finalizado extends State {
     }
 
     @Override
-    public void setEstadoEmConsulta() {
-
-        this.getAnimal().setEstado(new EmConsulta(this.getAnimal()));
-    }
-
-    @Override
     public void setEstadoEmEstadia() {
 
         this.getAnimal().setEstado(new EmEstadia(this.getAnimal()));
