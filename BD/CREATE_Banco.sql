@@ -18,27 +18,6 @@ CREATE TABLE Cuidador(
 	CONSTRAINT cuidador_pk PRIMARY KEY (id)
 
 );
-/*
-
-CREATE TABLE Veterinario(
-	nome		varchar(30),
-	cpf		varchar(11),
-	telefone	varchar(12),
-	id		serial,
-	CONSTRAINT veterinario_pk PRIMARY KEY (id)
-);
-INSERT INTO Veterinario (nome,cpf,telefone,id) VALUES 
-        ('Jescie',      '93326327072','309117323445',nextval('funcionarioID')),
-        ('Brenda',      '27542004018','770215532568',nextval('funcionarioID')),
-        ('Erich',       '97094094094','791207444469',nextval('funcionarioID')),
-        ('Dolan',       '79614790075','434464745647',nextval('funcionarioID')),
-        ('Zenia',       '68023779001','330562934928',nextval('funcionarioID')),
-        ('Keane',       '05197371056','837587732400',nextval('funcionarioID')),
-        ('Alexander',   '96598398045','772097412357',nextval('funcionarioID')),
-        ('Samantha',    '99917701001','425007823457',nextval('funcionarioID')),
-        ('Joel',        '69440133040','613095223506',nextval('funcionarioID')),
-        ('Lewis',       '43666598080','122144230534',nextval('funcionarioID'));
-*/
 
 CREATE TABLE Produtos(
         codBarras       int,
@@ -84,14 +63,6 @@ CREATE TABLE Recibo(
 	CONSTRAINT donoRecibo_fk FOREIGN KEY (cpf) REFERENCES cliente(cpf)
 );
 
-CREATE TABLE ReciboProduto(
-        codBarras       int,
-        idCompra        serial,
-        CONSTRAINT prod_fk FOREIGN KEY (codBarras) REFERENCES Produtos(codBarras),
-        CONSTRAINT rec_fk FOREIGN KEY (idCompra) REFERENCES Recibo(idCompra)
-        
-);
-
 --Inserts
 
 INSERT INTO Atendente (nome,cpf,telefone,id) VALUES
@@ -119,7 +90,10 @@ INSERT INTO Cuidador (nome,cpf,telefone,id) VALUES
         ('Angela',      '42299586091','124324519785',nextval('funcionarioID'));
 
 INSERT INTO Produtos (codBarras,preco,nome,quantidade) VALUES
-	(2,5.0   ,'Shampoo Haskell',52),
+	(0, 50.0, 'Banho',1000000),
+	(1, 100.0,'Hotel',1000000),
+	(2, 60.0, 'Tosa' ,1000000), 
+	(6, 5.0   ,'Shampoo Haskell',52),
 	(47,97.0 ,'Condicionador Eudora',80),
 	(87,57.0 ,'Escova Dogzeira',28),
 	(28,23.0 ,'Gravatinha',16),
@@ -160,11 +134,3 @@ INSERT INTO Animal (cpfDono, tipo, nome, raca) VALUES
         ('85390972066', 'c', 'Fedora', 	'Perdigueiro'),
         ('51911345087', 'c', 'Debian', 	'Rottweiler'),
         ('34976352005', 'g', 'Ubuntu',	'Himalaia');
-
-
-
---INSERT INTO recibo (idCompra,cpf,preco, descricao) VALUES ( nextval(idCompra), '84592076095', , );
- 
---INSERT INTO reciboproduto (nome,cpf,telefone) VALUES 
-
-select * from cliente

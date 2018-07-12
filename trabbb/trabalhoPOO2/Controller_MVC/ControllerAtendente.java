@@ -65,7 +65,7 @@ public class ControllerAtendente {
         this.buscaCliente.getBotaoCancela().addActionListener(new CancelaBuscaListener());
         this.buscaCliente.getBotaoBusca().addActionListener(new BotaoBuscaListener());
 
-        this.marcaC.getBotaoCancela().addActionListener(new CancelaConsultaListener());
+        this.marcaC.getBotaoPagamento().addActionListener(new PagamentoListener());
         this.marcaC.getGeraRecibo().addActionListener(new GeraReciboListener());
 
         this.cadastraA.getBotaoConfirma().addActionListener(new CadastraAnimalListener());
@@ -144,20 +144,23 @@ public class ControllerAtendente {
                 JOptionPane.showMessageDialog(null, "Preencha todos os campos");
             } else {
 
-                clientesAtivos.add(atendente.atende(Nome, CPF, Telefone));
-
-                limpaBufferCadastra();
-                
-
                 try {
-                    testesql.insereCliente(Nome, CPF, Telefone);
-                    clientesAtivos.add(atendente.atende(Nome, CPF, Telefone));
-                    limpaBufferCadastra();
-                    adicionaTabela(clientesAtivos.getLast());
-                } catch (ClassNotFoundException ex) {
-                    Logger.getLogger(ControllerAtendente.class.getName()).log(Level.SEVERE, null, ex);
+                    if (testesql.insereCliente(Nome, CPF, Telefone)) {
+                        clientesAtivos.add(atendente.atende(Nome, CPF, Telefone));
+                        limpaBufferCadastra();
+                        adicionaTabela(clientesAtivos.getLast());
+                    } else {
+                        JOptionPane.showMessageDialog(null, "eh, deu bao nao");
+                    }
+
                 } catch (SQLException ex) {
                     Logger.getLogger(ControllerAtendente.class.getName()).log(Level.SEVERE, null, ex);
+                    JOptionPane.showMessageDialog(null, "eh, deu ruim");
+
+                } catch (ClassNotFoundException ex) {
+                    Logger.getLogger(ControllerAtendente.class.getName()).log(Level.SEVERE, null, ex);
+                    JOptionPane.showMessageDialog(null, "eh, deu ruim2");
+
                 }
 
             }
@@ -257,12 +260,16 @@ public class ControllerAtendente {
 
     }
 
-    class CancelaConsultaListener implements ActionListener {
+    class PagamentoListener implements ActionListener {
 
         @Override
         public void actionPerformed(ActionEvent e) {
-            
-            marcaC.getjTextField1().setText("");
+            int aux = view.getTabelaClientes().getSelectedRow();
+            Cliente cli = tableModel.getCliente(aux);
+            if(cli.pagarDinheiro(Float.parseFloat(JOptionPane.showInputDialog(null, "Dinheiro:")))){
+                tableModel.removeCliente(aux);
+                clientesAtivos.remove(aux-1);
+            }
 
         }
     }
@@ -299,10 +306,12 @@ public class ControllerAtendente {
                 } else {
                     if (cao) {
                         cli.AdicionaAnimal(nomeAnimal, racaAnimal, 1);
+                        limpaBufferCadastraAnimal();
                         limpaRadioButton();
                         cao = false;
                     } else if (gato) {
                         cli.AdicionaAnimal(nomeAnimal, racaAnimal, 2);
+                        limpaBufferCadastraAnimal();
                         limpaRadioButton();
                         gato = false;
                     } else {

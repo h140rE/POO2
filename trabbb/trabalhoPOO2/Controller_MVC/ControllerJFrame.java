@@ -7,7 +7,6 @@ package Controller_MVC;
 
 import View_MVC.JanelaPrincipal;
 import View_MVC.TelaAtendente;
-import View_MVC.TelaConsulta;
 import View_MVC.TelaHBT;
 import View_MVC.TelaVendas;
 import View_MVC.TelaInicial;
@@ -19,15 +18,13 @@ public class ControllerJFrame {
     JanelaPrincipal view;
     TelaInicial viewTelaInicio;
     TelaAtendente viewAtendente;
-    TelaConsulta viewConsulta;
     TelaHBT viewHBT;
     TelaVendas viewVendas;
 
-    public ControllerJFrame(JanelaPrincipal view, TelaAtendente viewAtendente, TelaConsulta viewConsulta, TelaHBT viewHBT, TelaVendas viewVendas) {
+    public ControllerJFrame(JanelaPrincipal view, TelaAtendente viewAtendente, TelaHBT viewHBT, TelaVendas viewVendas) {
 
         this.view = view;
         this.viewAtendente = viewAtendente;
-        this.viewConsulta = viewConsulta;
         this.viewHBT = viewHBT;
         this.viewVendas = viewVendas;
         this.view.setSize(1017, 568);
@@ -39,7 +36,6 @@ public class ControllerJFrame {
         viewTelaInicio.show();
 
         view.getjMenuItem_Atendente().addActionListener(new MenuAtendenteListener());
-        view.getjMenuItem_Consulta().addActionListener(new MenuConsultaListener());
         view.getjMenuItem_HotelBanhoTosa().addActionListener(new MenuHotelBanhoTosaListener());
         view.getjMenuItem_Vendas().addActionListener(new MenuVendasListener());
         view.getjMenuItem4().addActionListener(new SairListener());
@@ -73,9 +69,6 @@ public class ControllerJFrame {
         public void actionPerformed(ActionEvent ae) {
             view.getDesktopPanel().remove(viewTelaInicio);
             view.getDesktopPanel().repaint();
-            view.getDesktopPanel().add(viewConsulta);
-            viewConsulta.show();
-
         }
     }
 

@@ -28,7 +28,7 @@ public class SQL {
     
     
     //INSERTS FUNCIONAM
-    public void insereCliente(String nome, String cpf, String telefone)throws ClassNotFoundException, SQLException{
+    public Boolean insereCliente(String nome, String cpf, String telefone)throws ClassNotFoundException, SQLException{
         
         sql = "INSERT INTO cliente (nome,cpf,telefone) VALUES (?,?,?);";
          if (conecta==null)JOptionPane.showMessageDialog(null, "TÁ NULO BURRO!!");
@@ -39,10 +39,13 @@ public class SQL {
             pst.setString(3, telefone);
             pst.execute();
             JOptionPane.showMessageDialog(null, "Cliente inserido com sucesso!!");
+            return true;
         }
         catch (SQLException ex) {
-            Logger.getLogger(SQL.class.getName()).log(Level.SEVERE, null, ex);
-            JOptionPane.showMessageDialog(null, "Erro!");
+            //Logger.getLogger(SQL.class.getName()).log(Level.SEVERE, null, ex);
+            JOptionPane.showMessageDialog(null, "Cliente já existe no banco de dados!");
+            return false;
+            
         }
     }
     
@@ -264,36 +267,5 @@ public class SQL {
             JOptionPane.showMessageDialog(null, "Erro!");
         }
         return c;
-    }
-    
-    /*              Pesquisar como consultar o cliente no github*/
-    public void buscaCliente(String cpf){
-            sql = "SELECT * FROM  Cliente WHERE cpf = ?;";
-
-            try {
-                pst = conecta.prepareStatement(sql);
-                pst.setString(1, cpf);
-                rs = pst.executeQuery();
-//PEGAR GET DA TABELA
-                //TabelaBanda.setModel(DbUtils.resultSetToTableModel(rs));
-            } catch (SQLException ex) {
-                Logger.getLogger(ControllerAtendente.class.getName()).log(Level.SEVERE, null, ex);
-            }
-
-    }
-    
-    public void buscaAnimal(String cpf){
-            sql = "SELECT * FROM  Animal c WHERE c.cpfdono = ?;";
-
-            try {
-                pst = conecta.prepareStatement(sql);
-                pst.setString(1, cpf);
-                rs = pst.executeQuery();
-                //PEGAR GET DA TABELA
-                //TabelaBanda.setModel(DbUtils.resultSetToTableModel(rs));
-            } catch (SQLException ex) {
-                Logger.getLogger(ControllerAtendente.class.getName()).log(Level.SEVERE, null, ex);
-            }
-
     }
 }

@@ -15,10 +15,6 @@ public class JanelaPrincipal extends javax.swing.JFrame {
         return jMenuItem_Atendente;
     }
 
-    public JMenuItem getjMenuItem_Consulta() {
-        return jMenuItem_Consulta;
-    }
-
     public JDesktopPane getDesktopPanel() {
         return desktopPanel;
     }
@@ -52,11 +48,10 @@ public class JanelaPrincipal extends javax.swing.JFrame {
         jMenu1 = new javax.swing.JMenu();
         jMenuItem_Atendente = new javax.swing.JMenuItem();
         jSeparator1 = new javax.swing.JPopupMenu.Separator();
-        jMenuItem_Consulta = new javax.swing.JMenuItem();
-        jSeparator2 = new javax.swing.JPopupMenu.Separator();
         jMenuItem_Vendas = new javax.swing.JMenuItem();
-        jSeparator3 = new javax.swing.JPopupMenu.Separator();
+        jSeparator2 = new javax.swing.JPopupMenu.Separator();
         jMenuItem_HotelBanhoTosa = new javax.swing.JMenuItem();
+        jSeparator3 = new javax.swing.JPopupMenu.Separator();
         jMenu2 = new javax.swing.JMenu();
         jMenuItem4 = new javax.swing.JMenuItem();
 
@@ -116,16 +111,6 @@ public class JanelaPrincipal extends javax.swing.JFrame {
         jMenu1.add(jMenuItem_Atendente);
         jMenu1.add(jSeparator1);
 
-        jMenuItem_Consulta.setIcon(new javax.swing.ImageIcon(getClass().getResource("/View_MVC/Icons/iconss/heart_add.png"))); // NOI18N
-        jMenuItem_Consulta.setText("Consulta");
-        jMenuItem_Consulta.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jMenuItem_ConsultaActionPerformed(evt);
-            }
-        });
-        jMenu1.add(jMenuItem_Consulta);
-        jMenu1.add(jSeparator2);
-
         jMenuItem_Vendas.setIcon(new javax.swing.ImageIcon(getClass().getResource("/View_MVC/Icons/iconss/user_suit.png"))); // NOI18N
         jMenuItem_Vendas.setText("Vendas");
         jMenuItem_Vendas.addActionListener(new java.awt.event.ActionListener() {
@@ -134,7 +119,7 @@ public class JanelaPrincipal extends javax.swing.JFrame {
             }
         });
         jMenu1.add(jMenuItem_Vendas);
-        jMenu1.add(jSeparator3);
+        jMenu1.add(jSeparator2);
 
         jMenuItem_HotelBanhoTosa.setIcon(new javax.swing.ImageIcon(getClass().getResource("/View_MVC/Icons/iconss/weather_clouds.png"))); // NOI18N
         jMenuItem_HotelBanhoTosa.setText("Hotel/Banho/Tosa");
@@ -144,6 +129,7 @@ public class JanelaPrincipal extends javax.swing.JFrame {
             }
         });
         jMenu1.add(jMenuItem_HotelBanhoTosa);
+        jMenu1.add(jSeparator3);
 
         jMenuBar1.add(jMenu1);
 
@@ -182,10 +168,6 @@ public class JanelaPrincipal extends javax.swing.JFrame {
     private void jMenuItem4ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jMenuItem4ActionPerformed
       
     }//GEN-LAST:event_jMenuItem4ActionPerformed
-
-    private void jMenuItem_ConsultaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jMenuItem_ConsultaActionPerformed
- 
-    }//GEN-LAST:event_jMenuItem_ConsultaActionPerformed
 
     private void jMenuItem_AtendenteActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jMenuItem_AtendenteActionPerformed
      
@@ -246,7 +228,6 @@ public class JanelaPrincipal extends javax.swing.JFrame {
     private javax.swing.JMenuBar jMenuBar1;
     private javax.swing.JMenuItem jMenuItem4;
     private javax.swing.JMenuItem jMenuItem_Atendente;
-    private javax.swing.JMenuItem jMenuItem_Consulta;
     private javax.swing.JMenuItem jMenuItem_HotelBanhoTosa;
     private javax.swing.JMenuItem jMenuItem_Vendas;
     private javax.swing.JPanel jPanel1;
