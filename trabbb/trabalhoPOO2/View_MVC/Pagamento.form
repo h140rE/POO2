@@ -55,7 +55,7 @@
                       <Group type="102" attributes="0">
                           <Component id="geraRecibo" min="-2" pref="200" max="-2" attributes="0"/>
                           <EmptySpace max="-2" attributes="0"/>
-                          <Component id="botaoCancela" min="-2" pref="200" max="-2" attributes="0"/>
+                          <Component id="recebePagamento" min="-2" pref="200" max="-2" attributes="0"/>
                           <EmptySpace max="-2" attributes="0"/>
                           <Component id="jLabel10" min="-2" max="-2" attributes="0"/>
                       </Group>
@@ -94,7 +94,7 @@
                           <EmptySpace min="-2" pref="73" max="-2" attributes="0"/>
                           <Group type="103" groupAlignment="3" attributes="0">
                               <Component id="geraRecibo" alignment="3" min="-2" pref="57" max="-2" attributes="0"/>
-                              <Component id="botaoCancela" alignment="3" min="-2" pref="57" max="-2" attributes="0"/>
+                              <Component id="recebePagamento" alignment="3" min="-2" pref="57" max="-2" attributes="0"/>
                           </Group>
                       </Group>
                       <Group type="102" alignment="0" attributes="0">
@@ -153,7 +153,7 @@
             <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="geraReciboActionPerformed"/>
           </Events>
         </Component>
-        <Component class="javax.swing.JButton" name="botaoCancela">
+        <Component class="javax.swing.JButton" name="recebePagamento">
           <Properties>
             <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
               <Font name="Yu Gothic UI Light" size="24" style="0"/>
@@ -161,7 +161,7 @@
             <Property name="text" type="java.lang.String" value="Recebe $$"/>
           </Properties>
           <Events>
-            <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="botaoCancelaActionPerformed"/>
+            <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="recebePagamentoActionPerformed"/>
           </Events>
         </Component>
       </SubComponents>
