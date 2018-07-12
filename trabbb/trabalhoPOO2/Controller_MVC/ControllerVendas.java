@@ -8,6 +8,7 @@ import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 import java.sql.ResultSet;
 import java.sql.SQLException;
+import java.util.LinkedList;
 import java.util.logging.Level;
 import java.util.logging.Logger;
 import javax.swing.JOptionPane;
@@ -16,15 +17,17 @@ import net.proteanit.sql.DbUtils;
 public class ControllerVendas {
     public  ResultSet rs;
     private TelaVendas view;
-    private Cuidador model;
+    private Atendente atendente;
     private JanelaPrincipal viewprinc;
     private SQL testesql;
+    private LinkedList<Cliente> clientes;
 
-    public ControllerVendas(TelaVendas view, Atendente atendente, SQL testesql) {
+    public ControllerVendas(TelaVendas view, Atendente atendente, SQL testesql, LinkedList<Cliente> cliente) {
         this.view = view;
-        this.model = model;
+        this.atendente = atendente;
         this.viewprinc = viewprinc;
         this.testesql = testesql;
+        this.clientes = cliente;
         view.setSize(960, 500);
         try {
             this.preencheTabela();

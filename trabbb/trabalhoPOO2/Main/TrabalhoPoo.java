@@ -43,7 +43,7 @@ public class TrabalhoPoo {
         //CONTROLLERS ----------------------------------//
         ControllerJFrame jf = new ControllerJFrame(telaPrincipal,telaAtendente,telaHotelBanhoTosa,telaVendas);
         ControllerAtendente controllerAtendente = new ControllerAtendente(telaPrincipal,atendentePadrao,telaAtendente, cad ,bus ,caa ,mar ,clientes,testesql);
-        ControllerVendas controllerVendas = new ControllerVendas(telaVendas,atendentePadrao,testesql);
+        ControllerVendas controllerVendas = new ControllerVendas(telaVendas,atendentePadrao,testesql,clientes);
         ControllerHBT controllerBanho;
         
         // INICIALIZACAO DA JANELA ----------------------//

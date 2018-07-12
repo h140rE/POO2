@@ -29,6 +29,8 @@ trabbb/nbproject/private/private.xml
 
 ### NetBeans ###
 trabbb/nbproject/private/
+trabbb/nbproject/
+trabbb/nbproject/*
 trabbb/build/
 !trabbb/build/classes/View_MVC/Icons
 trabbb/nbbuild/
