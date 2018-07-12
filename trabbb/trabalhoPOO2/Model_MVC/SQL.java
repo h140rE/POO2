@@ -268,35 +268,4 @@ public class SQL {
         }
         return c;
     }
-    
-    /*              Pesquisar como consultar o cliente no github*/
-    public void buscaCliente(String cpf){
-            sql = "SELECT * FROM  Cliente WHERE cpf = ?;";
-
-            try {
-                pst = conecta.prepareStatement(sql);
-                pst.setString(1, cpf);
-                rs = pst.executeQuery();
-//PEGAR GET DA TABELA
-                //TabelaBanda.setModel(DbUtils.resultSetToTableModel(rs));
-            } catch (SQLException ex) {
-                Logger.getLogger(ControllerAtendente.class.getName()).log(Level.SEVERE, null, ex);
-            }
-
-    }
-    
-    public void buscaAnimal(String cpf){
-            sql = "SELECT * FROM  Animal c WHERE c.cpfdono = ?;";
-
-            try {
-                pst = conecta.prepareStatement(sql);
-                pst.setString(1, cpf);
-                rs = pst.executeQuery();
-                //PEGAR GET DA TABELA
-                //TabelaBanda.setModel(DbUtils.resultSetToTableModel(rs));
-            } catch (SQLException ex) {
-                Logger.getLogger(ControllerAtendente.class.getName()).log(Level.SEVERE, null, ex);
-            }
-
-    }
 }
