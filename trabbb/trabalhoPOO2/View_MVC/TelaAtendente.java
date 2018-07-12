@@ -191,10 +191,10 @@ public class TelaAtendente extends javax.swing.JInternalFrame {
                 .addContainerGap()
                 .addComponent(jPanel2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                .addComponent(desktopPanel, javax.swing.GroupLayout.PREFERRED_SIZE, 480, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addComponent(desktopPanel, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, JButton_MenuPrincipalLayout.createSequentialGroup()
-                .addContainerGap(383, Short.MAX_VALUE)
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                 .addComponent(jLabel1)
                 .addGap(262, 262, 262))
         );
@@ -206,7 +206,7 @@ public class TelaAtendente extends javax.swing.JInternalFrame {
                 .addGroup(JButton_MenuPrincipalLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(JButton_MenuPrincipalLayout.createSequentialGroup()
                         .addGap(40, 40, 40)
-                        .addComponent(desktopPanel, javax.swing.GroupLayout.PREFERRED_SIZE, 330, javax.swing.GroupLayout.PREFERRED_SIZE))
+                        .addComponent(desktopPanel, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                     .addGroup(JButton_MenuPrincipalLayout.createSequentialGroup()
                         .addGap(74, 74, 74)
                         .addComponent(jPanel2, javax.swing.GroupLayout.PREFERRED_SIZE, 253, javax.swing.GroupLayout.PREFERRED_SIZE)))
@@ -265,7 +265,7 @@ public class TelaAtendente extends javax.swing.JInternalFrame {
         menuCadastraAnimal.add(jSeparator5);
 
         menuMarcaConsulta.setIcon(new javax.swing.ImageIcon(getClass().getResource("/View_MVC/Icons/iconss/application_form_edit.png"))); // NOI18N
-        menuMarcaConsulta.setText("Marca Consulta");
+        menuMarcaConsulta.setText("Pagamento");
         menuMarcaConsulta.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 menuMarcaConsultaActionPerformed(evt);

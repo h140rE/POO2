@@ -245,6 +245,27 @@ public class SQL {
         return c;
     }
     
+    public Produto getProdutoBanco (String codBarras) throws ClassNotFoundException, SQLException{
+        sql = "SELECT * FROM  Produtos WHERE codBarras = ?;";
+        Produto c = null;
+        String nome,ccpf,ctelefone;
+        try {
+            pst = conecta.prepareStatement(sql);
+            pst.setString(1, codBarras);
+            rs = pst.executeQuery();
+            if(rs.next()){
+                c = new Produto(null,rs.getFloat(2), rs.getString(3));
+                c.setCodBar(rs.getInt(1));
+            }else return null;
+            
+        }
+        catch (SQLException ex) {
+            Logger.getLogger(SQL.class.getName()).log(Level.SEVERE, null, ex);
+            JOptionPane.showMessageDialog(null, "Erro!");
+        }
+        return c;
+    }
+    
     /*              Pesquisar como consultar o cliente no github*/
     public void buscaCliente(String cpf){
             sql = "SELECT * FROM  Cliente WHERE cpf = ?;";
