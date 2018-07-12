@@ -55,11 +55,9 @@ CREATE TABLE Animal(
 );
 
 CREATE TABLE Recibo(
-        idCompra        serial,
         cpf		varchar(11),
 	preco           float,
 	Descricao       varchar(400) NOT NULL,
-	CONSTRAINT recibo_pk PRIMARY KEY (idCompra),
 	CONSTRAINT donoRecibo_fk FOREIGN KEY (cpf) REFERENCES cliente(cpf)
 );
 
