@@ -21,8 +21,7 @@ public class TrabalhoPoo {
         TelaAtendente telaAtendente = new TelaAtendente();
         TelaHBT telaHotelBanhoTosa = new TelaHBT();
         TelaVendas telaVendas = new TelaVendas();
-        TelaVendasProdutos vprod = new TelaVendasProdutos();
-        TelaVendaServico vserv = new TelaVendaServico();
+    
         
         CadastraCliente  cad = new CadastraCliente();
         CadastraAnimal caa = new CadastraAnimal();
@@ -44,7 +43,7 @@ public class TrabalhoPoo {
         //CONTROLLERS ----------------------------------//
         ControllerJFrame jf = new ControllerJFrame(telaPrincipal,telaAtendente,telaHotelBanhoTosa,telaVendas);
         ControllerAtendente controllerAtendente = new ControllerAtendente(telaPrincipal,atendentePadrao,telaAtendente, cad ,bus ,caa ,mar ,clientes,testesql);
-        ControllerVendas controllerVendas = new ControllerVendas(telaPrincipal,telaVendas,cuidadorPadrao, vserv, vprod,testesql);
+        ControllerVendas controllerVendas = new ControllerVendas(telaPrincipal,telaVendas,cuidadorPadrao,testesql);
         ControllerHBT controllerBanho;
         
         // INICIALIZACAO DA JANELA ----------------------//

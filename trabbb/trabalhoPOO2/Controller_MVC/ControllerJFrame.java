@@ -27,7 +27,7 @@ public class ControllerJFrame {
         this.viewAtendente = viewAtendente;
         this.viewHBT = viewHBT;
         this.viewVendas = viewVendas;
-        this.view.setSize(1015, 560);
+        this.view.setSize(1017, 568);
         this.view.setVisible(true);
         this.view.setLocationRelativeTo(null);
 
