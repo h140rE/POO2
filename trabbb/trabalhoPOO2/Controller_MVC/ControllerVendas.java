@@ -18,7 +18,7 @@ public class ControllerVendas {
     private JanelaPrincipal viewprinc;
     private SQL testesql;
 
-    public ControllerVendas(JanelaPrincipal viewprinc, TelaVendas view, Cuidador model, SQL testesql) {
+    public ControllerVendas(JanelaPrincipal viewprinc, TelaVendas view, Atendente atendente, SQL testesql) {
         this.view = view;
         this.model = model;
         this.viewprinc = viewprinc;
@@ -36,7 +36,7 @@ public class ControllerVendas {
         @Override
         public void actionPerformed(ActionEvent e) {
 
-            String CPF = view.getjTextPane3().getText();
+            String CPF = view.getTextoCPF().getText();
 
             if (CPF.equals("")) {
                 JOptionPane.showMessageDialog(null, "Preencha todos os campos!!");
@@ -46,7 +46,7 @@ public class ControllerVendas {
                     if (c == null) {
                         JOptionPane.showMessageDialog(null, "Cliente não encontrado!!!");
                     }
-                    view.getjTextField1().setText(c.getNome());
+                    view.getTextoNomeCliente().setText(c.getNome());
 
                 } catch (ClassNotFoundException ex) {
                     Logger.getLogger(ControllerAtendente.class.getName()).log(Level.SEVERE, null, ex);
@@ -57,5 +57,11 @@ public class ControllerVendas {
         }
 
     }
+    
+    
+    private void preencheTabela(){
+        
+    }
+    
 
 }
