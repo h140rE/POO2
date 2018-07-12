@@ -20,7 +20,6 @@ public class TrabalhoPoo {
         TelaInicial telaApresentacao = new TelaInicial();
         TelaAtendente telaAtendente = new TelaAtendente();
         TelaHBT telaHotelBanhoTosa = new TelaHBT();
-        TelaConsulta telaConsulta = new TelaConsulta();
         TelaVendas telaVendas = new TelaVendas();
         TelaVendasProdutos vprod = new TelaVendasProdutos();
         TelaVendaServico vserv = new TelaVendaServico();
@@ -41,15 +40,13 @@ public class TrabalhoPoo {
         LinkedList<Cliente> clientes = new LinkedList<>();
         Atendente atendentePadrao = new Atendente("Joao1","123","1111",1);
         Cuidador cuidadorPadrao = new Cuidador("Joao2","132","1111",2);
-        Veterinario veterinarioPadrao = new Veterinario("Joao3","213","1111",3);
         
         //CONTROLLERS ----------------------------------//
-        ControllerJFrame jf = new ControllerJFrame(telaPrincipal,telaAtendente,telaConsulta ,telaHotelBanhoTosa,telaVendas);
+        ControllerJFrame jf = new ControllerJFrame(telaPrincipal,telaAtendente,telaHotelBanhoTosa,telaVendas);
         ControllerAtendente controllerAtendente = new ControllerAtendente(telaPrincipal,atendentePadrao,telaAtendente, cad ,bus ,caa ,mar ,clientes,testesql);
         ControllerVendas controllerVendas = new ControllerVendas(telaPrincipal,telaVendas,cuidadorPadrao, vserv, vprod,testesql);
         ControllerHBT controllerBanho;
-        ControllerConsulta controllerConsulta;
-       
+        
         // INICIALIZACAO DA JANELA ----------------------//
         //telaPrincipal.setVisible(true);
         
