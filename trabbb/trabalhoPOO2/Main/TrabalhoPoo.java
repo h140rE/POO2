@@ -12,6 +12,8 @@ public class TrabalhoPoo {
     public static void main(String[] args) throws ClassNotFoundException, SQLException {
         
         SQL testesql = new SQL(new PostgreSQL().login("postgres","121533"));
+        
+        
          
         // TELAS ----------------------------------------//
         JanelaPrincipal telaPrincipal = new JanelaPrincipal();

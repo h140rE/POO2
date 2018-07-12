@@ -144,22 +144,25 @@ public class ControllerAtendente {
                 JOptionPane.showMessageDialog(null, "Preencha todos os campos");
             } else {
 
-                clientesAtivos.add(atendente.atende(Nome, CPF, Telefone));
-
-                limpaBufferCadastra();
-                
-
                 try {
-                    testesql.insereCliente(Nome, CPF, Telefone);
-                    clientesAtivos.add(atendente.atende(Nome, CPF, Telefone));
-                    limpaBufferCadastra();
-                    adicionaTabela(clientesAtivos.getLast());
-                } catch (ClassNotFoundException ex) {
-                    Logger.getLogger(ControllerAtendente.class.getName()).log(Level.SEVERE, null, ex);
+                    if(testesql.insereCliente(Nome, CPF, Telefone)){
+                       clientesAtivos.add(atendente.atende(Nome, CPF, Telefone));
+                        limpaBufferCadastra();
+                        adicionaTabela(clientesAtivos.getLast()); 
+                    }else{
+                        JOptionPane.showMessageDialog(null, "eh, deu bao nao");
+                    }
+
                 } catch (SQLException ex) {
                     Logger.getLogger(ControllerAtendente.class.getName()).log(Level.SEVERE, null, ex);
+                    JOptionPane.showMessageDialog(null, "eh, deu ruim");
+                    
+                } catch (ClassNotFoundException ex) {
+                    Logger.getLogger(ControllerAtendente.class.getName()).log(Level.SEVERE, null, ex);
+                    JOptionPane.showMessageDialog(null, "eh, deu ruim2");
+                    
                 }
-
+                    
             }
         }
     }
@@ -261,7 +264,7 @@ public class ControllerAtendente {
 
         @Override
         public void actionPerformed(ActionEvent e) {
-            
+
             marcaC.getjTextField1().setText("");
 
         }
@@ -299,10 +302,12 @@ public class ControllerAtendente {
                 } else {
                     if (cao) {
                         cli.AdicionaAnimal(nomeAnimal, racaAnimal, 1);
+                        limpaBufferCadastraAnimal();
                         limpaRadioButton();
                         cao = false;
                     } else if (gato) {
                         cli.AdicionaAnimal(nomeAnimal, racaAnimal, 2);
+                        limpaBufferCadastraAnimal();
                         limpaRadioButton();
                         gato = false;
                     } else {
