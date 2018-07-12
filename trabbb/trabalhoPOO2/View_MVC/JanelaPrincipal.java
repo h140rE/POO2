@@ -46,8 +46,8 @@ public class JanelaPrincipal extends javax.swing.JFrame {
         jPopupMenu2 = new javax.swing.JPopupMenu();
         jPopupMenu3 = new javax.swing.JPopupMenu();
         jPopupMenu4 = new javax.swing.JPopupMenu();
-        jPanel1 = new javax.swing.JPanel();
         desktopPanel = new javax.swing.JDesktopPane();
+        jPanel1 = new javax.swing.JPanel();
         jMenuBar1 = new javax.swing.JMenuBar();
         jMenu1 = new javax.swing.JMenu();
         jMenuItem_Atendente = new javax.swing.JMenuItem();
@@ -64,6 +64,8 @@ public class JanelaPrincipal extends javax.swing.JFrame {
         setExtendedState(MAXIMIZED_BOTH);
         setSize(new java.awt.Dimension(1000, 500));
 
+        desktopPanel.setPreferredSize(new java.awt.Dimension(1000, 500));
+
         jPanel1.setBackground(new java.awt.Color(51, 204, 255));
         jPanel1.setPreferredSize(new java.awt.Dimension(1000, 500));
 
@@ -78,17 +80,19 @@ public class JanelaPrincipal extends javax.swing.JFrame {
             .addGap(0, 500, Short.MAX_VALUE)
         );
 
-        desktopPanel.setPreferredSize(new java.awt.Dimension(1000, 500));
+        desktopPanel.setLayer(jPanel1, javax.swing.JLayeredPane.DEFAULT_LAYER);
 
         javax.swing.GroupLayout desktopPanelLayout = new javax.swing.GroupLayout(desktopPanel);
         desktopPanel.setLayout(desktopPanelLayout);
         desktopPanelLayout.setHorizontalGroup(
             desktopPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 1000, Short.MAX_VALUE)
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, desktopPanelLayout.createSequentialGroup()
+                .addGap(0, 0, Short.MAX_VALUE)
+                .addComponent(jPanel1, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
         );
         desktopPanelLayout.setVerticalGroup(
             desktopPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 500, Short.MAX_VALUE)
+            .addComponent(jPanel1, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
         );
 
         jMenuBar1.setBackground(new java.awt.Color(153, 204, 255));
@@ -166,14 +170,10 @@ public class JanelaPrincipal extends javax.swing.JFrame {
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
                 .addGap(0, 0, Short.MAX_VALUE)
                 .addComponent(desktopPanel, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-            .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                .addComponent(jPanel1, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addComponent(desktopPanel, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-            .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                .addComponent(jPanel1, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
         );
 
         pack();

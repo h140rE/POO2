@@ -84,7 +84,7 @@ public class ControllerAtendente {
             view.getDesktopPanel().repaint();
 
             view.getDesktopPanel().add(cadastraC);
-            cadastraC.setSize(457, 300);
+           // cadastraC.setSize(457, 300);
             cadastraC.show();
 
         }
@@ -98,7 +98,7 @@ public class ControllerAtendente {
             view.getDesktopPanel().repaint();
 
             view.getDesktopPanel().add(buscaCliente);
-            buscaCliente.setSize(457, 300);
+           // buscaCliente.setSize(457, 300);
             buscaCliente.show();
 
         }
@@ -112,7 +112,7 @@ public class ControllerAtendente {
             view.getDesktopPanel().repaint();
 
             view.getDesktopPanel().add(cadastraA);
-            cadastraA.setSize(457, 300);
+           // cadastraA.setSize(457, 300);
             cadastraA.show();
         }
     }
@@ -125,7 +125,7 @@ public class ControllerAtendente {
             view.getDesktopPanel().repaint();
 
             view.getDesktopPanel().add(marcaC);
-            marcaC.setSize(457, 300);
+            //marcaC.setSize(457, 300);
             marcaC.show();
         }
     }

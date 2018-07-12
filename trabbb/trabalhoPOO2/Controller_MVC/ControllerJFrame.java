@@ -30,7 +30,7 @@ public class ControllerJFrame {
         this.viewConsulta = viewConsulta;
         this.viewHBT = viewHBT;
         this.viewVendas = viewVendas;
-        this.view.setSize(1015, 560);
+        this.view.setSize(1017, 568);
         this.view.setVisible(true);
         this.view.setLocationRelativeTo(null);
 
