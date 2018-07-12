@@ -48,6 +48,20 @@ public class TelaVendaServico extends javax.swing.JInternalFrame {
         return jTextField4;
     }
 
+    public JButton getjButton4() {
+        return jButton4;
+    }
+
+    public JTextField getjTextField1() {
+        return jTextField1;
+    }
+
+    public JTextField getjTextField2() {
+        return jTextField2;
+    }
+
+    
+    
     /**
      * This method is called from within the constructor to initialize the form.
      * WARNING: Do NOT modify this code. The content of this method is always

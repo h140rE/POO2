@@ -26,7 +26,7 @@ public class TrabalhoPoo {
         CadastraCliente  cad = new CadastraCliente();
         CadastraAnimal caa = new CadastraAnimal();
         BuscaCliente bus = new BuscaCliente();
-        TelaPagamento mar = new TelaPagamento();
+        Pagamento mar = new Pagamento();
         
      
         /*
@@ -44,7 +44,7 @@ public class TrabalhoPoo {
         //CONTROLLERS ----------------------------------//
         ControllerJFrame jf = new ControllerJFrame(telaPrincipal,telaAtendente,telaConsulta ,telaHotelBanhoTosa,telaVendas);
         ControllerAtendente controllerAtendente = new ControllerAtendente(telaPrincipal,atendentePadrao,telaAtendente, cad ,bus ,caa ,mar ,clientes,testesql);
-        ControllerVendas controllerVendas = new ControllerVendas(telaPrincipal,telaVendas,cuidadorPadrao, vserv, vprod);
+        ControllerVendas controllerVendas = new ControllerVendas(telaPrincipal,telaVendas,cuidadorPadrao, vserv, vprod,testesql);
         ControllerHBT controllerBanho;
         ControllerConsulta controllerConsulta;
        

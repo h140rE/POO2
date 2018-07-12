@@ -18,7 +18,7 @@ CREATE TABLE Cuidador(
 	CONSTRAINT cuidador_pk PRIMARY KEY (id)
 
 );
-
+/*
 
 CREATE TABLE Veterinario(
 	nome		varchar(30),
@@ -27,7 +27,18 @@ CREATE TABLE Veterinario(
 	id		serial,
 	CONSTRAINT veterinario_pk PRIMARY KEY (id)
 );
-
+INSERT INTO Veterinario (nome,cpf,telefone,id) VALUES 
+        ('Jescie',      '93326327072','309117323445',nextval('funcionarioID')),
+        ('Brenda',      '27542004018','770215532568',nextval('funcionarioID')),
+        ('Erich',       '97094094094','791207444469',nextval('funcionarioID')),
+        ('Dolan',       '79614790075','434464745647',nextval('funcionarioID')),
+        ('Zenia',       '68023779001','330562934928',nextval('funcionarioID')),
+        ('Keane',       '05197371056','837587732400',nextval('funcionarioID')),
+        ('Alexander',   '96598398045','772097412357',nextval('funcionarioID')),
+        ('Samantha',    '99917701001','425007823457',nextval('funcionarioID')),
+        ('Joel',        '69440133040','613095223506',nextval('funcionarioID')),
+        ('Lewis',       '43666598080','122144230534',nextval('funcionarioID'));
+*/
 
 CREATE TABLE Produtos(
         codBarras       int,
@@ -106,18 +117,6 @@ INSERT INTO Cuidador (nome,cpf,telefone,id) VALUES
         ('Unity',       '41272499006','689856123356',nextval('funcionarioID')),
         ('Veronica',    '64527142011','252865023608',nextval('funcionarioID')),
         ('Angela',      '42299586091','124324519785',nextval('funcionarioID'));
-
-INSERT INTO Veterinario (nome,cpf,telefone,id) VALUES 
-        ('Jescie',      '93326327072','309117323445',nextval('funcionarioID')),
-        ('Brenda',      '27542004018','770215532568',nextval('funcionarioID')),
-        ('Erich',       '97094094094','791207444469',nextval('funcionarioID')),
-        ('Dolan',       '79614790075','434464745647',nextval('funcionarioID')),
-        ('Zenia',       '68023779001','330562934928',nextval('funcionarioID')),
-        ('Keane',       '05197371056','837587732400',nextval('funcionarioID')),
-        ('Alexander',   '96598398045','772097412357',nextval('funcionarioID')),
-        ('Samantha',    '99917701001','425007823457',nextval('funcionarioID')),
-        ('Joel',        '69440133040','613095223506',nextval('funcionarioID')),
-        ('Lewis',       '43666598080','122144230534',nextval('funcionarioID'));
 
 INSERT INTO Produtos (codBarras,preco,nome,quantidade) VALUES
 	(2,5.0   ,'Shampoo Haskell',52),
