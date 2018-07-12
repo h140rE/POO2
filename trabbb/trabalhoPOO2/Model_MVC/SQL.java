@@ -268,4 +268,35 @@ public class SQL {
         }
         return c;
     }
+    public ResultSet getTodosProdutoso (String codBarras) throws ClassNotFoundException, SQLException{
+        sql = "SELECT * FROM  Produtos";
+        rs=null;
+        try {
+            pst = conecta.prepareStatement(sql);
+            pst.setString(1, codBarras);
+            rs = pst.executeQuery();
+        }
+        catch (SQLException ex) {
+            Logger.getLogger(SQL.class.getName()).log(Level.SEVERE, null, ex);
+            JOptionPane.showMessageDialog(null, "Erro!");
+        }
+        return rs;
+    }
+    public void guardaRecibo(Servicos s, String cpf){
+        String desc = s.getDescricao();
+        String preco = Float.toString(s.getPreco());
+        sql = "INSERT INTO Recibo (cpf,preco,Descricao) VALUES (?,?,?);";
+        try {
+            pst = conecta.prepareStatement(sql);
+            pst.setString(1, cpf);
+            pst.setString(2, preco);
+            pst.setString(3, desc);
+            pst.execute();
+            JOptionPane.showMessageDialog(null, "Recibo inserido com sucesso!!");
+        }
+        catch (SQLException ex) {
+            Logger.getLogger(SQL.class.getName()).log(Level.SEVERE, null, ex);
+            JOptionPane.showMessageDialog(null, "Erro!");
+        }
+    }
 }
