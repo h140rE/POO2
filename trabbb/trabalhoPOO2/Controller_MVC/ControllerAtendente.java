@@ -279,7 +279,9 @@ public class ControllerAtendente {
         @Override
         public void actionPerformed(ActionEvent e) {
             Cliente cli = cli = tableModel.getCliente(view.getTabelaClientes().getSelectedRow());
-            cli.setRecibo(atendente.criaRecibo());
+            if(cli.getRecibo() == null){
+                cli.setRecibo(atendente.criaRecibo());
+            }
             atendente.Imprime(cli);
 
         }

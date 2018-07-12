@@ -63,14 +63,7 @@ public class ControllerJFrame {
         }
     }
 
-    class MenuConsultaListener implements ActionListener {
 
-        @Override
-        public void actionPerformed(ActionEvent ae) {
-            view.getDesktopPanel().remove(viewTelaInicio);
-            view.getDesktopPanel().repaint();
-        }
-    }
 
     class MenuHotelBanhoTosaListener implements ActionListener {
 
