@@ -14,14 +14,16 @@ public class Cliente extends Pessoa {
         this.animais = new ArrayList<Animal>();
     }
 
-    public void pagarDinheiro(float dinheiro) {
+    public Boolean pagarDinheiro(float dinheiro) {
         float resultado = dinheiro - this.recibo.pagar();
         if (resultado < 0) {
             JOptionPane.showMessageDialog(null, "Valor insuficiente, Faltam: R$" + resultado);
+                return false;
         } else {
             JOptionPane.showMessageDialog(null, "Troco igual a R$" + resultado);
             //GUARDAR RECIBO NO BANCO
             this.recibo = null;
+            return true;
         }
     }
 

@@ -39,7 +39,7 @@ public class Pagamento extends javax.swing.JInternalFrame {
         jLabel6 = new javax.swing.JLabel();
         jLabel10 = new javax.swing.JLabel();
         geraRecibo = new javax.swing.JButton();
-        botaoCancela = new javax.swing.JButton();
+        recebePagamento = new javax.swing.JButton();
 
         setClosable(true);
         setDefaultCloseOperation(javax.swing.WindowConstants.HIDE_ON_CLOSE);
@@ -71,11 +71,11 @@ public class Pagamento extends javax.swing.JInternalFrame {
             }
         });
 
-        botaoCancela.setFont(new java.awt.Font("Yu Gothic UI Light", 0, 24)); // NOI18N
-        botaoCancela.setText("Recebe $$");
-        botaoCancela.addActionListener(new java.awt.event.ActionListener() {
+        recebePagamento.setFont(new java.awt.Font("Yu Gothic UI Light", 0, 24)); // NOI18N
+        recebePagamento.setText("Recebe $$");
+        recebePagamento.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                botaoCancelaActionPerformed(evt);
+                recebePagamentoActionPerformed(evt);
             }
         });
 
@@ -89,7 +89,7 @@ public class Pagamento extends javax.swing.JInternalFrame {
                     .addGroup(JPanel_MenuPrincipal_CadastroLayout.createSequentialGroup()
                         .addComponent(geraRecibo, javax.swing.GroupLayout.PREFERRED_SIZE, 200, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addComponent(botaoCancela, javax.swing.GroupLayout.PREFERRED_SIZE, 200, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addComponent(recebePagamento, javax.swing.GroupLayout.PREFERRED_SIZE, 200, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                         .addComponent(jLabel10))
                     .addComponent(jLabel6)
@@ -120,7 +120,7 @@ public class Pagamento extends javax.swing.JInternalFrame {
                         .addGap(73, 73, 73)
                         .addGroup(JPanel_MenuPrincipal_CadastroLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                             .addComponent(geraRecibo, javax.swing.GroupLayout.PREFERRED_SIZE, 57, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(botaoCancela, javax.swing.GroupLayout.PREFERRED_SIZE, 57, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                            .addComponent(recebePagamento, javax.swing.GroupLayout.PREFERRED_SIZE, 57, javax.swing.GroupLayout.PREFERRED_SIZE)))
                     .addGroup(JPanel_MenuPrincipal_CadastroLayout.createSequentialGroup()
                         .addGap(165, 165, 165)
                         .addComponent(jLabel10)))
@@ -151,12 +151,12 @@ public class Pagamento extends javax.swing.JInternalFrame {
         // TODO add your handling code here:
     }//GEN-LAST:event_geraReciboActionPerformed
 
-    private void botaoCancelaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_botaoCancelaActionPerformed
+    private void recebePagamentoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_recebePagamentoActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_botaoCancelaActionPerformed
+    }//GEN-LAST:event_recebePagamentoActionPerformed
 
-    public JButton getBotaoCancela() {
-        return botaoCancela;
+    public JButton getBotaoPagamento() {
+        return recebePagamento;
     }
 
     public JButton getGeraRecibo() {
@@ -171,12 +171,12 @@ public class Pagamento extends javax.swing.JInternalFrame {
     
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JPanel JPanel_MenuPrincipal_Cadastro;
-    private javax.swing.JButton botaoCancela;
     private javax.swing.JButton geraRecibo;
     private javax.swing.JLabel jLabel10;
     private javax.swing.JLabel jLabel2;
     private javax.swing.JLabel jLabel4;
     private javax.swing.JLabel jLabel6;
     private javax.swing.JTextField jPagamento;
+    private javax.swing.JButton recebePagamento;
     // End of variables declaration//GEN-END:variables
 }
