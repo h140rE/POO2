@@ -29,13 +29,12 @@ public class ControllerAtendente {
     CadastraCliente cadastraC;
     MarcaConsulta marcaC;
     private LinkedList<Cliente> clientesAtivos;
-<<<<<<< HEAD
+
     ClienteTableModel tableModel;
     Boolean cao = false;
     Boolean gato = false;
-=======
+
     SQL testesql;
->>>>>>> 54d0be88ee3cd808807c76cf9aa83fb47322f7dd
 
     public ControllerAtendente(JanelaPrincipal jPrincipal, Atendente model, TelaAtendente view, CadastraCliente cadastraC,
             BuscaCliente buscaCliente, CadastraAnimal cadastraA, MarcaConsulta marcaC, LinkedList<Cliente> cliente, SQL testesql) {
@@ -48,11 +47,10 @@ public class ControllerAtendente {
         this.cadastraA = cadastraA;
         this.marcaC = marcaC;
         this.clientesAtivos = cliente;
-<<<<<<< HEAD
+
         this.tableModel = new ClienteTableModel(cliente);
-=======
+
         this.testesql = testesql;
->>>>>>> 54d0be88ee3cd808807c76cf9aa83fb47322f7dd
 
         this.view.getTabelaClientes().setModel(tableModel);
         this.view.getTabelaClientes().addMouseListener(new ClicaTabela());
@@ -69,9 +67,9 @@ public class ControllerAtendente {
 
         this.marcaC.getBotaoCancela().addActionListener(new CancelaConsultaListener());
         this.marcaC.getBotaoConfirma().addActionListener(new ConfirmaConsultaListener());
-        
-        this.cadastraA.getBotaoConfirmaAnimal().addActionListener(new CadastraAnimalListener());
-        this.cadastraA.getBotaoCancelaAnimal().addActionListener(new CancelaAnimalListener());
+
+        this.cadastraA.getBotaoConfirma().addActionListener(new CadastraAnimalListener());
+        this.cadastraA.getBotaoCancela().addActionListener(new CancelaAnimalListener());
         this.cadastraA.getRadioButtonCao().addActionListener(new SelecionaCaoListener());
         this.cadastraA.getRadioButtonGato().addActionListener(new SelecionaGatoListener());
 
@@ -145,23 +143,23 @@ public class ControllerAtendente {
             if (Nome.equals("") || CPF.equals("") || Telefone.equals("")) {
                 JOptionPane.showMessageDialog(null, "Preencha todos os campos");
             } else {
-<<<<<<< HEAD
+
                 clientesAtivos.add(atendente.atende(Nome, CPF, Telefone));
 
                 limpaBufferCadastra();
                 adicionaTabela(clientesAtivos.getLast());
-=======
+
                 try {
                     testesql.insereCliente(Nome, CPF, Telefone);
                     clientesAtivos.add(atendente.atende(Nome, CPF, Telefone));
                     limpaBufferCadastra();
-                    adicionaTabela(clientesAtivos);
+                    adicionaTabela(clientesAtivos.getLast());
                 } catch (ClassNotFoundException ex) {
                     Logger.getLogger(ControllerAtendente.class.getName()).log(Level.SEVERE, null, ex);
                 } catch (SQLException ex) {
                     Logger.getLogger(ControllerAtendente.class.getName()).log(Level.SEVERE, null, ex);
                 }
->>>>>>> 54d0be88ee3cd808807c76cf9aa83fb47322f7dd
+
             }
         }
     }
@@ -176,7 +174,7 @@ public class ControllerAtendente {
 
     private void adicionaTabela(Cliente clientesAtivos) {
         this.tableModel.addCliente(clientesAtivos);
-        
+
     }
 
     private void limpaBufferCadastra() {
@@ -210,9 +208,8 @@ public class ControllerAtendente {
             if (NomeCliente.equals("")) {
                 JOptionPane.showMessageDialog(null, "Preencha todos os campos!!!");
             } else {
-                   clientesAtivos.add(atendente.atende(buscaCliente.getjTextField1().getText(), buscaCliente.getjTextField2().getText(),
-                           buscaCliente.getjTextField3().getText()));
-                
+                clientesAtivos.add(atendente.atende(buscaCliente.getjTextField1().getText(), buscaCliente.getjTextField2().getText(),
+                        buscaCliente.getjTextField3().getText()));
 
             }
 
@@ -244,12 +241,10 @@ public class ControllerAtendente {
 
                     limpaBufferBusca();
 
-                    adicionaTabela(clientesAtivos);
-
+                    adicionaTabela(clientesAtivos.getLast());
 
                     buscaCliente.getjTextField2().setText(c.getNome());
                     buscaCliente.getjTextField3().setText(c.getTelefone());
-                    
 
                 } catch (ClassNotFoundException ex) {
                     Logger.getLogger(ControllerAtendente.class.getName()).log(Level.SEVERE, null, ex);
@@ -282,7 +277,8 @@ public class ControllerAtendente {
         }
 
     }
-      class CadastraAnimalListener implements ActionListener {
+
+    class CadastraAnimalListener implements ActionListener {
 
         @Override
         public void actionPerformed(ActionEvent e) {
@@ -293,9 +289,9 @@ public class ControllerAtendente {
                 JOptionPane.showMessageDialog(null, "Escolha um cliente");
             } else {
 
-                cadastraA.getDonoCadastraAnimal().setText(cli.getNome());
-                nomeAnimal = cadastraA.getTextoNomeAnimal().getText();
-                racaAnimal = cadastraA.getTextoRacaAnimal().getText();
+                cadastraA.getjTextField1().setText(cli.getNome());
+                nomeAnimal = cadastraA.getjTextField4().getText();
+                racaAnimal = cadastraA.getjTextField5().getText();
 
                 if (nomeAnimal.equals("") || racaAnimal.equals("")) {
                     JOptionPane.showMessageDialog(null, "Preencha todos os campos");
@@ -343,30 +339,27 @@ public class ControllerAtendente {
         }
 
     }
-    
+
     class ClicaTabela extends MouseAdapter {
 
-        
         public void mouseClicked(MouseEvent e) {
             Cliente cli;
             cli = tableModel.getCliente(view.getTabelaClientes().getSelectedRow());
             view.getTabelaClientes().getSelectedRow();
-            cadastraA.getDonoCadastraAnimal().setText(cli.getNome());
-            
+            cadastraA.getjTextField1().setText(cli.getNome());
+
         }
-   
+
     }
 
     public void limpaRadioButton() {
         cadastraA.getButtonGroup1().clearSelection();
     }
 
-
-
     private void limpaBufferCadastraAnimal() {
-        cadastraA.getTextoNomeAnimal().setText("");
-        cadastraA.getTextoRacaAnimal().setText("");
-        cadastraA.getDonoCadastraAnimal().setText("");
+        cadastraA.getjTextField1().setText("");
+        cadastraA.getjTextField4().setText("");
+        cadastraA.getjTextField5().setText("");
     }
 
 }
