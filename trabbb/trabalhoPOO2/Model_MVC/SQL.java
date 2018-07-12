@@ -268,12 +268,11 @@ public class SQL {
         }
         return c;
     }
-    public ResultSet getTodosProdutoso (String codBarras) throws ClassNotFoundException, SQLException{
+    public ResultSet getTodosProdutoso () throws ClassNotFoundException, SQLException{
         sql = "SELECT * FROM  Produtos";
         rs=null;
         try {
             pst = conecta.prepareStatement(sql);
-            pst.setString(1, codBarras);
             rs = pst.executeQuery();
         }
         catch (SQLException ex) {
