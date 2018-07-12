@@ -147,7 +147,7 @@ public class ControllerAtendente {
                 clientesAtivos.add(atendente.atende(Nome, CPF, Telefone));
 
                 limpaBufferCadastra();
-                adicionaTabela(clientesAtivos.getLast());
+                
 
                 try {
                     testesql.insereCliente(Nome, CPF, Telefone);
