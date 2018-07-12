@@ -26,7 +26,7 @@ public class TrabalhoPoo {
         CadastraCliente  cad = new CadastraCliente();
         CadastraAnimal caa = new CadastraAnimal();
         BuscaCliente bus = new BuscaCliente();
-        MarcaConsulta mar = new MarcaConsulta();
+        TelaPagamento mar = new TelaPagamento();
         
      
         /*

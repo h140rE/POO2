@@ -25,12 +25,12 @@ public class ControllerAtendente {
     BuscaCliente buscaCliente;
     CadastraAnimal cadastraA;
     CadastraCliente cadastraC;
-    MarcaConsulta marcaC;
+    TelaPagamento marcaC;
     private LinkedList<Cliente> clientesAtivos;
     SQL testesql;
 
     public ControllerAtendente(JanelaPrincipal jPrincipal, Atendente model, TelaAtendente view, CadastraCliente cadastraC,
-            BuscaCliente buscaCliente, CadastraAnimal cadastraA, MarcaConsulta marcaC, LinkedList<Cliente> cliente, SQL testesql) {
+            BuscaCliente buscaCliente, CadastraAnimal cadastraA, TelaPagamento marcaC, LinkedList<Cliente> cliente, SQL testesql) {
 
         this.jPrincipal = jPrincipal;
         this.atendente = model;
@@ -241,7 +241,6 @@ public class ControllerAtendente {
         @Override
         public void actionPerformed(ActionEvent e) {
 
-            marcaC.getjTextField1().setText("");
 
         }
     }
